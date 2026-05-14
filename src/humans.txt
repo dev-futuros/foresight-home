@@ -1,0 +1,20 @@
+/* humans.txt — futuros.io */
+/* Standard: https://humanstxt.org  */
+
+/* TEAM */
+  Founder & Strategy: Oliver Henares
+  Contact: hello@futuros.io
+  Location: Barcelona, España
+
+/* SITE */
+  Last update: 2025-04-01
+  Language: Spanish
+  Technology: HTML5, CSS3, Vanilla JS
+  Fonts: Playfair Display, DM Sans, DM Mono (Google Fonts)
+  Hosting: futuros.io
+
+/* THANKS */
+  Methodology inspired by the European Environment Agency,
+  Joint Research Centre (European Commission),
+  Finnish Government's Foresight Network,
+  Shell Global Scenarios, and the Institute for the Future.

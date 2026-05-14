@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title data-i18n-title="meta.title">Futuros — Foresight estratégico con IA | Advanced AI Strategic Tools</title>
+<meta name="description" data-i18n-meta-desc="meta.desc" content="Futuros combina metodología de foresight institucional europeo con inteligencia artificial para generar análisis de escenarios estratégicos completos en menos de 2 horas.">
+<meta name="author" content="Oliver Henares — Futuros">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://futuros.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Futuros">
+<meta property="og:url" content="https://futuros.io/">
+<meta property="og:image" content="https://futuros.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://futuros.io/og-image.jpg">
+<link rel="manifest" href="https://futuros.io/manifest.json">
+<meta name="theme-color" content="#09090b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Futuros">
+<link rel="icon" type="image/svg+xml" href="https://futuros.io/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://futuros.io/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://futuros.io/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Futuros","url":"https://futuros.io","description":"Strategic foresight platform combining European institutional methodology with AI.","contactPoint":{"@type":"ContactPoint","email":"hello@futuros.io","contactType":"customer support","availableLanguage":["Spanish","English"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Futuros","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://futuros.io","offers":[{"@type":"Offer","name":"Futuros Pro","price":"99","priceCurrency":"EUR"}]}</script>
+
+<style>
+/* ─── DESIGN TOKENS ─── */
+:root{
+  --bg:#09090b; --bg2:#0f0f11; --bg3:#141417; --bg4:#1a1a1e;
+  --border:rgba(255,255,255,.06); --border-h:rgba(255,255,255,.12); --border-g:rgba(212,168,83,.28);
+  --text:#f0ece4; --text2:#c8c4bc; --muted:#8a8680; --dim:#5d5a55;
+  --gold:#d4a853; --gold2:#b8863c; --gold-dim:rgba(212,168,83,.06);
+  --green:#4ade80; --blue:#60a5fa; --red:#f87171;
+  --nav-h:64px;
+  --container:1140px;
+  --r-sm:6px; --r-md:10px; --r-lg:14px;
+}
+
+/* ─── RESET ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* ─── AMBIENT BACKGROUND ─── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(800px 800px at 80% -10%,rgba(212,168,83,.05) 0%,transparent 60%),
+    radial-gradient(600px 600px at -10% 110%,rgba(96,165,250,.035) 0%,transparent 60%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+}
+@media(max-width:768px){body::after{display:none}}
+
+
+.subsection-break{
+  height:1px;background:var(--border);margin:4rem auto;max-width:120px;opacity:.6;
+}
+@media(max-width:768px){.subsection-break{margin:2.5rem auto}}
+
+/* ─── LAYOUT ─── */
+.container{max-width:var(--container);margin:0 auto;padding:0 1.5rem;position:relative;z-index:1}
+.section{padding:5.5rem 0;position:relative;z-index:1}
+.section-tight{padding:4rem 0}
+.section-divider{border-top:1px solid var(--border)}
+@media(max-width:768px){
+  .section{padding:3.5rem 0}
+  .section-tight{padding:2.5rem 0}
+  .container{padding:0 1.25rem}
+}
+
+/* ─── TYPOGRAPHY ─── */
+.eyebrow{
+  font-family:'DM Mono',monospace;font-size:.7rem;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.16em;
+  display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.1rem
+}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400;letter-spacing:-.01em;line-height:1.15}
+h1{font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(1.85rem,3.6vw,2.6rem);margin-bottom:1rem}
+h3{font-size:clamp(1.2rem,2vw,1.5rem)}
+h4{font-size:1.1rem}
+em{font-style:italic;color:var(--gold)}
+.lede{font-size:clamp(1.05rem,1.5vw,1.18rem);color:var(--text2);max-width:62ch;line-height:1.65;margin-bottom:1.5rem}
+.eyebrow + h2{margin-top:0}
+.section-header{max-width:760px;margin-bottom:3rem}
+@media(max-width:768px){.section-header{margin-bottom:2rem}}
+
+/* ─── BUTTONS ─── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.1em;
+  padding:14px 24px;border-radius:var(--r-sm);
+  cursor:pointer;transition:background .2s,transform .15s,border-color .2s;
+  min-height:44px;white-space:nowrap;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--gold);color:#0a0a0a}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--text);border-color:var(--border-h)}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+.btn-ghost{padding:10px 0;font-size:.72rem;color:var(--gold)}
+.btn-ghost:hover{color:var(--gold2)}
+.btn-arrow::after{content:'→';transition:transform .2s}
+.btn-arrow:hover::after{transform:translateX(3px)}
+
+/* ─── NAV ─── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+  background:rgba(9,9,11,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s;
+}
+.nav.scrolled{border-bottom-color:var(--border);background:rgba(9,9,11,.9)}
+.nav-inner{max-width:var(--container);height:100%;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-brand{display:flex;align-items:baseline;gap:.55rem;text-decoration:none}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--gold);line-height:1;letter-spacing:-.01em}
+.nav-tag{font-family:'DM Mono',monospace;font-size:.5rem;color:var(--dim);letter-spacing:.18em;text-transform:uppercase}
+.nav-links{display:flex;gap:1.8rem;align-items:center;font-family:'DM Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.12em}
+.nav-link{color:var(--muted);position:relative;padding:6px 0;transition:color .2s}
+.nav-link:hover{color:var(--text2)}
+.nav-link.active{color:var(--gold)}
+.nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold)}
+.nav-cta{margin-left:.5rem}
+.nav-cta .btn{padding:9px 16px;min-height:36px;font-size:.65rem}
+.nav-burger{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--text2);transition:transform .3s,opacity .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .nav-tag{display:none}
+}
+
+/* ─── MOBILE NAV ─── */
+.mobile-nav{
+  position:fixed;inset:0;top:var(--nav-h);z-index:99;
+  background:rgba(9,9,11,.97);backdrop-filter:blur(20px);
+  display:none;flex-direction:column;padding:2rem 1.5rem;gap:.5rem;
+}
+.mobile-nav.open{display:flex}
+.mobile-nav a{
+  font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--text);
+  padding:.75rem 0;border-bottom:1px solid var(--border);
+}
+.mobile-nav a:last-of-type{border:none}
+.mobile-nav .btn{margin-top:1.5rem;width:100%}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100dvh;padding-top:calc(var(--nav-h) + 4rem);padding-bottom:3rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.hero-tag{
+  font-family:'DM Mono',monospace;font-size:.7rem;color:var(--gold);
+  letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.5rem;
+  display:inline-flex;align-items:center;gap:.7rem;
+}
+.hero-tag::before{content:'';width:28px;height:1px;background:var(--gold)}
+.hero-title{
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.04;letter-spacing:-.025em;
+  margin-bottom:1.5rem;max-width:18ch;
+}
+.hero-sub{
+  font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.6;color:var(--text2);
+  max-width:58ch;margin-bottom:2.4rem;
+}
+.hero-sub strong{color:var(--text)}
+.hero-ctas{display:flex;gap:.85rem;align-items:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-trust{
+  padding-top:2rem;border-top:1px solid var(--border);
+  display:flex;flex-wrap:wrap;gap:1rem 2.5rem;
+  font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.1em;
+}
+.hero-trust-item{display:flex;align-items:center;gap:8px}
+.hero-trust-item::before{content:'✓';color:var(--gold);font-size:.78rem}
+@media(max-width:600px){
+  .hero{padding-top:calc(var(--nav-h) + 2rem)}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:.6rem}
+  .hero-ctas .btn{width:100%}
+  .hero-trust{gap:.6rem}
+}
+
+/* ─── PROBLEM SECTION ─── */
+.problem{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.problem-list{display:flex;flex-direction:column;gap:1.4rem}
+.problem-item{display:flex;gap:1rem;align-items:flex-start}
+.problem-num{
+  flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1px solid var(--border-g);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Mono',monospace;font-size:.7rem;color:var(--gold);
+}
+.problem-text{font-size:.95rem;color:var(--text2);line-height:1.6}
+.problem-text strong{color:var(--text);font-weight:500}
+@media(max-width:768px){.problem-grid{grid-template-columns:1fr;gap:2rem}}
+
+/* ─── OUTPUT SECTION ─── */
+.output-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;margin-top:1.5rem}
+.output-card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  overflow:hidden;cursor:pointer;transition:transform .25s,border-color .25s;
+  position:relative;
+}
+.output-card:hover{transform:translateY(-3px);border-color:var(--border-g)}
+.output-card-img{position:relative;background:var(--bg);aspect-ratio:.71;overflow:hidden}
+.output-card-img img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+  transform:scale(2.5);
+}
+.output-card-img::after{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,transparent 45%,rgba(9,9,11,.75) 80%,rgba(9,9,11,.95) 100%);
+}
+.output-card-meta{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.1rem;z-index:2}
+.output-card-tag{font-family:'DM Mono',monospace;font-size:.55rem;color:var(--gold);letter-spacing:.13em;text-transform:uppercase;margin-bottom:.25rem}
+.output-card-title{font-family:'Playfair Display',serif;font-size:.92rem;color:var(--text);line-height:1.25}
+/* Layout: 4 equal cards */
+.output-card{grid-column:span 3}
+.output-cta{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+@media(max-width:900px){.output-card{grid-column:span 6}}
+@media(max-width:600px){.output-card{grid-column:span 12}}
+
+/* ─── HOW IT WORKS ─── */
+/* ─── HOW (modes) ─── */
+.modes-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.mode-card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.8rem;display:flex;flex-direction:column;gap:.7rem;
+}
+.mode-card:nth-child(1){border-top:2px solid var(--gold)}
+.mode-card:nth-child(2){border-top:2px solid var(--blue)}
+.mode-tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
+.mode-card:nth-child(2) .mode-tag{color:var(--blue)}
+.mode-card h3{font-size:1.2rem;line-height:1.25}
+.mode-card p{font-size:.9rem;color:var(--text2);line-height:1.6}
+.mode-list{list-style:none;padding:.6rem 0 0;margin-top:.6rem;border-top:1px solid var(--border)}
+.mode-list li{font-size:.82rem;color:var(--muted);padding:5px 0 5px 1.1rem;position:relative;line-height:1.45}
+.mode-list li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:.78rem}
+.mode-card:nth-child(2) .mode-list li::before{color:var(--blue)}
+.how-shared{
+  margin-top:1.2rem;padding:1.4rem 1.6rem;
+  background:var(--gold-dim);border:1px solid var(--border-g);border-radius:var(--r-md);
+  display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;
+}
+.how-shared-tag{
+  font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gold);
+  letter-spacing:.13em;text-transform:uppercase;flex-shrink:0;
+}
+.how-shared-text{font-size:.88rem;color:var(--text2);line-height:1.6;flex:1;min-width:280px}
+.how-shared-text strong{color:var(--text);font-weight:500}
+@media(max-width:900px){.modes-grid{grid-template-columns:1fr;gap:.85rem}}
+
+/* ─── FOR WHOM ─── 
+/* PERSONAS — clean horizontal cards, no border colors, no quotes */
+.personas{display:flex;flex-direction:column;gap:1rem;margin-top:1rem;max-width:880px}
+.persona{
+  display:flex;gap:1.5rem;align-items:flex-start;
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.6rem 1.8rem;transition:border-color .2s;
+}
+.persona:hover{border-color:var(--border-h)}
+.persona-icon{
+  flex-shrink:0;width:42px;height:42px;border-radius:50%;
+  background:var(--gold-dim);border:1px solid var(--border-g);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);
+  margin-top:.15rem;
+}
+.persona-content{flex:1;min-width:0;display:flex;flex-direction:column;gap:.45rem}
+.persona-tag{
+  font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gold);
+  letter-spacing:.13em;text-transform:uppercase;line-height:1.3;margin:0;
+}
+.persona-title{
+  font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;
+  line-height:1.3;letter-spacing:-.005em;color:var(--text);margin:0;
+}
+.persona-desc{
+  font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:400;
+  color:var(--text2);line-height:1.65;margin:0;
+}
+@media(max-width:700px){
+  .persona{padding:1.3rem 1.4rem;gap:1.1rem}
+  .persona-icon{width:36px;height:36px;font-size:.95rem}
+  .persona-title{font-size:1.05rem}
+  .persona-desc{font-size:.85rem}
+}
+
+
+/* ─── SERVICES ─── */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.svc-card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.6rem 1.8rem;display:flex;gap:1.4rem;align-items:flex-start;
+  transition:border-color .2s,transform .2s;
+}
+.svc-card:hover{border-color:var(--border-g);transform:translateY(-2px)}
+.svc-num{
+  flex-shrink:0;font-family:'Playfair Display',serif;font-size:2.2rem;
+  color:var(--gold);line-height:1;font-style:italic;font-weight:400;
+  width:54px;
+}
+.svc-meta{flex:1;min-width:0}
+.svc-time{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;margin-bottom:.4rem}
+.svc-name{font-family:'Playfair Display',serif;font-size:1.2rem;line-height:1.2;margin-bottom:.6rem}
+.svc-desc{font-size:.86rem;color:var(--text2);line-height:1.6;margin-bottom:.85rem}
+.svc-who{
+  padding-top:.85rem;border-top:1px solid var(--border);
+  font-size:.78rem;color:var(--muted);line-height:1.5;
+}
+.svc-who-label{
+  display:block;font-family:'DM Mono',monospace;font-size:.55rem;color:var(--gold);
+  letter-spacing:.13em;text-transform:uppercase;margin-bottom:.3rem;
+}
+.svc-cta{margin-top:2rem;display:flex;justify-content:center}
+@media(max-width:900px){
+  .svc-grid{grid-template-columns:1fr;gap:.85rem}
+  .svc-card{padding:1.3rem 1.5rem;gap:1.1rem}
+  .svc-num{font-size:1.8rem;width:42px}
+}
+
+/* ─── METHODOLOGY ─── */
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.method-item{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.2rem 1.4rem;border-left:2px solid var(--gold);
+}
+.method-num{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem}
+.method-name{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:.4rem;line-height:1.25}
+.method-desc{font-size:.82rem;color:var(--muted);line-height:1.55}
+@media(max-width:700px){.method-grid{grid-template-columns:1fr}}
+
+/* ─── PLANS ─── */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.plan{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.6rem;display:flex;flex-direction:column;
+}
+.plan.featured{border-color:var(--gold);background:linear-gradient(180deg,var(--bg3) 0%,#13110d 100%)}
+.plan-name{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:.85rem}
+.plan-price{display:flex;align-items:baseline;gap:6px;margin-bottom:.3rem}
+.plan-price-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);line-height:1}
+.plan-price-num.coming{font-size:1.3rem;color:var(--muted)}
+.plan-period{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--muted)}
+.plan-limits{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--dim);margin-bottom:1.2rem}
+.plan-features{list-style:none;padding:1.2rem 0;margin:0;border-top:1px solid var(--border);flex:1}
+.plan-features li{font-size:.85rem;color:var(--text2);padding:5px 0 5px 1.2rem;position:relative;line-height:1.45}
+.plan-features li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:.85rem}
+.plan-cta{margin-top:1rem}
+.plan-cta .btn{width:100%}
+@media(max-width:900px){.plans-grid{grid-template-columns:1fr;gap:.85rem}}
+
+
+/* SOLUCIONES — tabs to switch between Planes and Servicios */
+.sol-tabs{margin:1.5rem 0 2rem;display:flex;justify-content:flex-start}
+.sol-tab-list{
+  display:inline-flex;background:var(--bg3);border:1px solid var(--border);
+  border-radius:var(--r-md);padding:5px;gap:2px;
+}
+.sol-tab{
+  padding:10px 20px;border-radius:7px;
+  font-family:'DM Mono',monospace;font-size:.65rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  transition:color .2s,background .2s;min-height:40px;cursor:pointer;
+}
+.sol-tab:hover{color:var(--text2)}
+.sol-tab.active{background:var(--gold);color:#0a0a0a}
+.sol-panel[hidden]{display:none}
+.sol-panel{animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){
+  .sol-tabs{justify-content:stretch}
+  .sol-tab-list{width:100%}
+  .sol-tab{flex:1;padding:11px 12px;font-size:.6rem}
+}
+/* Inside sol-panel, suppress section-header big margin since the parent already has one */
+.sol-panel > .section-header{margin-bottom:1.5rem}
+
+/* ─── FAQ ─── */
+.faq-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem;max-width:780px}
+.faq-item{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  overflow:hidden;
+}
+.faq-q{
+  width:100%;text-align:left;padding:1.1rem 1.4rem;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;font-size:.95rem;color:var(--text);
+  font-family:'DM Sans',sans-serif;font-weight:500;line-height:1.4;
+  min-height:56px;
+}
+.faq-q:hover{background:var(--bg4)}
+.faq-icon{flex-shrink:0;font-size:1.2rem;color:var(--gold);transition:transform .25s;font-weight:300;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;
+  font-size:.88rem;color:var(--text2);line-height:1.65;
+}
+.faq-a-inner{padding:0 1.4rem 1.2rem;border-top:1px solid var(--border);padding-top:1rem;margin-top:.2rem}
+.faq-a strong{color:var(--text);font-weight:500}
+.faq-item.open .faq-a{max-height:400px}
+
+/* ─── TEAM ─── */
+/* TEAM — manifesto + 3 co-founders + stats */
+.founders{display:flex;flex-direction:column;gap:1rem;margin-top:1rem;max-width:920px}
+.founder{
+  display:flex;gap:1.5rem;align-items:flex-start;
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.7rem 1.9rem;transition:border-color .2s;
+}
+.founder:hover{border-color:var(--border-h)}
+.founder-icon{
+  flex-shrink:0;width:44px;height:44px;border-radius:50%;
+  background:var(--gold-dim);border:1px solid var(--border-g);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);
+  margin-top:.2rem;
+}
+.founder-content{flex:1;min-width:0}
+.founder-name{
+  font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;
+  letter-spacing:-.005em;color:var(--text);line-height:1.2;margin-bottom:.25rem;
+}
+.founder-role{
+  font-family:'DM Mono',monospace;font-size:.62rem;color:var(--gold);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:.85rem;
+}
+.founder-bio{
+  font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--text2);
+  line-height:1.65;margin:0;
+}
+.founder-bio strong{color:var(--text);font-weight:500}
+
+.team-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;
+}
+.team-stat{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:1.4rem 1.3rem;
+}
+.team-stat-num{
+  font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);
+  line-height:1;margin-bottom:.5rem;
+}
+.team-stat-label{font-size:.76rem;color:var(--muted);line-height:1.4}
+
+@media(max-width:900px){
+  .team-stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .founder{padding:1.4rem 1.5rem;gap:1.1rem}
+  .founder-icon{width:38px;height:38px;font-size:1rem}
+  .founder-name{font-size:1.1rem}
+  .founder-role{font-size:.58rem;margin-bottom:.7rem}
+  .founder-bio{font-size:.85rem}
+  .team-stats{gap:.6rem;margin-top:1.6rem}
+  .team-stat{padding:1.1rem}
+  .team-stat-num{font-size:1.7rem;margin-bottom:.3rem}
+  .team-stat-label{font-size:.68rem}
+}
+
+
+.services-list{display:flex;flex-direction:column;margin-top:1rem}
+.service-row{
+  display:flex;gap:1.5rem;align-items:flex-start;
+  padding:1.6rem 0;border-top:1px solid var(--border);
+}
+.service-row:last-child{border-bottom:1px solid var(--border)}
+.service-num{
+  flex-shrink:0;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--gold);
+  letter-spacing:.13em;padding-top:.25rem;min-width:36px;
+}
+.service-body{flex:1}
+.service-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  margin-bottom:.55rem;flex-wrap:wrap;
+}
+.service-name{font-family:'Playfair Display',serif;font-size:1.35rem;line-height:1.2;font-weight:400}
+.service-meta{
+  font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);
+  letter-spacing:.1em;text-transform:uppercase;
+}
+.service-desc{font-size:.93rem;color:var(--text2);line-height:1.65}
+.services-cta{margin-top:2rem}
+@media(max-width:700px){
+  .service-row{gap:1rem;padding:1.3rem 0}
+  .service-num{font-size:.62rem;min-width:28px}
+  .service-name{font-size:1.15rem}
+  .service-head{flex-direction:column;gap:.2rem}
+  .service-meta{font-size:.58rem}
+}
+
+/* ─── CTA FINAL ─── */
+.cta-final{
+  background:var(--bg2);border-top:1px solid var(--border);
+  text-align:center;
+}
+.cta-final .container{max-width:680px}
+.cta-final-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin-bottom:1.2rem}
+.cta-final-sub{font-size:1rem;color:var(--text2);margin-bottom:2.4rem;line-height:1.6}
+.cta-form{display:flex;flex-direction:column;gap:.7rem;text-align:left}
+.cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.cta-input,.cta-select{
+  background:var(--bg);border:1px solid var(--border-h);color:var(--text);
+  padding:13px 16px;border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;
+  font-size:.95rem;outline:none;transition:border-color .2s;width:100%;
+  min-height:48px;
+}
+.cta-input::placeholder,.cta-select{color:var(--muted)}
+.cta-input:focus,.cta-select:focus{border-color:var(--gold);color:var(--text)}
+.cta-select{
+  appearance:none;cursor:pointer;
+  background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6"%3E%3Cpath d="M0 0l5 6 5-6z" fill="%238a8680"/%3E%3C/svg%3E');
+  background-repeat:no-repeat;background-position:right 16px center;
+}
+.cta-submit{margin-top:.6rem;width:100%;padding:15px;font-size:.78rem}
+.cta-fine{text-align:center;font-family:'DM Mono',monospace;font-size:.6rem;color:var(--dim);margin-top:1rem;line-height:1.6}
+.cta-fine a{color:var(--gold)}
+.cta-done{display:none;text-align:center;padding:3rem 0}
+.cta-done.show{display:block}
+.cta-done-icon{font-size:2.2rem;color:var(--gold);margin-bottom:.7rem}
+.cta-done-title{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:.4rem}
+.cta-done-sub{color:var(--muted);font-style:italic}
+@media(max-width:600px){.cta-form-row{grid-template-columns:1fr}}
+
+/* ─── FOOTER ─── */
+.footer{
+  border-top:1px solid var(--border);padding:2.5rem 0 2rem;
+  font-family:'DM Mono',monospace;font-size:.7rem;color:var(--dim);
+}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem}
+.footer-brand-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);font-style:italic;margin-bottom:.25rem}
+.footer-tag{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;font-size:.6rem;letter-spacing:.13em;color:var(--dim)}
+@media(max-width:700px){.footer-inner{flex-direction:column}}
+
+/* ─── LANG TOGGLE ─── */
+.lang-toggle{
+  position:fixed;bottom:1.2rem;right:1.2rem;z-index:90;
+  display:flex;gap:2px;background:var(--bg3);border:1px solid var(--border-h);
+  border-radius:20px;padding:4px;
+  font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  box-shadow:0 4px 18px rgba(0,0,0,.25);
+}
+.lt-btn{padding:6px 11px;border-radius:14px;color:var(--muted);transition:color .2s,background .2s;min-width:36px;min-height:32px}
+.lt-btn:hover{color:var(--text2)}
+.lt-btn.active{color:#0a0a0a;background:var(--gold);font-weight:500}
+@media(max-width:600px){.lang-toggle{bottom:1rem;right:1rem;padding:3px}}
+
+/* ─── MODAL ─── */
+.modal-backdrop{
+  position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;padding:2rem;
+}
+.modal-backdrop.open{display:flex}
+.modal-content{
+  max-width:900px;max-height:90vh;background:var(--bg2);border-radius:var(--r-lg);
+  border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.modal-img{
+  flex:1;overflow:auto;background:#000;
+  scrollbar-width:thin;scrollbar-color:var(--gold) transparent;
+}
+.modal-img::-webkit-scrollbar{width:10px;height:10px}
+.modal-img::-webkit-scrollbar-track{background:rgba(255,255,255,.03)}
+.modal-img::-webkit-scrollbar-thumb{
+  background:rgba(212,168,83,.5);border-radius:6px;
+  border:2px solid #000;transition:background .2s;
+}
+.modal-img::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+.modal-img::-webkit-scrollbar-corner{background:transparent}
+.modal-img img{width:100%;height:auto;display:block}
+.modal-close{
+  position:absolute;top:1.2rem;right:1.2rem;width:44px;height:44px;border-radius:50%;
+  background:var(--bg3);border:1px solid var(--border-h);color:var(--text);
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  z-index:201;cursor:pointer;
+}
+.modal-close:hover{background:var(--bg4);border-color:var(--gold)}
+.modal-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;border-radius:50%;
+  background:var(--bg3);border:1px solid var(--border-h);color:var(--text);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;font-weight:300;line-height:1;
+  z-index:201;cursor:pointer;transition:background .2s,border-color .2s,opacity .2s;
+}
+.modal-nav:hover{background:var(--bg4);border-color:var(--gold);color:var(--gold)}
+.modal-prev{left:1.5rem}
+.modal-next{right:1.5rem}
+.modal-counter{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  z-index:201;
+  font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;
+  color:var(--muted);background:var(--bg3);border:1px solid var(--border-h);
+  border-radius:20px;padding:7px 14px;
+}
+@media(max-width:700px){
+  .modal-nav{width:44px;height:44px;font-size:1.5rem}
+  .modal-prev{left:.75rem}
+  .modal-next{right:.75rem}
+}
+
+/* ─── FADE-IN ANIMATION ─── */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <div class="nav-logo">Futuros</div>
+      <div class="nav-tag" data-i18n="nav.tag">Advanced AI Strategic Tools</div>
+    </a>
+    <div class="nav-links">
+      <a href="#producto" class="nav-link" data-section="producto" data-i18n="nav.product">Qué es</a>
+      <a href="#para-quien" class="nav-link" data-section="para-quien" data-i18n="nav.who">Para quién</a>
+      <a href="#planes" class="nav-link" data-section="planes" data-i18n="nav.plans">Planes</a>
+      <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+      <a href="#equipo" class="nav-link" data-section="equipo" data-i18n="nav.team">Equipo</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Lista de espera</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#producto" data-i18n="nav.product">Qué es</a>
+  <a href="#como" data-i18n="nav.how">Cómo funciona</a>
+  <a href="#para-quien" data-i18n="nav.who">Para quién</a>
+  <a href="#servicios" data-i18n="nav.services">Servicios</a>
+  <a href="#planes" data-i18n="nav.plans">Planes</a>
+  <a href="#faq">FAQ</a>
+  <a href="#equipo" data-i18n="nav.team">Equipo</a>
+  <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Lista de espera</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="top">
+  <div class="container">
+    <h1 class="hero-title" data-i18n-html="hero.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h1>
+    <p class="hero-sub" data-i18n-html="hero.sub">Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.</p>
+    <div class="hero-ctas">
+      <a href="#waitlist" class="btn btn-primary btn-arrow" data-i18n="hero.cta1">Únete a la lista de espera</a>
+      <a id="hero-interactive-report" href="https://futuros.io/samples/sample_es.html" class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="hero.cta2">Ver informe interactivo</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item" data-i18n="hero.trust1">Advanced AI Strategic Tools</div>
+      <div class="hero-trust-item" data-i18n="hero.trust2">Metodología de instituciones europeas líderes</div>
+      <div class="hero-trust-item" data-i18n="hero.trust3">Informe completo en menos de 2 horas</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRODUCTO ═══════════ -->
+<section class="section" id="producto">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="out.eyebrow">El output</div>
+      <h2 data-i18n-html="out.title">Esto es lo que genera Futuros <em>en 90&nbsp;minutos.</em></h2>
+      <p class="lede" data-i18n="out.lede">Un informe completo de foresight estratégico, no un resumen genérico. Caso real: análisis sectorial de Restalia (franquicias de restauración) generado por la plataforma.</p>
+    </div>
+    <div class="output-grid">
+      <div class="output-card reveal" data-modal="samples/sample-matrix-es.jpg">
+        <div class="output-card-img">
+          <img src="samples/sample-matrix-es.jpg" alt="Matriz de impacto e incertidumbre" loading="lazy">
+        </div>
+        <div class="output-card-meta">
+          <div class="output-card-tag" data-i18n="out.s2.tag">Visualización</div>
+          <div class="output-card-title" data-i18n="out.s2.title">Matriz 2×2 de impacto e incertidumbre</div>
+        </div>
+      </div>
+      <div class="output-card reveal" data-modal="samples/sample-scenarios-es.jpg">
+        <div class="output-card-img">
+          <img src="samples/sample-scenarios-es.jpg" alt="Tres escenarios" loading="lazy">
+        </div>
+        <div class="output-card-meta">
+          <div class="output-card-tag" data-i18n="out.s3.tag">Scenario Planning</div>
+          <div class="output-card-title" data-i18n="out.s3.title">Tres escenarios 3P con probabilidades</div>
+        </div>
+      </div>
+      <div class="output-card reveal" data-modal="samples/sample-summary-es.jpg">
+        <div class="output-card-img">
+          <img src="samples/sample-summary-es.jpg" alt="Resumen ejecutivo" loading="lazy">
+        </div>
+        <div class="output-card-meta">
+          <div class="output-card-tag" data-i18n="out.s4.tag">Resumen ejecutivo</div>
+          <div class="output-card-title" data-i18n="out.s4.title">Tensión central y oportunidad crítica</div>
+        </div>
+      </div>
+      <div class="output-card reveal" data-modal="samples/sample-backcasting-es.jpg">
+        <div class="output-card-img">
+          <img src="samples/sample-backcasting-es.jpg" alt="Backcasting timeline" loading="lazy">
+        </div>
+        <div class="output-card-meta">
+          <div class="output-card-tag" data-i18n="out.s5.tag">Backcasting</div>
+          <div class="output-card-title" data-i18n="out.s5.title">Camino del futuro al presente — milestones</div>
+        </div>
+      </div>
+    </div>
+    <div class="output-cta reveal">
+      <a id="cta-interactive-report" href="https://futuros.io/samples/sample_es.html" class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="out.cta3">Ver report interactivo</a>
+    </div>
+    <div class="subsection-break reveal"></div>
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="how.eyebrow">Cómo funciona</div>
+      <h2 data-i18n-html="how.title"><em>Tú decides</em> el nivel de control.</h2>
+      <p class="lede" data-i18n="how.lede">Misma metodología, mismo rigor, mismo entregable final. Lo que cambia es cuánto pones tú y cuánto pone la plataforma. Empieza con el asistente y profundiza manualmente cuando quieras matizar.</p>
+    </div>
+    <div class="modes-grid">
+      <div class="mode-card reveal">
+        <div class="mode-tag" data-i18n="how.m1.tag">Modo asistente</div>
+        <h3 data-i18n="how.m1.title">Conversacional, rápido</h3>
+        <p data-i18n="how.m1.desc">Le cuentas a Futuros tu reto en lenguaje natural. La IA propone los campos STEEP, las dimensiones del horizonte y los drivers; tú aceptas o ajustas con un click. Ideal cuando empiezas, cuando vas justo de tiempo o cuando exploras un sector nuevo.</p>
+        <ul class="mode-list">
+          <li data-i18n="how.m1.b1">Sin formularios largos</li>
+          <li data-i18n="how.m1.b2">Sugerencias contextuales en cada paso</li>
+          <li data-i18n="how.m1.b3">Resultado completo en menos de 30 minutos</li>
+        </ul>
+      </div>
+      <div class="mode-card reveal">
+        <div class="mode-tag" data-i18n="how.m2.tag">Modo manual</div>
+        <h3 data-i18n="how.m2.title">Editorial, máximo control</h3>
+        <p data-i18n="how.m2.desc">Introduces tus propios datos, tags y matices. Editas cada dimensión, refinas las probabilidades, ajustas el lenguaje. Para análisis sensibles, sectores donde tienes visión propia o entregables que necesitan reflejar tu criterio palabra por palabra.</p>
+        <ul class="mode-list">
+          <li data-i18n="how.m2.b1">Edición libre de cada dimensión</li>
+          <li data-i18n="how.m2.b2">Refinamiento de escenarios y probabilidades</li>
+          <li data-i18n="how.m2.b3">Tu criterio reflejado palabra por palabra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="how-shared reveal">
+      <div class="how-shared-tag" data-i18n="how.shared.tag">En cualquier modo</div>
+      <div class="how-shared-text" data-i18n-html="how.shared.text">Mismo workflow guiado: <strong>perfil → macro scan → análisis sectorial → horizonte → síntesis → informe.</strong> Misma metodología STEEP + Tres Horizontes + scenario planning. Mismo entregable final brand-ready, en el idioma de tu cliente.</div>
+    </div>
+    <div class="subsection-break reveal"></div>
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="met.eyebrow">Metodología</div>
+      <h2 data-i18n-html="met.title">Frameworks reales. <em>No prompts genéricos.</em></h2>
+      <p class="lede" data-i18n="met.lede">Los mismos protocolos que usan gobiernos europeos y think tanks de primer nivel para anticipar el futuro — integrados en una plataforma que cualquier consultor puede usar hoy.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-item reveal">
+        <div class="method-num" data-i18n="met.01.num">01 · STEEP</div>
+        <div class="method-name" data-i18n="met.01.name">Análisis del entorno</div>
+        <div class="method-desc" data-i18n="met.01.desc">Social, Tecnológico, Económico, Medioambiental, Político. El mapa completo de fuerzas que moldean tu sector.</div>
+      </div>
+      <div class="method-item reveal">
+        <div class="method-num" data-i18n="met.02.num">02 · Horizon Scan</div>
+        <div class="method-name" data-i18n="met.02.name">Tres horizontes (H1/H2/H3)</div>
+        <div class="method-desc" data-i18n="met.02.desc">Lo que ya ocurre, lo que emerge y lo que podría transformarlo todo. Exploración sistemática.</div>
+      </div>
+      <div class="method-item reveal">
+        <div class="method-num" data-i18n="met.03.num">03 · Scenario 3P</div>
+        <div class="method-name" data-i18n="met.03.name">Probable, Plausible, Posible</div>
+        <div class="method-desc" data-i18n="met.03.desc">Tres escenarios con probabilidades derivadas del contexto real del cliente. Nunca genéricos.</div>
+      </div>
+      <div class="method-item reveal">
+        <div class="method-num" data-i18n="met.04.num">04 · Backcasting</div>
+        <div class="method-name" data-i18n="met.04.name">Del futuro al presente</div>
+        <div class="method-desc" data-i18n="met.04.desc">Desde cada escenario futuro, los hitos críticos que hay que tomar hoy para llegar (o evitarlo).</div>
+      </div>
+      <div class="method-item reveal">
+        <div class="method-num" data-i18n="met.05.num">05 · Weak Signals</div>
+        <div class="method-name" data-i18n="met.05.name">Señales débiles</div>
+        <div class="method-desc" data-i18n="met.05.desc">Los primeros indicios de cambio antes de convertirse en tendencias. Quien los ve primero tiene ventaja.</div>
+      </div>
+      <div class="method-item reveal">
+        <div class="method-num" data-i18n="met.06.num">06 · Strategic Map</div>
+        <div class="method-name" data-i18n="met.06.name">Mapa accionable</div>
+        <div class="method-desc" data-i18n="met.06.desc">Prioridades organizadas por horizonte temporal. Del análisis a la agenda de trabajo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PARA QUIÉN ═══════════ -->
+<section class="section" id="para-quien">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="who.eyebrow">Para quién</div>
+      <h2 data-i18n-html="who.title">Una técnica reservada a unos pocos. <em>Ahora al alcance de cualquiera.</em></h2>
+      <p class="lede" data-i18n="who.lede">Durante décadas, anticipar el futuro con método ha sido patrimonio de gobiernos, think tanks y consultoras de élite. Futuros pone esa misma técnica en manos de quien tenga una decisión estratégica que tomar — sea un estudiante, un autónomo, una pyme o una gran institución.</p>
+    </div>
+    <div class="personas">
+      <div class="persona reveal">
+        <div class="persona-icon">◆</div>
+        <div class="persona-content">
+          <div class="persona-tag" data-i18n="who.p1.tag">Estudiante / Investigador</div>
+          <h3 class="persona-title" data-i18n="who.p1.title">El método que se enseña en Sciences Po, en tu mesa de trabajo</h3>
+          <p class="persona-desc" data-i18n="who.p1.desc">El foresight deja de estar encerrado en programas de posgrado y centros de pensamiento. Aplícalo a tu tesis, a un proyecto académico o a tu primer encargo profesional con la misma metodología que usa la Comisión Europea.</p>
+        </div>
+      </div>
+      <div class="persona reveal">
+        <div class="persona-icon">◇</div>
+        <div class="persona-content">
+          <div class="persona-tag" data-i18n="who.p2.tag">Autónomo / Consultor</div>
+          <h3 class="persona-title" data-i18n="who.p2.title">Profundidad institucional, trabajando solo</h3>
+          <p class="persona-desc" data-i18n="who.p2.desc">Ya no hace falta un equipo de veinte personas detrás para entregar un análisis serio. Tu independencia deja de ser un techo y empieza a ser una ventaja.</p>
+        </div>
+      </div>
+      <div class="persona reveal">
+        <div class="persona-icon">⬢</div>
+        <div class="persona-content">
+          <div class="persona-tag" data-i18n="who.p3.tag">Pyme</div>
+          <h3 class="persona-title" data-i18n="who.p3.title">Preguntas estratégicas que antes no podías permitirte</h3>
+          <p class="persona-desc" data-i18n="who.p3.desc">Las decisiones que obligaban a contratar a una consultora pueden trabajarse en casa, con método y profundidad, sin desviar el presupuesto del año ni perder semanas de calendario.</p>
+        </div>
+      </div>
+      <div class="persona reveal">
+        <div class="persona-icon">◉</div>
+        <div class="persona-content">
+          <div class="persona-tag" data-i18n="who.p4.tag">Gran empresa / Institución</div>
+          <h3 class="persona-title" data-i18n="who.p4.title">La misma profundidad, en una fracción del tiempo</h3>
+          <p class="persona-desc" data-i18n="who.p4.desc">La metodología que ya conoces — pero con el control y la velocidad de hacerla en casa. Iteras escenarios antes de llevarlos a la consultora externa, o descubres que ya no la necesitas para esa pregunta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PLANES (subscription + services) ═══════════ -->
+<section class="section section-divider" id="planes" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="sol.eyebrow">Soluciones</div>
+      <h2 data-i18n-html="sol.title">Dos formas de incorporar Futuros — <em>elige la que encaje.</em></h2>
+      <p class="lede" data-i18n="sol.lede">Suscripción a la plataforma para autonomía total, o servicios de consultoría aumentada cuando necesitas acompañamiento experto. Ambos modelos comparten la misma metodología.</p>
+    </div>
+    <div class="sol-tabs reveal">
+      <div class="sol-tab-list">
+        <button class="sol-tab active" data-sol-tab="planes" data-i18n="sol.tab.planes">Planes (suscripción)</button>
+        <button class="sol-tab" data-sol-tab="servicios" data-i18n="sol.tab.services">Servicios (consultoría)</button>
+      </div>
+    </div>
+    <div class="sol-panel" id="sol-panel-planes">
+      <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="plans.eyebrow">Planes</div>
+      <h2 data-i18n-html="plans.title">Tres niveles de <em>relación con el futuro.</em></h2>
+      <p class="lede" data-i18n="plans.lede">Desde el profesional en solitario hasta la organización con governance completa.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan reveal">
+        <h3 class="plan-name" data-i18n="plan1.name">Futuros Pro</h3>
+        <div class="plan-price">
+          <div class="plan-price-num">99€</div>
+          <div class="plan-period" data-i18n="plan.period">/mes</div>
+        </div>
+        <div class="plan-limits" data-i18n="plan1.limits">1 usuario · 10 informes/mes</div>
+        <ul class="plan-features">
+          <li data-i18n="plan1.f1">Acceso completo a la plataforma</li>
+          <li data-i18n="plan1.f2">Flujo guiado STEEP + Horizon Scan</li>
+          <li data-i18n="plan1.f3">Escenarios 3P contextuales</li>
+          <li data-i18n="plan1.f4">Backcasting + mapa H1/H2/H3</li>
+          <li data-i18n="plan1.f5">Export PDF + presentación editable + enlace web</li>
+        </ul>
+        <div class="plan-cta">
+          <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
+        </div>
+      </div>
+      <div class="plan reveal">
+        <h3 class="plan-name" data-i18n="plan2.name">Futuros Max</h3>
+        <div class="plan-price">
+          <div class="plan-price-num coming" data-i18n="plan.coming">Próximamente</div>
+        </div>
+        <div class="plan-limits" data-i18n="plan2.limits">Equipos pequeños · pricing TBA</div>
+        <ul class="plan-features">
+          <li data-i18n="plan2.f1">Todo lo del plan Pro</li>
+          <li data-i18n="plan2.f2">Workspace colaborativo</li>
+          <li data-i18n="plan2.f3">White-label en exports</li>
+          <li data-i18n="plan2.f4">Integraciones con tus herramientas</li>
+          <li data-i18n="plan2.f5">Onboarding + soporte prioritario</li>
+        </ul>
+        <div class="plan-cta">
+          <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
+        </div>
+      </div>
+      <div class="plan reveal">
+        <h3 class="plan-name" data-i18n="plan3.name">Futuros Enterprise</h3>
+        <div class="plan-price">
+          <div class="plan-price-num coming" data-i18n="plan.coming">Próximamente</div>
+        </div>
+        <div class="plan-limits" data-i18n="plan3.limits">Pricing por seats · contrato anual</div>
+        <ul class="plan-features">
+          <li data-i18n="plan3.f1">Cuenta admin · roles · workspaces</li>
+          <li data-i18n="plan3.f2">Blacklist de fuentes (compliance)</li>
+          <li data-i18n="plan3.f3">SSO/SAML · audit logs · EU residency</li>
+          <li data-i18n="plan3.f4">API + webhooks · plantillas corp.</li>
+          <li data-i18n="plan3.f5">CSM dedicado · SLA · DPA</li>
+        </ul>
+        <div class="plan-cta">
+          <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="sol-panel" id="sol-panel-servicios" hidden>
+      <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="svc.eyebrow">Servicios</div>
+      <h2 data-i18n-html="svc.title">Más allá del software — <em>consultoría aumentada.</em></h2>
+      <p class="lede" data-i18n="svc.lede">No sustituimos el juicio humano: lo amplificamos. Cinco formas de incorporar foresight estratégico a tu próxima decisión, desde la formación inicial hasta el acompañamiento continuo.</p>
+    </div>
+    <div class="services-list">
+      <div class="service-row reveal">
+        <div class="service-num">01</div>
+        <div class="service-body">
+          <div class="service-head">
+            <h3 class="service-name" data-i18n="svc.01.name">Onboarding</h3>
+            <div class="service-meta" data-i18n="svc.01.meta">1 hora · sesión 1:1</div>
+          </div>
+          <p class="service-desc" data-i18n="svc.01.desc">Formación práctica para sacar partido profesional desde el primer día: plantear bien un análisis, leer escenarios 3P, afinar prompts y exportar entregables a cliente.</p>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">02</div>
+        <div class="service-body">
+          <div class="service-head">
+            <h3 class="service-name" data-i18n="svc.02.name">Workshop</h3>
+            <div class="service-meta" data-i18n="svc.02.meta">Half day o full day · presencial o remoto</div>
+          </div>
+          <p class="service-desc" data-i18n="svc.02.desc">Sesión conducida sobre un reto real del cliente. STEEP, Horizon Scan, escenarios 3P y backcasting aplicados a un problema propio — sale un mapa estratégico accionable.</p>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">03</div>
+        <div class="service-body">
+          <div class="service-head">
+            <h3 class="service-name" data-i18n="svc.03.name">Foresight Sprint</h3>
+            <div class="service-meta" data-i18n="svc.03.meta">Hasta 1 semana · entregable completo</div>
+          </div>
+          <p class="service-desc" data-i18n="svc.03.desc">Análisis completo en 5 días laborables: diagnóstico, escenarios 3P, backcasting y mapa H1/H2/H3. Sesión de devolución con el equipo decisor incluida.</p>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">04</div>
+        <div class="service-body">
+          <div class="service-head">
+            <h3 class="service-name" data-i18n="svc.04.name">Foresight as a Service</h3>
+            <div class="service-meta" data-i18n="svc.04.meta">Suscripción mensual · analista experto</div>
+          </div>
+          <p class="service-desc" data-i18n="svc.04.desc">Un analista experto trabaja como extensión de tu equipo: informes recurrentes, monitorización de señales débiles, briefings para comité y participación en sesiones estratégicas.</p>
+        </div>
+      </div>
+      <div class="service-row reveal">
+        <div class="service-num">05</div>
+        <div class="service-body">
+          <div class="service-head">
+            <h3 class="service-name" data-i18n="svc.05.name">Programa Ejecutivo</h3>
+            <div class="service-meta" data-i18n="svc.05.meta">Formación intensiva · grupo cerrado</div>
+          </div>
+          <p class="service-desc" data-i18n="svc.05.desc">Programa para C-level y comités de dirección. Instala un lenguaje común sobre incertidumbre y escenarios — eleva la conversación estratégica de la cúpula, no enseña a usar una herramienta.</p>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta reveal">
+      <a href="mailto:hello@futuros.io" class="btn btn-secondary btn-arrow" data-i18n="svc.cta">Contactar para servicios</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="faq.eyebrow">Preguntas frecuentes</div>
+      <h2 data-i18n="faq.title">Lo que querrás saber antes de apuntarte.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span data-i18n="faq.q1">¿En qué se diferencia de pedirle un análisis a una IA general?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a1">Tres cosas. <strong>Una:</strong> Futuros integra metodología real (STEEP, Tres Horizontes, scenario planning) en un workflow guiado, con lógica encadenada entre pasos. <strong>Dos:</strong> hace búsqueda web en vivo durante la generación, así los datos macro están actualizados al día. <strong>Tres:</strong> el output es un entregable brand-ready listo para cliente, no un texto plano que tienes que reformatear.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span data-i18n="faq.q2">¿Mis datos están seguros? ¿Dónde se almacenan?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a2">Sí. Los datos se almacenan en infraestructura europea (data residency UE). En el plan Enterprise hay SSO/SAML, logs de auditoría, blacklist de fuentes para compliance, DPA firmado y SLA. Para Pro y Max, los datos del cliente nunca se usan para entrenar modelos.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span data-i18n="faq.q3">¿Necesito formación para usarlo?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a3">No. El flujo está diseñado para ser intuitivo desde el primer informe. Si prefieres ir guiado, el asistente conversacional te lleva paso a paso. Si quieres control total, puedes introducir tus propios datos y matices manualmente. Para sacar el máximo partido ofrecemos un onboarding 1:1 de 1 hora con nuestro equipo — opcional, pero recomendable para los primeros entregables a cliente.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span data-i18n="faq.q4">¿Puedo cancelar cuando quiera?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a4">Sí. El plan Pro es mensual sin compromiso — cancelas cuando quieras desde tu cuenta. El plan Enterprise es anual por requisitos de provisioning empresarial, pero con cláusulas de salida estándar.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span data-i18n="faq.q5">¿Funciona en inglés y español?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a5">Sí, completamente bilingüe — interfaz, prompts y output. Configurable por informe: puedes hacer el análisis en español pero entregar el PDF en inglés para tu cliente internacional. Más idiomas en el roadmap (FR, IT, DE) para 2027.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span data-i18n="faq.q6">¿Puedo personalizar el branding del informe?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a6">En el plan Max, puedes aplicar tu logo, paleta y portada al export — perfecto para entregar bajo tu marca a cliente final. En Enterprise, plantillas corporativas completas. En Pro, el export sale con la marca Futuros visible.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EQUIPO ═══════════ -->
+<section class="section section-divider" id="equipo" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow" data-i18n="team.eyebrow">El equipo</div>
+      <h2 data-i18n-html="team.title">El foresight estratégico ha sido siempre un privilegio. <em>Lo estamos cambiando.</em></h2>
+      <p class="lede" data-i18n-html="team.lede">Durante décadas, sólo las grandes corporaciones con presupuestos para consultoras de primer nivel han tenido acceso real al diseño de futuros. Sabemos cómo funciona ese mundo desde dentro — y sabemos cómo construir herramientas que lo democraticen.</p>
+    </div>
+
+    <div class="founders">
+      <div class="founder reveal">
+        <div class="founder-icon">◆</div>
+        <div class="founder-content">
+          <div class="founder-name">Oliver Henares</div>
+          <div class="founder-role" data-i18n="team.f1.role">Estrategia & Foresight</div>
+          <p class="founder-bio" data-i18n-html="team.f1.bio">Más de 20 años diseñando futuros para marcas globales — <strong>Nike, IKEA, Coca-Cola, Airbnb, BMW, FC Barcelona</strong> — desde agencias como Serviceplan, Young & Rubicam, DDB y Grupo Restalia. Después de dos décadas viendo el proceso desde dentro, fundó Futuros para hacerlo accesible a equipos sin presupuesto de Fortune 500.</p>
+        </div>
+      </div>
+
+      <div class="founder reveal">
+        <div class="founder-icon">◇</div>
+        <div class="founder-content">
+          <div class="founder-name">Ruben Henares</div>
+          <div class="founder-role" data-i18n="team.f2.role">Producto</div>
+          <p class="founder-bio" data-i18n-html="team.f2.bio">Technical Director con 20 años de experiencia en producto en tecnología de vanguardia. <strong>Apple</strong>, <strong>Riot Games</strong>, <strong>Blizzard Entertainment</strong>, <strong>Lucasfilm</strong>. Diseña la experiencia de producto que hace que la metodología institucional sea utilizable por cualquiera — sin sacrificar la profundidad.</p>
+        </div>
+      </div>
+
+      <div class="founder reveal">
+        <div class="founder-icon">⬢</div>
+        <div class="founder-content">
+          <div class="founder-name">Roger Henares</div>
+          <div class="founder-role" data-i18n="team.f3.role">Ingeniería</div>
+          <p class="founder-bio" data-i18n-html="team.f3.bio">Desarrollador full-stack con doble trayectoria. Empezó en publicidad creativa (HerraizSoto, QyA para Nintendo Ibérica) — viviendo en primera persona la frustración con los procesos estratégicos que Futuros resuelve — antes de virar hacia la ingeniería. Hoy desarrolla para <strong>la Generalitat de Catalunya</strong> a través de DXC Technology, donde construye sistemas críticos para entidades públicas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-stats reveal">
+      <div class="team-stat">
+        <div class="team-stat-num">20+</div>
+        <div class="team-stat-label" data-i18n="team.s1">años de experiencia combinada en estrategia</div>
+      </div>
+      <div class="team-stat">
+        <div class="team-stat-num">40+</div>
+        <div class="team-stat-label" data-i18n="team.s2">marcas globales transformadas</div>
+      </div>
+      <div class="team-stat">
+        <div class="team-stat-num">3</div>
+        <div class="team-stat-label" data-i18n="team.s3">disciplinas en un equipo core: estrategia, producto e ingeniería</div>
+      </div>
+      <div class="team-stat">
+        <div class="team-stat-num">1</div>
+        <div class="team-stat-label" data-i18n="team.s4">misión: democratizar el diseño de futuros</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FINAL CTA ═══════════ -->
+<section class="section cta-final" id="waitlist">
+  <div class="container">
+    <div class="reveal" id="waitlist-form">
+      <div class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">Lista de espera</div>
+      <h2 class="cta-final-title" data-i18n-html="cta.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h2>
+      <form class="cta-form" onsubmit="submitWaitlist(event)">
+        <div class="cta-form-row">
+          <input class="cta-input" type="text" id="wf-name" required data-i18n-ph="form.name" placeholder="Tu nombre">
+          <input class="cta-input" type="email" id="wf-email" required data-i18n-ph="form.email" placeholder="tu@email.com">
+        </div>
+        <select class="cta-select" id="wf-profile">
+          <option value="" disabled selected data-i18n="form.profile.ph">¿Cuál es tu perfil?</option>
+          <option value="consultor" data-i18n="form.profile.o1">Consultor independiente</option>
+          <option value="equipo" data-i18n="form.profile.o2">Equipo de estrategia / innovación</option>
+          <option value="consultora" data-i18n="form.profile.o3">Consultora o agencia</option>
+          <option value="empresa" data-i18n="form.profile.o4">Empresa — departamento interno</option>
+          <option value="otro" data-i18n="form.profile.o5">Otro</option>
+        </select>
+        <select class="cta-select" id="wf-plan">
+          <option value="" disabled selected data-i18n="form.plan.ph">¿Qué plan te interesa?</option>
+          <option value="pro" data-i18n="form.plan.o1">Futuros Pro — 99€/mes</option>
+          <option value="max" data-i18n="form.plan.o2">Futuros Max — Próximamente</option>
+          <option value="enterprise" data-i18n="form.plan.o3">Futuros Enterprise — Próximamente</option>
+          <option value="no-se" data-i18n="form.plan.o4">Todavía no lo sé</option>
+        </select>
+        <button type="submit" class="btn btn-primary cta-submit" data-i18n="form.btn">Únete a la lista de espera</button>
+        <p class="cta-fine" data-i18n-html="form.fine">Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
+      </form>
+    </div>
+    <div class="cta-done" id="waitlist-done">
+      <div class="cta-done-icon">◈</div>
+      <div class="cta-done-title" data-i18n="form.done.title">Estás en la lista.</div>
+      <div class="cta-done-sub" data-i18n="form.done.sub">Te avisamos en cuanto abramos el acceso.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Futuros</div>
+        <div class="footer-tag" data-i18n="footer.tag">Advanced AI Strategic Tools</div>
+      </div>
+      <div class="footer-links">
+        <a href="#producto" data-i18n="nav.product">Qué es</a>
+        <a href="#para-quien" data-i18n="nav.who">Para quién</a>
+        <a href="#planes" data-i18n="nav.plans">Planes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#equipo" data-i18n="nav.team">Equipo</a>
+        <a href="mailto:hello@futuros.io">hello@futuros.io</a>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footer.bottom">© 2026 Futuros · Barcelona, España · futuros.io</div>
+  </div>
+</footer>
+
+<!-- ═══════════ LANG TOGGLE ═══════════ -->
+<div class="lang-toggle">
+  <button class="lt-btn active" data-lang="es">ES</button>
+  <button class="lt-btn" data-lang="en">EN</button>
+</div>
+
+<!-- ═══════════ MODAL ═══════════ -->
+<div class="modal-backdrop" id="modal">
+  <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+  <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous">‹</button>
+  <button class="modal-nav modal-next" id="modalNext" aria-label="Next">›</button>
+  <div class="modal-counter" id="modalCounter">1 / 4</div>
+  <div class="modal-content">
+    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════
+   FUTUROS V2 — i18n + scrollspy + faq + modal + form
+═══════════════════════════════════════════════ */
+
+const TRANSLATIONS = {
+  es: {
+    'meta.title': 'Futuros — Foresight estratégico con IA | Advanced AI Strategic Tools',
+    'meta.desc':  'Futuros combina metodología de foresight institucional europeo con inteligencia artificial para generar análisis de escenarios estratégicos completos en menos de 2 horas.',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.plans':'Planes','nav.team':'Equipo','nav.cta':'Lista de espera',
+    'hero.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
+    'hero.sub':'Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.',
+    'hero.cta1':'Únete a la lista de espera','hero.cta2':'Ver informe interactivo',
+    'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Metodología de instituciones europeas líderes','hero.trust3':'Informe completo en menos de 2 horas',
+    'prob.eyebrow':'El reto',
+    'prob.title':'Tu cliente quiere un análisis estratégico para el próximo comité. <em>Tienes cinco días.</em>',
+    'prob.lede':'El foresight estratégico requiere metodología, datos actuales, criterio senior y horas de trabajo manual. Mientras tanto, tu cliente espera un entregable claro y defendible. La mayoría de equipos resuelven esto improvisando con frameworks dispersos, datos de hace dos años y decks que mezclan tendencias con opiniones.',
+    'prob.p1':'<strong>Frameworks dispersos.</strong> STEEP, Tres Horizontes, scenario planning. Cada uno en su propia herramienta, sin trazabilidad entre análisis.',
+    'prob.p2':'<strong>Datos obsoletos.</strong> Las soluciones genéricas responden con conocimiento de hace años y sin citar fuentes.',
+    'prob.p3':'<strong>Sin entregable.</strong> Llegas al comité con un documento improvisado en lugar de un informe brand-ready que defiende solo.',
+    'out.eyebrow':'El output',
+    'out.title':'Esto es lo que genera Futuros <em>en 90&nbsp;minutos.</em>',
+    'out.lede':'Un informe completo de foresight estratégico, no un resumen genérico. Caso real: análisis sectorial de Restalia (franquicias de restauración) generado por la plataforma.',
+    'out.s1.tag':'Caso real · Mayo 2026','out.s1.title':'Informe Restalia — Foresight estratégico a 5 años',
+    'out.s2.tag':'Visualización','out.s2.title':'Matriz 2×2 de impacto e incertidumbre',
+    'out.s3.tag':'Scenario Planning','out.s3.title':'Tres escenarios 3P con probabilidades',
+    'out.s4.tag':'Resumen ejecutivo','out.s4.title':'Tensión central y oportunidad crítica',
+    'out.s5.tag':'Backcasting','out.s5.title':'Camino del futuro al presente — milestones',
+    'out.cta1':'Quiero acceso anticipado','out.cta2':'Descargar informe completo (PDF)','out.cta3':'Ver report interactivo',
+    'how.eyebrow':'Cómo funciona',
+    'how.title':'<em>Tú decides</em> el nivel de control.',
+    'how.lede':'Misma metodología, mismo rigor, mismo entregable final. Lo que cambia es cuánto pones tú y cuánto pone la plataforma. Empieza con el asistente y profundiza manualmente cuando quieras matizar.',
+    'how.m1.tag':'Modo asistente','how.m1.title':'Conversacional, rápido','how.m1.desc':'Le cuentas a Futuros tu reto en lenguaje natural. La IA propone los campos STEEP, las dimensiones del horizonte y los drivers; tú aceptas o ajustas con un click. Ideal cuando empiezas, cuando vas justo de tiempo o cuando exploras un sector nuevo.',
+    'how.m1.b1':'Sin formularios largos','how.m1.b2':'Sugerencias contextuales en cada paso','how.m1.b3':'Resultado completo en menos de 30 minutos',
+    'how.m2.tag':'Modo manual','how.m2.title':'Editorial, máximo control','how.m2.desc':'Introduces tus propios datos, tags y matices. Editas cada dimensión, refinas las probabilidades, ajustas el lenguaje. Para análisis sensibles, sectores donde tienes visión propia o entregables que necesitan reflejar tu criterio palabra por palabra.',
+    'how.m2.b1':'Edición libre de cada dimensión','how.m2.b2':'Refinamiento de escenarios y probabilidades','how.m2.b3':'Tu criterio reflejado palabra por palabra',
+    'how.shared.tag':'En cualquier modo','how.shared.text':'Mismo workflow guiado: <strong>perfil → macro scan → análisis sectorial → horizonte → síntesis → informe.</strong> Misma metodología STEEP + Tres Horizontes + scenario planning. Mismo entregable final brand-ready, en el idioma de tu cliente.',
+    'nav.services':'Servicios',
+    'how.m1.tag':'Asistido','how.m1.title':'Déjate guiar','how.m1.desc':'Describes tu empresa y tu reto en lenguaje natural. El asistente propone campos estructurados, dimensiones STEEP, horizontes y escenarios. Aceptas o ajustas con un click. Ideal para un primer borrador rápido o cuando explores un sector nuevo.','how.m1.time':'Desde 10 minutos',
+    'how.m2.tag':'Manual','how.m2.title':'Toma el control','how.m2.desc':'Introduces los datos directamente, eliges fuerzas motrices, calibras probabilidades y refinas cada escenario. La metodología sigue siendo la misma — pero el criterio es tuyo en cada paso. Ideal para análisis donde defenderás cada conclusión.','how.m2.time':'Tan profundo como necesites',
+    'how.spectrum':'Y todo el espectro intermedio. Acepta lo que el asistente propone donde no añadas valor; afina manualmente donde tu criterio aporte. Tú decides dónde está tu sweet spot.',
+    'how.out.tag':'El resultado','how.out.title':'Un entregable, no un texto','how.out.desc':'Cuando termines, recibes un informe brand-ready: PDF para el comité, PowerPoint editable para iterar, enlace HTML compartible para el cliente. En el idioma que prefieras. Listo para presentar.',
+    'sol.eyebrow':'Planes','sol.title':'Dos formas de incorporar Futuros — <em>elige la que encaje.</em>','sol.lede':'Suscripción a la plataforma para autonomía total, o servicios de consultoría aumentada cuando necesitas acompañamiento experto. Ambos modelos comparten la misma metodología.',
+    'sol.tab.planes':'Planes (suscripción)','sol.tab.services':'Servicios (consultoría)',
+    'svc.eyebrow':'Servicios','svc.title':'Más allá del software — <em>consultoría aumentada.</em>','svc.lede':'No sustituimos el juicio humano: lo amplificamos. Cinco formas de incorporar foresight estratégico a tu próxima decisión, desde la formación inicial hasta el acompañamiento continuo.','svc.cta':'Contactar para servicios',
+    'svc.01.name':'Onboarding','svc.01.meta':'1 hora · sesión 1:1','svc.01.desc':'Formación práctica para sacar partido profesional desde el primer día: plantear bien un análisis, leer escenarios 3P, afinar prompts y exportar entregables a cliente.',
+    'svc.02.name':'Workshop','svc.02.meta':'Half day o full day · presencial o remoto','svc.02.desc':'Sesión conducida sobre un reto real del cliente. STEEP, Horizon Scan, escenarios 3P y backcasting aplicados a un problema propio — sale un mapa estratégico accionable.',
+    'svc.03.name':'Foresight Sprint','svc.03.meta':'Hasta 1 semana · entregable completo','svc.03.desc':'Análisis completo en 5 días laborables: diagnóstico, escenarios 3P, backcasting y mapa H1/H2/H3. Sesión de devolución con el equipo decisor incluida.',
+    'svc.04.name':'Foresight as a Service','svc.04.meta':'Suscripción mensual · analista experto','svc.04.desc':'Un analista experto trabaja como extensión de tu equipo: informes recurrentes, monitorización de señales débiles, briefings para comité y participación en sesiones estratégicas.',
+    'svc.05.name':'Programa Ejecutivo','svc.05.meta':'Formación intensiva · grupo cerrado','svc.05.desc':'Programa para C-level y comités de dirección. Instala un lenguaje común sobre incertidumbre y escenarios — eleva la conversación estratégica de la cúpula, no enseña a usar una herramienta.',
+    'who.eyebrow':'Para quién',
+    'who.title':'Una técnica reservada a unos pocos. <em>Ahora al alcance de cualquiera.</em>',
+    'who.lede':'Durante décadas, anticipar el futuro con método ha sido patrimonio de gobiernos, think tanks y consultoras de élite. Futuros pone esa misma técnica en manos de quien tenga una decisión estratégica que tomar — sea un estudiante, un autónomo, una pyme o una gran institución.',
+    'who.p1.tag':'Estudiante / Investigador',
+    'who.p1.title':'El método que se enseña en Sciences Po, en tu mesa de trabajo',
+    'who.p1.desc':'El foresight deja de estar encerrado en programas de posgrado y centros de pensamiento. Aplícalo a tu tesis, a un proyecto académico o a tu primer encargo profesional con la misma metodología que usa la Comisión Europea.',
+    'who.p2.tag':'Autónomo / Consultor',
+    'who.p2.title':'Profundidad institucional, trabajando solo',
+    'who.p2.desc':'Ya no hace falta un equipo de veinte personas detrás para entregar un análisis serio. Tu independencia deja de ser un techo y empieza a ser una ventaja.',
+    'who.p3.tag':'Pyme',
+    'who.p3.title':'Preguntas estratégicas que antes no podías permitirte',
+    'who.p3.desc':'Las decisiones que obligaban a contratar a una consultora pueden trabajarse en casa, con método y profundidad, sin desviar el presupuesto del año ni perder semanas de calendario.',
+    'who.p4.tag':'Gran empresa / Institución',
+    'who.p4.title':'La misma profundidad, en una fracción del tiempo',
+    'who.p4.desc':'La metodología que ya conoces — pero con el control y la velocidad de hacerla en casa. Iteras escenarios antes de llevarlos a la consultora externa, o descubres que ya no la necesitas para esa pregunta.',
+    'svc.eyebrow':'Servicios',
+    'svc.title':'Más allá de la herramienta — <em>consultoría aumentada.</em>',
+    'svc.lede':'Cuando necesitas que el criterio senior trabaje contigo, no solo bajo el capó. Cinco formatos de servicio para incorporar el foresight estratégico al ritmo que pida tu organización.',
+    'svc.for':'Para quién','svc.cta':'Hablar con Oliver',
+    'svc.01.num':'01','svc.01.time':'1 hora · sesión 1:1','svc.01.name':'Onboarding',
+    'svc.01.desc':'Formación práctica para sacar partido profesional desde el primer día: cómo plantear un análisis, leer escenarios 3P, afinar prompts y exportar entregables a cliente.',
+    'svc.01.who':'Consultores y equipos que necesitan empezar a entregar informes facturables ya. Reduce el riesgo del primer entregable.',
+    'svc.02.num':'02','svc.02.time':'Half day o full day','svc.02.name':'Workshop',
+    'svc.02.desc':'Sesión conducida sobre un reto real del cliente. STEEP, Horizon Scan, escenarios 3P y backcasting aplicados a un problema propio. Sale un mapa estratégico accionable.',
+    'svc.02.who':'Comités que arrancan plan estratégico, innovación que justifica su roadmap, o consultoras que ofrecen jornada de alto valor.',
+    'svc.03.num':'03','svc.03.time':'Hasta 1 semana','svc.03.name':'Foresight Sprint',
+    'svc.03.desc':'Análisis completo en cinco días laborables: diagnóstico, escenarios 3P, backcasting y mapa H1/H2/H3. Sesión de devolución con el equipo decisor incluida.',
+    'svc.03.who':'Decisiones con dinero o plazo encima de la mesa: due diligence, comité de inversión, entrada en mercado, respuesta competitiva.',
+    'svc.04.num':'04','svc.04.time':'Suscripción mensual','svc.04.name':'Foresight as a Service',
+    'svc.04.desc':'Un analista senior trabaja como extensión de tu equipo: informes recurrentes, monitorización de señales débiles, briefings para comité y participación en sesiones estratégicas.',
+    'svc.04.who':'Organizaciones que necesitan inteligencia estratégica continua sin montar equipo interno — radar permanente para CEO, M&A o innovación.',
+    'svc.05.num':'05','svc.05.time':'Formación intensiva · grupo cerrado','svc.05.name':'Programa Ejecutivo',
+    'svc.05.desc':'Programa para C-level y comités de dirección. Instala un lenguaje común sobre incertidumbre y escenarios — eleva la conversación estratégica de la cúpula, no enseña a usar una herramienta.',
+    'svc.05.who':'Consejos que toman decisiones de alto impacto y quieren reducir el riesgo de apostar por un único futuro probable.',
+    'nav.services':'Servicios',
+    'met.eyebrow':'Metodología',
+    'met.title':'Frameworks reales. <em>No prompts genéricos.</em>',
+    'met.lede':'Los mismos protocolos que usan gobiernos europeos y think tanks de primer nivel para anticipar el futuro — integrados en una plataforma que cualquier consultor puede usar hoy.',
+    'met.01.num':'01 · STEEP','met.01.name':'Análisis del entorno','met.01.desc':'Social, Tecnológico, Económico, Medioambiental, Político. El mapa completo de fuerzas que moldean tu sector.',
+    'met.02.num':'02 · Horizon Scan','met.02.name':'Tres horizontes (H1/H2/H3)','met.02.desc':'Lo que ya ocurre, lo que emerge y lo que podría transformarlo todo. Exploración sistemática.',
+    'met.03.num':'03 · Scenario 3P','met.03.name':'Probable, Plausible, Posible','met.03.desc':'Tres escenarios con probabilidades derivadas del contexto real del cliente. Nunca genéricos.',
+    'met.04.num':'04 · Backcasting','met.04.name':'Del futuro al presente','met.04.desc':'Desde cada escenario futuro, los hitos críticos que hay que tomar hoy para llegar (o evitarlo).',
+    'met.05.num':'05 · Weak Signals','met.05.name':'Señales débiles','met.05.desc':'Los primeros indicios de cambio antes de convertirse en tendencias. Quien los ve primero tiene ventaja.',
+    'met.06.num':'06 · Strategic Map','met.06.name':'Mapa accionable','met.06.desc':'Prioridades organizadas por horizonte temporal. Del análisis a la agenda de trabajo.',
+    'plans.eyebrow':'Planes',
+    'plans.title':'Tres niveles de <em>relación con el futuro.</em>',
+    'plans.lede':'Desde el profesional en solitario hasta la organización con governance completa.',
+    'plan.period':'/mes','plan.coming':'Próximamente','plan.cta':'Únete a la lista de espera',
+    'plan1.name':'Futuros Pro','plan1.limits':'1 usuario · 10 informes/mes',
+    'plan1.f1':'Acceso completo a la plataforma','plan1.f2':'Flujo guiado STEEP + Horizon Scan','plan1.f3':'Escenarios 3P contextuales','plan1.f4':'Backcasting + mapa H1/H2/H3','plan1.f5':'Export PDF + presentación editable + enlace web',
+    'plan2.name':'Futuros Max','plan2.limits':'Equipos pequeños · pricing TBA',
+    'plan2.f1':'Todo lo del plan Pro','plan2.f2':'Workspace colaborativo','plan2.f3':'White-label en exports','plan2.f4':'Integraciones con tus herramientas','plan2.f5':'Onboarding + soporte prioritario',
+    'plan3.name':'Futuros Enterprise','plan3.limits':'Pricing por seats · contrato anual',
+    'plan3.f1':'Cuenta admin · roles · workspaces','plan3.f2':'Blacklist de fuentes (compliance)','plan3.f3':'SSO/SAML · audit logs · EU residency','plan3.f4':'API + webhooks · plantillas corp.','plan3.f5':'CSM dedicado · SLA · DPA',
+    'faq.eyebrow':'Preguntas frecuentes','faq.title':'Lo que querrás saber antes de apuntarte.',
+    'faq.q1':'¿En qué se diferencia de pedirle un análisis a una IA general?',
+    'faq.a1':'Tres cosas. <strong>Una:</strong> Futuros integra metodología real (STEEP, Tres Horizontes, scenario planning) en un workflow guiado, con lógica encadenada entre pasos. <strong>Dos:</strong> hace búsqueda web en vivo durante la generación, así los datos macro están actualizados al día. <strong>Tres:</strong> el output es un entregable brand-ready listo para cliente, no un texto plano que tienes que reformatear.',
+    'faq.q2':'¿Mis datos están seguros? ¿Dónde se almacenan?',
+    'faq.a2':'Sí. Los datos se almacenan en infraestructura europea (data residency UE). En el plan Enterprise hay SSO/SAML, logs de auditoría, blacklist de fuentes para compliance, DPA firmado y SLA. Para Pro y Max, los datos del cliente nunca se usan para entrenar modelos.',
+    'faq.q3':'¿Necesito formación para usarlo?',
+    'faq.a3':'No. El flujo está diseñado para ser intuitivo desde el primer informe. Si prefieres ir guiado, el asistente conversacional te lleva paso a paso. Si quieres control total, puedes introducir tus propios datos y matices manualmente. Para sacar el máximo partido ofrecemos un onboarding 1:1 de 1 hora con nuestro equipo — opcional, pero recomendable para los primeros entregables a cliente.',
+    'faq.q4':'¿Puedo cancelar cuando quiera?',
+    'faq.a4':'Sí. El plan Pro es mensual sin compromiso — cancelas cuando quieras desde tu cuenta. El plan Enterprise es anual por requisitos de provisioning empresarial, pero con cláusulas de salida estándar.',
+    'faq.q5':'¿Funciona en inglés y español?',
+    'faq.a5':'Sí, completamente bilingüe — interfaz, prompts y output. Configurable por informe: puedes hacer el análisis en español pero entregar el PDF en inglés para tu cliente internacional. Más idiomas en el roadmap (FR, IT, DE) para 2027.',
+    'faq.q6':'¿Puedo personalizar el branding del informe?',
+    'faq.a6':'En el plan Max, puedes aplicar tu logo, paleta y portada al export — perfecto para entregar bajo tu marca a cliente final. En Enterprise, plantillas corporativas completas. En Pro, el export sale con la marca Futuros visible.',
+    'team.eyebrow':'El equipo',
+    'team.title':'El foresight estratégico ha sido siempre un privilegio. <em>Lo estamos cambiando.</em>',
+    'team.lede':'Durante décadas, sólo las grandes corporaciones con presupuestos para consultoras de primer nivel han tenido acceso real al diseño de futuros. Sabemos cómo funciona ese mundo desde dentro — y sabemos cómo construir herramientas que lo democraticen.',
+    'team.f1.role':'Estrategia & Foresight',
+    'team.f1.bio':'Más de 20 años diseñando futuros para marcas globales — <strong>Nike, IKEA, Coca-Cola, Airbnb, BMW, FC Barcelona</strong> — desde agencias como Serviceplan, Young & Rubicam, DDB y Grupo Restalia. Después de dos décadas viendo el proceso desde dentro, fundó Futuros para hacerlo accesible a equipos sin presupuesto de Fortune 500.',
+    'team.f2.role':'Producto',
+    'team.f2.bio':'Technical Director con 20 años de experiencia en producto en tecnología de vanguardia. <strong>Apple</strong>, <strong>Riot Games</strong>, <strong>Blizzard Entertainment</strong>, <strong>Lucasfilm</strong>. Diseña la experiencia de producto que hace que la metodología institucional sea utilizable por cualquiera — sin sacrificar la profundidad.',
+    'team.f3.role':'Ingeniería',
+    'team.f3.bio':'Desarrollador full-stack con doble trayectoria. Empezó en publicidad creativa (HerraizSoto, QyA para Nintendo Ibérica) — viviendo en primera persona la frustración con los procesos estratégicos que Futuros resuelve — antes de virar hacia la ingeniería. Hoy desarrolla para <strong>la Generalitat de Catalunya</strong> a través de DXC Technology, donde construye sistemas críticos para entidades públicas.',
+    'team.s1':'años de experiencia combinada en estrategia',
+    'team.s2':'marcas globales transformadas',
+    'team.s3':'disciplinas en un equipo core: estrategia, producto e ingeniería',
+    'team.s4':'misión: democratizar el diseño de futuros',
+    'cta.eyebrow':'Lista de espera',
+    'cta.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
+    'form.name':'Tu nombre','form.email':'tu@email.com',
+    'form.profile.ph':'¿Cuál es tu perfil?','form.profile.o1':'Consultor independiente','form.profile.o2':'Equipo de estrategia / innovación','form.profile.o3':'Consultora o agencia','form.profile.o4':'Empresa — departamento interno','form.profile.o5':'Otro',
+    'form.plan.ph':'¿Qué plan te interesa?','form.plan.o1':'Futuros Pro — 99€/mes','form.plan.o2':'Futuros Max — Próximamente','form.plan.o3':'Futuros Enterprise — Próximamente','form.plan.o4':'Todavía no lo sé',
+    'form.btn':'Únete a la lista de espera',
+    'form.fine':'Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
+    'form.done.title':'Estás en la lista.','form.done.sub':'Te avisamos en cuanto abramos el acceso.','form.sending':'Enviando...',
+    'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, España · futuros.io',
+  },
+  en: {
+    'meta.title': 'Futuros — AI-powered Strategic Foresight | Advanced AI Strategic Tools',
+    'meta.desc':  'Futuros combines European institutional foresight methodology with AI to generate complete strategic scenario analyses in under 2 hours.',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.plans':'Plans','nav.team':'Team','nav.cta':'Join waitlist',
+    'hero.title':'The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>',
+    'hero.sub':'Futuros combines <strong>professional foresight methodology</strong> with advanced artificial intelligence — the same process large corporations use, now within reach of any team.',
+    'hero.cta1':'Join the waitlist','hero.cta2':'See interactive report',
+    'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Methodology from leading European institutions','hero.trust3':'Complete report in under 2 hours',
+    'prob.eyebrow':'The challenge',
+    'prob.title':'Your client wants a strategic analysis for the next board meeting. <em>You have five days.</em>',
+    'prob.lede':"Strategic foresight needs methodology, current data, senior judgement and hours of manual work. Meanwhile, your client expects a clear, defensible deliverable. Most teams improvise with scattered frameworks, two-year-old data and decks that mix trends with opinions.",
+    'prob.p1':'<strong>Scattered frameworks.</strong> STEEP, Three Horizons, scenario planning. Each in its own tool, with no traceability across analyses.',
+    'prob.p2':'<strong>Stale data.</strong> Generic solutions reply with knowledge from years ago, with no sources cited.',
+    'prob.p3':'<strong>No deliverable.</strong> You arrive at the committee with an improvised document instead of a brand-ready report that defends itself.',
+    'out.eyebrow':'The output',
+    'out.title':'This is what Futuros generates <em>in 90&nbsp;minutes.</em>',
+    'out.lede':'A complete strategic foresight report, not a generic summary. Real case: sectorial analysis for Restalia (restaurant franchises) generated by the platform.',
+    'out.s1.tag':'Real case · May 2026','out.s1.title':'Restalia Report — 5-year strategic foresight',
+    'out.s2.tag':'Visualization','out.s2.title':'2×2 impact-uncertainty matrix',
+    'out.s3.tag':'Scenario Planning','out.s3.title':'Three 3P scenarios with probabilities',
+    'out.s4.tag':'Executive summary','out.s4.title':'Central tension and critical opportunity',
+    'out.s5.tag':'Backcasting','out.s5.title':'From future to present — milestones',
+    'out.cta1':'I want early access','out.cta2':'Download full report (PDF)','out.cta3':'View interactive report',
+    'how.eyebrow':'How it works',
+    'how.title':'<em>You decide</em> the level of control.',
+    'how.lede':'Same methodology, same rigor, same final deliverable. What changes is how much you contribute and how much the platform handles. Start with the assistant and refine manually whenever you want to nuance.',
+    'how.m1.tag':'Assistant mode','how.m1.title':'Conversational, fast','how.m1.desc':'You tell Futuros your challenge in natural language. The AI proposes the STEEP fields, horizon dimensions and drivers; you accept or adjust with a click. Ideal when starting out, when time is tight, or when exploring a new sector.',
+    'how.m1.b1':'No long forms','how.m1.b2':'Contextual suggestions at every step','how.m1.b3':'Complete result in under 30 minutes',
+    'how.m2.tag':'Manual mode','how.m2.title':'Editorial, maximum control','how.m2.desc':'You input your own data, tags and nuances. Edit each dimension, refine probabilities, adjust the language. For sensitive analyses, sectors where you have your own perspective, or deliverables that need to reflect your judgement word for word.',
+    'how.m2.b1':'Free editing of each dimension','how.m2.b2':'Refinement of scenarios and probabilities','how.m2.b3':'Your judgement reflected word for word',
+    'how.shared.tag':'In either mode','how.shared.text':"Same guided workflow: <strong>profile → macro scan → sectorial analysis → horizon → synthesis → report.</strong> Same STEEP + Three Horizons + scenario planning methodology. Same final brand-ready deliverable, in your client's language.",
+    'nav.services':'Services',
+    'how.m1.tag':'Assisted','how.m1.title':'Be guided','how.m1.desc':'You describe your company and challenge in natural language. The assistant proposes structured fields, STEEP dimensions, horizons and scenarios. You accept or adjust with one click. Ideal for a quick first draft or exploring a new sector.','how.m1.time':'From 10 minutes',
+    'how.m2.tag':'Manual','how.m2.title':'Take control','how.m2.desc':'You enter data directly, choose driving forces, calibrate probabilities and refine each scenario. The methodology stays the same — but the judgement is yours at every step. Ideal for analyses where you will defend each conclusion.','how.m2.time':'As deep as you need',
+    'how.spectrum':'And the full spectrum in between. Accept what the assistant proposes where you add no value; refine manually where your judgement matters. You decide where your sweet spot is.',
+    'how.out.tag':'The result','how.out.title':'A deliverable, not a text','how.out.desc':"When you are done, you receive a brand-ready report: PDF for the committee, editable PowerPoint to iterate, shareable HTML link for the client. In whichever language you prefer. Ready to present.",
+    'sol.eyebrow':'Plans','sol.title':'Two ways to incorporate Futuros — <em>pick the one that fits.</em>','sol.lede':'Platform subscription for full autonomy, or augmented consulting services when you need expert support. Both models share the same methodology.',
+    'sol.tab.planes':'Plans (subscription)','sol.tab.services':'Services (consulting)',
+    'svc.eyebrow':'Services','svc.title':'Beyond the software — <em>augmented consulting.</em>','svc.lede':'We do not replace human judgement: we amplify it. Five ways to incorporate strategic foresight into your next decision, from initial training to ongoing accompaniment.','svc.cta':'Contact for services',
+    'svc.01.name':'Onboarding','svc.01.meta':'1 hour · 1:1 session','svc.01.desc':'Hands-on training to get professional output from day one: framing analyses, reading 3P scenarios, refining prompts and exporting client-ready deliverables.',
+    'svc.02.name':'Workshop','svc.02.meta':'Half day or full day · onsite or remote','svc.02.desc':'Facilitated working session on a real client challenge. STEEP, Horizon Scan, 3P scenarios and backcasting applied to your own problem — exits with an actionable strategic map.',
+    'svc.03.name':'Foresight Sprint','svc.03.meta':'Up to 1 week · complete deliverable','svc.03.desc':'Complete analysis delivered in 5 working days: diagnosis, 3P scenarios, backcasting and H1/H2/H3 map. Includes debrief with the decision-making team.',
+    'svc.04.name':'Foresight as a Service','svc.04.meta':'Monthly subscription · expert analyst','svc.04.desc':'An expert analyst as an extension of your team: recurring reports, weak-signal monitoring, briefings for committee and participation in strategic sessions.',
+    'svc.05.name':'Executive Programme','svc.05.meta':'Intensive training · closed group','svc.05.desc':'Programme for C-level and leadership committees. Installs a common language for uncertainty and scenarios — elevates the strategic conversation, not a tool tutorial.',
+    'who.eyebrow':'For whom',
+    'who.title':'A technique reserved for a few. <em>Now within reach of anyone.</em>',
+    'who.lede':'For decades, anticipating the future with method has been the domain of governments, think tanks and elite consultancies. Futuros puts that same technique in the hands of anyone facing a strategic decision — whether a student, a freelancer, an SME or a large institution.',
+    'who.p1.tag':'Student / Researcher',
+    'who.p1.title':'The method taught at Sciences Po, on your desk',
+    'who.p1.desc':'Foresight is no longer locked inside graduate programs and think tanks. Apply it to your thesis, an academic project or your first professional assignment with the same methodology used by the European Commission.',
+    'who.p2.tag':'Freelancer / Consultant',
+    'who.p2.title':'Institutional depth, working solo',
+    'who.p2.desc':'You no longer need a team of twenty behind you to deliver a serious analysis. Your independence stops being a ceiling and starts being an advantage.',
+    'who.p3.tag':'SME',
+    'who.p3.title':"Strategic questions you couldn't afford before",
+    'who.p3.desc':'The decisions that used to mean hiring a consultancy can now be tackled in-house, with method and depth, without redirecting the annual budget or losing weeks of calendar.',
+    'who.p4.tag':'Large company / Institution',
+    'who.p4.title':'The same depth, in a fraction of the time',
+    'who.p4.desc':'The methodology you already know — but with the control and speed of doing it in-house. Iterate scenarios before taking them to the external consultancy, or discover you no longer need them for that question.',
+    'svc.eyebrow':'Services',
+    'svc.title':'Beyond the tool — <em>augmented consulting.</em>',
+    'svc.lede':'When you need senior judgement working with you, not just under the hood. Five service formats to incorporate strategic foresight at the pace your organization needs.',
+    'svc.for':'Best for','svc.cta':'Talk to Oliver',
+    'svc.01.num':'01','svc.01.time':'1 hour · 1:1 session','svc.01.name':'Onboarding',
+    'svc.01.desc':'Hands-on training to get professional output from day one: how to frame an analysis, read 3P scenarios, fine-tune prompts and export client-ready deliverables.',
+    'svc.01.who':'Consultants and teams who need to start shipping billable reports right away. De-risks the first deliverable.',
+    'svc.02.num':'02','svc.02.time':'Half day or full day','svc.02.name':'Workshop',
+    'svc.02.desc':'Facilitated session on a real client challenge. STEEP, Horizon Scan, 3P scenarios and backcasting applied to your own problem. Output: an actionable strategic map.',
+    'svc.02.who':'Committees opening a strategic plan, innovation teams justifying roadmap, or consultancies running a high-value day for their end client.',
+    'svc.03.num':'03','svc.03.time':'Up to 1 week','svc.03.name':'Foresight Sprint',
+    'svc.03.desc':'Complete analysis delivered in five working days: diagnosis, 3P scenarios, backcasting and H1/H2/H3 map. Includes debrief with the decision-making team.',
+    'svc.03.who':'Decisions with money or deadline on the table: due diligence, investment committee, market entry, competitive response.',
+    'svc.04.num':'04','svc.04.time':'Monthly subscription','svc.04.name':'Foresight as a Service',
+    'svc.04.desc':'A senior analyst works as an extension of your team: recurring reports, weak-signal monitoring, briefings for committee and participation in strategic sessions.',
+    'svc.04.who':'Organizations that need continuous strategic intelligence without building an internal unit — permanent radar for CEO, M&A or innovation.',
+    'svc.05.num':'05','svc.05.time':'Intensive training · closed group','svc.05.name':'Executive Programme',
+    'svc.05.desc':'Programme for C-level and leadership committees. Installs a common language for uncertainty and scenarios — elevates the strategic conversation, not a tool tutorial.',
+    'svc.05.who':'Boards making high-impact decisions who want to reduce the risk of betting on a single probable future.',
+    'nav.services':'Services',
+    'met.eyebrow':'Methodology',
+    'met.title':'Real frameworks. <em>Not generic prompts.</em>',
+    'met.lede':'The same protocols European governments and top-tier think tanks use to anticipate the future — integrated into a platform any consultant can use today.',
+    'met.01.num':'01 · STEEP','met.01.name':'Environmental scan','met.01.desc':'Social, Technological, Economic, Environmental, Political. The full map of forces shaping your sector.',
+    'met.02.num':'02 · Horizon Scan','met.02.name':'Three horizons (H1/H2/H3)','met.02.desc':"What's already happening, what's emerging, and what could change everything. Systematic exploration.",
+    'met.03.num':'03 · Scenario 3P','met.03.name':'Probable, Plausible, Possible','met.03.desc':"Three scenarios with probabilities derived from the client's real context. Never generic.",
+    'met.04.num':'04 · Backcasting','met.04.name':'From future to present','met.04.desc':'From each future scenario, the critical milestones that need to happen today to get there (or avoid it).',
+    'met.05.num':'05 · Weak Signals','met.05.name':'Weak signals','met.05.desc':'The first signs of change before they become trends. Whoever sees them first has the advantage.',
+    'met.06.num':'06 · Strategic Map','met.06.name':'Actionable map','met.06.desc':'Priorities organized by time horizon. From analysis to work agenda.',
+    'plans.eyebrow':'Plans',
+    'plans.title':'Three levels of <em>relationship with the future.</em>',
+    'plans.lede':'From the solo professional to the organization with full governance.',
+    'plan.period':'/mo','plan.coming':'Coming soon','plan.cta':'Join the waitlist',
+    'plan1.name':'Futuros Pro','plan1.limits':'1 user · 10 reports/month',
+    'plan1.f1':'Full platform access','plan1.f2':'Guided STEEP + Horizon Scan','plan1.f3':'Contextual 3P scenarios','plan1.f4':'Backcasting + H1/H2/H3 map','plan1.f5':'PDF + editable presentation + web link export',
+    'plan2.name':'Futuros Max','plan2.limits':'Small teams · pricing TBA',
+    'plan2.f1':'Everything in Pro','plan2.f2':'Collaborative workspace','plan2.f3':'White-label exports','plan2.f4':'Integrations with your tools','plan2.f5':'Onboarding + priority support',
+    'plan3.name':'Futuros Enterprise','plan3.limits':'Per-seat pricing · annual contract',
+    'plan3.f1':'Admin · roles · workspaces','plan3.f2':'Source blacklist (compliance)','plan3.f3':'SSO/SAML · audit logs · EU residency','plan3.f4':'API + webhooks · corp templates','plan3.f5':'Dedicated CSM · SLA · DPA',
+    'faq.eyebrow':'Frequently asked','faq.title':"What you'll want to know before signing up.",
+    'faq.q1':"How is it different from asking a general AI for an analysis?",
+    'faq.a1':'Three things. <strong>One:</strong> Futuros integrates real methodology (STEEP, Three Horizons, scenario planning) in a guided workflow with chained logic between steps. <strong>Two:</strong> live web search at generation time, so macro data is current to today. <strong>Three:</strong> the output is a brand-ready, client-ready deliverable, not raw text you have to reformat.',
+    'faq.q2':'Is my data secure? Where is it stored?',
+    'faq.a2':'Yes. Data is stored on European infrastructure (EU data residency). Enterprise plan includes SSO/SAML, audit logs, source blacklist for compliance, signed DPA and SLA. For Pro and Max, customer data is never used to train models.',
+    'faq.q3':'Do I need training to use it?',
+    'faq.a3':"No. The flow is designed to be intuitive from the first report. If you prefer to be guided, the conversational assistant walks you through step by step. If you want full control, you can input your own data and nuances manually. To get the most out of it, we offer a 1:1 onboarding hour with our team — optional, but recommended for the first client deliverables.",
+    'faq.q4':'Can I cancel anytime?',
+    'faq.a4':'Yes. The Pro plan is monthly with no commitment — cancel anytime from your account. The Enterprise plan is annual due to enterprise provisioning requirements, with standard exit clauses.',
+    'faq.q5':'Does it work in English and Spanish?',
+    'faq.a5':"Yes, fully bilingual — interface, prompts and output. Configurable per report: you can do the analysis in Spanish but deliver the PDF in English for your international client. More languages on the roadmap (FR, IT, DE) for 2027.",
+    'faq.q6':'Can I customize the report branding?',
+    'faq.a6':'In the Max plan, you can apply your logo, palette and cover to the export — perfect for delivering under your brand to the end client. Enterprise has full corporate templates. In Pro, exports include the visible Futuros brand.',
+    'team.eyebrow':'The team',
+    'team.title':'Strategic foresight has always been a privilege. <em>We are changing that.</em>',
+    'team.lede':'For decades, only large corporations with budgets for top-tier consultancies have had real access to futures design. We know how that world works from the inside — and we know how to build tools that democratize it.',
+    'team.f1.role':'Strategy & Foresight',
+    'team.f1.bio':'Over 20 years designing futures for global brands — <strong>Nike, IKEA, Coca-Cola, Airbnb, BMW, FC Barcelona</strong> — from agencies like Serviceplan, Young & Rubicam, DDB and Grupo Restalia. After two decades watching the process from the inside, he founded Futuros to make it accessible to teams without Fortune 500 budgets.',
+    'team.f2.role':'Product',
+    'team.f2.bio':'Technical Director with 20 years of product experience in cutting-edge technology. <strong>Apple</strong>, <strong>Riot Games</strong>, <strong>Blizzard Entertainment</strong>, <strong>Lucasfilm</strong>. Designs the product experience that makes institutional methodology usable by anyone — without sacrificing depth.',
+    'team.f3.role':'Engineering',
+    'team.f3.bio':'Full-stack developer with a dual background. Started in creative advertising (HerraizSoto, QyA for Nintendo Iberia) — experiencing first-hand the frustration with strategic processes that Futuros solves — before pivoting to engineering. Today he develops for <strong>the Generalitat de Catalunya</strong> through DXC Technology, where he builds critical systems for public entities.',
+    'team.s1':'years of combined strategy experience',
+    'team.s2':'global brands transformed',
+    'team.s3':'disciplines in one core team: strategy, product, engineering',
+    'team.s4':'mission: democratize futures design',
+    'cta.eyebrow':'Waitlist',
+    'cta.title':"The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>",
+    'form.name':'Your name','form.email':'your@email.com',
+    'form.profile.ph':"What's your profile?",'form.profile.o1':'Independent consultant','form.profile.o2':'Strategy / innovation team','form.profile.o3':'Consulting firm or agency','form.profile.o4':'Company — internal department','form.profile.o5':'Other',
+    'form.plan.ph':'Which plan interests you?','form.plan.o1':'Futuros Pro — €99/month','form.plan.o2':'Futuros Max — Coming soon','form.plan.o3':'Futuros Enterprise — Coming soon','form.plan.o4':'Not sure yet',
+    'form.btn':'Join the waitlist',
+    'form.fine':'No spam. No data sharing.<br>Direct contact: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
+    'form.done.title':"You're on the list.",'form.done.sub':"We'll notify you as soon as we open access.",'form.sending':'Sending...',
+    'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Spain · futuros.io',
+  }
+};
+
+const FORMSPREE = 'https://formspree.io/f/xlgaawzq';
+let currentLang = 'es';
+
+/* ── i18n ── */
+function detectLang(){
+  const param = new URLSearchParams(window.location.search).get('lang');
+  if (param === 'es' || param === 'en') return param;
+  const stored = localStorage.getItem('futuros_lang');
+  if (stored === 'es' || stored === 'en') return stored;
+  const nav = (navigator.language || 'en').toLowerCase();
+  if (nav.startsWith('es')) return 'es';
+  if (navigator.languages) for (const l of navigator.languages) if (l.toLowerCase().startsWith('es')) return 'es';
+  return 'en';
+}
+
+function t(key){ return TRANSLATIONS[currentLang][key] ?? TRANSLATIONS.es[key] ?? key }
+
+function applyTranslations(lang){
+  currentLang = lang;
+  const T = TRANSLATIONS[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.dataset.i18n; if (T[k]) el.textContent = T[k]; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { const k = el.dataset.i18nHtml; if (T[k]) el.innerHTML = T[k]; });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { const k = el.dataset.i18nPh; if (T[k]) el.placeholder = T[k]; });
+  if (T['meta.title']) document.title = T['meta.title'];
+  const md = document.querySelector('meta[name="description"]');
+  if (md && T['meta.desc']) md.setAttribute('content', T['meta.desc']);
+  document.documentElement.lang = lang;
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', lang);
+  window.history.replaceState({}, '', url.toString());
+  localStorage.setItem('futuros_lang', lang);
+  // Update interactive report links to match selected language
+  const sampleUrl = 'https://futuros.io/samples/sample_' + lang + '.html';
+  document.querySelectorAll('#cta-interactive-report, #hero-interactive-report').forEach(el => {
+    if (el) el.href = sampleUrl;
+  });
+  // Update output sample thumbnails (and any open modal) to match selected language
+  const otherLang = lang === 'es' ? 'en' : 'es';
+  document.querySelectorAll('.output-card img').forEach(img => {
+    img.src = img.src.replace('-' + otherLang + '.jpg', '-' + lang + '.jpg');
+  });
+  document.querySelectorAll('.output-card[data-modal]').forEach(card => {
+    card.dataset.modal = card.dataset.modal.replace('-' + otherLang + '.jpg', '-' + lang + '.jpg');
+  });
+  const modalImg = document.getElementById('modalImg');
+  if (modalImg && modalImg.src) {
+    modalImg.src = modalImg.src.replace('-' + otherLang + '.jpg', '-' + lang + '.jpg');
+  }
+  document.querySelectorAll('.lt-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+}
+
+document.querySelectorAll('.lt-btn').forEach(b => b.addEventListener('click', () => applyTranslations(b.dataset.lang)));
+
+/* ── Mobile nav burger ── */
+const burger = document.getElementById('navBurger');
+const mobileNav = document.getElementById('mobileNav');
+burger?.addEventListener('click', () => {
+  const open = burger.classList.toggle('open');
+  mobileNav.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open');
+  mobileNav.classList.remove('open');
+  document.body.style.overflow = '';
+}));
+
+/* ── Nav scrollspy + scrolled state ── */
+const nav = document.getElementById('mainNav');
+const navLinks = document.querySelectorAll('.nav-link[data-section]');
+const sections = ['producto','como','para-quien','servicios','planes','faq'].map(id => ({ id, el: document.getElementById(id) })).filter(s => s.el);
+
+function updateNav(){
+  const scrolled = window.scrollY > 20;
+  nav.classList.toggle('scrolled', scrolled);
+  // Find active section: pick the last section whose top has crossed the trigger line
+  const trigger = 140;
+  let active = '';
+  for (const s of sections){
+    const rect = s.el.getBoundingClientRect();
+    if (rect.top <= trigger) active = s.id;
+  }
+  // Edge case: if scrolled near bottom of page, force last section as active
+  const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 80);
+  if (nearBottom && sections.length) active = sections[sections.length - 1].id;
+  navLinks.forEach(l => l.classList.toggle('active', l.dataset.section === active));
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+window.addEventListener('resize', updateNav);
+
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  q.addEventListener('click', () => item.classList.toggle('open'));
+});
+
+/* ── Modal for output cards (with navigation) ── */
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const modalClose = document.getElementById('modalClose');
+const modalPrev = document.getElementById('modalPrev');
+const modalNext = document.getElementById('modalNext');
+const modalCounter = document.getElementById('modalCounter');
+const modalCards = Array.from(document.querySelectorAll('[data-modal]'));
+let modalIndex = 0;
+
+function showModalAt(i){
+  if (!modalCards.length) return;
+  modalIndex = (i + modalCards.length) % modalCards.length;
+  const card = modalCards[modalIndex];
+  modalImg.src = card.dataset.modal;
+  modalImg.alt = card.querySelector('img')?.alt || '';
+  modalCounter.textContent = (modalIndex + 1) + ' / ' + modalCards.length;
+  // Reset scroll inside the modal img container
+  const wrap = modalImg.parentElement;
+  if (wrap) wrap.scrollTop = 0;
+}
+
+modalCards.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    showModalAt(i);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+modalClose.addEventListener('click', closeModal);
+modalPrev.addEventListener('click', () => showModalAt(modalIndex - 1));
+modalNext.addEventListener('click', () => showModalAt(modalIndex + 1));
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => {
+  if (!modal.classList.contains('open')) return;
+  if (e.key === 'Escape') closeModal();
+  else if (e.key === 'ArrowLeft') showModalAt(modalIndex - 1);
+  else if (e.key === 'ArrowRight') showModalAt(modalIndex + 1);
+});
+// Touch swipe support for mobile
+let touchStartX = 0;
+modal.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+modal.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 50) showModalAt(modalIndex + (dx < 0 ? 1 : -1));
+}, { passive: true });
+
+
+/* ── Soluciones tabs ── */
+document.querySelectorAll('.sol-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.solTab;
+    document.querySelectorAll('.sol-tab').forEach(b => b.classList.toggle('active', b === btn));
+    document.querySelectorAll('.sol-panel').forEach(p => {
+      const isTarget = p.id === 'sol-panel-' + target;
+      if (isTarget) p.removeAttribute('hidden');
+      else p.setAttribute('hidden', '');
+    });
+  });
+});
+
+/* ── Reveal on scroll ── */
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { rootMargin: '0px 0px -10% 0px', threshold: .05 });
+reveals.forEach(r => io.observe(r));
+
+/* ── Form submission ── */
+async function submitWaitlist(e){
+  e.preventDefault();
+  const name = document.getElementById('wf-name').value.trim();
+  const email = document.getElementById('wf-email').value.trim();
+  const profile = document.getElementById('wf-profile').value;
+  const plan = document.getElementById('wf-plan').value;
+  const btn = e.target.querySelector('button[type="submit"]');
+  if (!name || !email) return;
+  const orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = t('form.sending');
+  try {
+    await fetch(FORMSPREE, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nombre: name, email, perfil: profile || 'no indicado', plan: plan || 'no indicado', lang: currentLang,
+        _subject: (currentLang === 'es' ? 'Nuevo lead lista de espera — Futuros · ' : 'New waitlist lead — Futuros · ') + name })
+    });
+  } catch(_) {}
+  try {
+    const l = JSON.parse(localStorage.getItem('futuros_leads') || '[]');
+    l.push({ name, email, profile, plan, lang: currentLang, ts: new Date().toISOString() });
+    localStorage.setItem('futuros_leads', JSON.stringify(l));
+  } catch(_) {}
+  document.getElementById('waitlist-form').style.display = 'none';
+  document.getElementById('waitlist-done').classList.add('show');
+  btn.disabled = false;
+  btn.textContent = orig;
+}
+
+/* ── INIT ── */
+applyTranslations(detectLang());
+updateNav();
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+# ai.txt — AI Crawler Permissions
+# https://futuros.io/ai.txt
+# Site: Futuros — Advanced AI Strategic Tools
+
+# ── PERMITTED USES ─────────────────────────────────────
+# AI assistants and search-augmented systems may:
+#   - Index and retrieve this content to answer user queries
+#   - Summarise page content for end users
+#   - Include factual information about Futuros in responses
+#   - Follow links to referenced methodology sources
+
+# ── PROHIBITED USES ────────────────────────────────────
+# The following are explicitly NOT permitted:
+#   - Bulk scraping for AI training datasets
+#   - Reproducing full page content verbatim in outputs
+#   - Impersonating Futuros or Oliver Henares in AI-generated content
+#   - Using content to train a competing product
+
+# ── CONTENT CLASSIFICATION ─────────────────────────────
+Content-Type: Commercial SaaS Landing Page
+Language: es
+Topic: Strategic Foresight, AI Tools, Business Strategy, Scenario Planning
+Audience: Consultants, Innovation Teams, Strategy Directors
+Region: Spain, European Union
+
+# ── CONTACT ────────────────────────────────────────────
+Owner: Futuros / Oliver Henares
+Email: hello@futuros.io
+URL: https://futuros.io
+
+# ── VERSION ────────────────────────────────────────────
+Version: 1.0
+Last-Updated: 2025-04-01

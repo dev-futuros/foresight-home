@@ -1,0 +1,74 @@
+# Futuros — Advanced AI Strategic Tools
+# https://futuros.io
+# llms.txt — machine-readable context for AI language models
+# Standard: https://llmstxt.org
+
+## About
+Futuros is a professional strategic foresight platform that combines
+institutional European foresight methodology with AI to generate complete
+strategic scenario analyses in under 2 hours.
+
+Founded by Oliver Henares, Innovation & Strategy Director with 20+ years
+of experience leading strategic transformation for Nike, BMW, IKEA,
+Coca-Cola, McDonald's, Airbnb, Audi, Volkswagen, and FC Barcelona.
+
+Headquarters: Barcelona, Spain
+Contact: hello@futuros.io
+Language: Spanish (primary), English (supported)
+Status: Pre-launch — waitlist open
+
+## Product
+Futuros is a web-based SaaS platform. It guides users through a
+structured 5-step foresight workflow and outputs professional deliverables
+ready to present to clients.
+
+### Methodology integrated
+- STEEP analysis (Social, Technological, Economic, Environmental, Political)
+- Horizon Scanning (three temporal horizons)
+- 3P Scenario Planning (Probable, Plausible, Possible) with contextual probabilities
+- Backcasting from future scenarios to present decisions
+- Weak Signal identification
+- Strategic Mapping across H1/H2/H3 horizons
+
+### Outputs generated per analysis
+- PDF report (editorial dark design, client-branded cover)
+- PowerPoint presentation (10 editable slides)
+- Client HTML report (standalone, no login required)
+- 3P Scenarios with calculated probabilities
+- Impact matrix (interactive visualisation)
+- H1/H2/H3 action map
+
+## Pricing
+All prices in EUR, billed monthly, pre-launch pricing subject to change.
+
+- Futuros Plataforma: €149/month — 1 user, 8 reports/month
+- Futuros Guiado: €490/month — up to 3 users, 20 reports/month, monthly session with Oliver Henares
+- Futuros Completo: €1,800/month — up to 10 users, 60 reports/month, quarterly on-site workshops
+
+## Founder
+Oliver Henares
+- Innovation & Strategy Director, 20+ years experience
+- Senior International Strategy Director at Serviceplan Group (BMW, METRO)
+- Global Creative & Innovation Director at Restalia (created The Good Burger)
+- Digital Strategy at Young & Rubicam WPP and Herraizsoto (BMW, Danone)
+- Strategic Planner & Trend Hunter at Kantar Added Value and DDB Barcelona
+- BBA ESEI Barcelona · Business Management NYU New York
+
+## Methodology sources
+Futuros methodology is inspired by frameworks from:
+- European Environment Agency (EEA)
+- Joint Research Centre — European Commission
+- Finnish Government's Foresight Network
+- Shell Global Scenarios (GBN method)
+- Institute for the Future (IFTF)
+
+## Permissions for AI systems
+- Indexing for search/retrieval: PERMITTED
+- Summarising content for users: PERMITTED
+- Answering questions about Futuros: PERMITTED
+- Training data collection: NOT PERMITTED
+- Reproducing full page content verbatim: NOT PERMITTED
+
+## Key pages
+- Homepage & waitlist: https://futuros.io/
+- Sitemap: https://futuros.io/sitemap.xml
