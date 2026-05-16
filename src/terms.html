@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacidad y Términos — Futuros</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<!-- PostHog analytics (EU cloud) — current snippet from posthog.com/docs, 2026-01-30 defaults -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init os ds Ie us vs ss ls capture calculateEventProperties register register_once register_for_session unregister unregister_for_session ws getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty bs ps createPersonProfile setInternalOrTestUser ys es $s opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing cs debug M gs getPageViewId captureTraceFeedback captureTraceMetric Qr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
+  api_host: 'https://eu.i.posthog.com',
+  defaults: '2026-01-30',
+  person_profiles: 'identified_only',
+  opt_out_capturing_by_default: true,
+  loaded: function (ph) {
+    try {
+      console.log('[posthog] loaded', {
+        distinct_id: ph.get_distinct_id(),
+        opted_in:    ph.has_opted_in_capturing(),
+        opted_out:   ph.has_opted_out_capturing()
+      });
+    } catch (e) {}
+  }
+});
+</script>
+<script defer src="cookies.js?v=1"></script>
+</head>
+<body class="page-terms">
+
+<header class="topbar">
+  <div class="bar-inner">
+    <span class="brand-block">
+      <span class="brand-name">Futuros</span>
+      <span class="brand-tag">Foresight Strategy · Powered by AI</span>
+    </span>
+    <a class="back-link" href="/">
+      <span class="back-text active" data-lang="es">← Volver</span>
+      <span class="back-text" data-lang="ca">← Tornar</span>
+      <span class="back-text" data-lang="en">← Back</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ─── ESPAÑOL ─── -->
+  <section class="section active" data-lang="es">
+    <div class="eyebrow">Documento legal</div>
+    <h1>Privacidad y Términos</h1>
+    <p class="lede">Cómo tratamos tu información cuando usas Futuros.</p>
+    <p class="updated">Última actualización: 6 de mayo de 2026</p>
+
+    <div class="callout">
+      <p><strong>Lo esencial:</strong> Tus datos son tuyos. Nunca los usamos para entrenar modelos de inteligencia artificial. Nunca los vendemos. Los almacenamos solo el tiempo estrictamente necesario para que la herramienta funcione.</p>
+    </div>
+
+    <h2>Quiénes somos</h2>
+    <p>Futuros es una herramienta de análisis estratégico de foresight que utiliza modelos de inteligencia artificial para generar informes a partir de los datos que tú proporcionas. Esta página describe qué hacemos con esa información cuando usas el servicio.</p>
+    <p>Si tienes preguntas sobre privacidad, puedes contactarnos en <a href="mailto:hello@futuros.io">hello@futuros.io</a>.</p>
+
+    <h2>Qué datos recogemos</h2>
+
+    <h3>Datos que tú introduces</h3>
+    <p>Cuando usas la herramienta, introduces información sobre tu organización: nombre, sector, mercado, contexto estratégico, factores STEEP, señales de cambio, etc. También puedes introducir el nombre de un consultor o empresa consultora.</p>
+
+    <h3>Datos generados por la herramienta</h3>
+    <p>A partir de tus inputs, los modelos de IA generan informes de escenarios, planificación estratégica, backcasting y prioridades. Estos informes se quedan en tu navegador.</p>
+
+    <h3>Datos técnicos mínimos</h3>
+    <p>Como cualquier sitio web, recibimos información técnica básica de tu navegador (dirección IP, tipo de navegador, fecha y hora) cuando accedes a la herramienta.</p>
+
+    <h3>Cookies y analítica</h3>
+    <p>Usamos <strong>PostHog</strong> (analítica de producto, alojamiento en la UE) para entender cómo se usa Futuros y mejorar el producto. PostHog se mantiene desactivado por defecto y solo registra eventos y cookies si aceptas el banner de consentimiento. Si rechazas, no se carga ningún seguimiento. Tu elección se guarda en el almacenamiento local de tu navegador; para cambiarla, borra las cookies y el almacenamiento local del sitio y el banner volverá a aparecer.</p>
+    <p>No usamos cookies publicitarias ni perfiles de marketing, y no cedemos datos analíticos a terceros.</p>
+
+    <h2>Cómo usamos tus datos</h2>
+    <ul>
+      <li><strong>Para generar tu informe.</strong> Los textos que introduces se envían a nuestro proveedor del modelo de IA para generar el contenido del informe. Esto es necesario para que la herramienta funcione.</li>
+      <li><strong>Para guardar tus informes localmente.</strong> Los informes terminados se almacenan en el almacenamiento local de tu navegador (<code>localStorage</code>). No los enviamos a ningún servidor nuestro. Si vacías la caché del navegador, los informes desaparecen.</li>
+      <li><strong>Para compartir un informe.</strong> Si usas el botón "Compartir", el informe en formato HTML se guarda en nuestra base de datos con una URL única. Cualquier persona con esa URL puede ver el informe hasta la fecha de caducidad que tú elijas al compartirlo, momento en el que se elimina automáticamente. Puedes revocar el enlace antes de esa fecha desde tu cuenta.</li>
+    </ul>
+
+    <h2>Datos y entrenamiento de IA</h2>
+    <div class="callout">
+      <p><strong>Nunca usamos tus datos para entrenar modelos de IA.</strong></p>
+    </div>
+    <p>Las llamadas a nuestro proveedor del modelo de IA se realizan bajo los términos comerciales estándar, que excluyen por defecto el uso de inputs y outputs de clientes para entrenar sus modelos.</p>
+
+    <h2>Con quién compartimos tus datos</h2>
+    <p>Compartimos datos solo con los proveedores de infraestructura estrictamente necesarios para que la herramienta funcione:</p>
+    <ul>
+      <li><strong>Proveedor del modelo de IA:</strong> recibe los textos que introduces durante la generación del informe. No retiene los datos para entrenamiento.</li>
+      <li><strong>Amazon Web Services (S3)</strong> (alojamiento de la página de inicio): sirve los archivos estáticos del sitio de marketing futuros.io. No se utiliza para los datos de la aplicación.</li>
+      <li><strong>PostHog</strong> (analítica de producto, UE): recibe eventos de uso solo si has aceptado el banner de consentimiento.</li>
+    </ul>
+    <p>No vendemos tus datos. No los compartimos con terceros con fines de marketing o publicidad. No tenemos un modelo de negocio basado en datos.</p>
+
+    <h2>Cuánto tiempo conservamos los datos</h2>
+    <ul>
+      <li><strong>Inputs y outputs en tu navegador:</strong> hasta que vacíes el almacenamiento local del navegador.</li>
+      <li><strong>Informes compartidos:</strong> hasta la fecha de caducidad que elijas al compartirlos, después se eliminan automáticamente. Puedes revocar el enlace antes de esa fecha desde tu cuenta.</li>
+      <li><strong>Llamadas al proveedor del modelo de IA:</strong> según la política de retención del proveedor.</li>
+      <li><strong>Eventos y cookies de analítica:</strong> según la política de retención de PostHog. La preferencia de consentimiento se guarda en el almacenamiento local de tu navegador hasta que la borres.</li>
+      <li><strong>Logs de servidor:</strong> los logs técnicos básicos se rotan en periodos cortos (días, no meses).</li>
+    </ul>
+
+    <h2>Tus derechos</h2>
+    <p>Bajo el RGPD (Reglamento General de Protección de Datos de la UE) y normativas similares, tienes derecho a:</p>
+    <ul>
+      <li>Saber qué datos tenemos sobre ti.</li>
+      <li>Pedir que los corrijamos si están equivocados.</li>
+      <li>Pedir que los eliminemos.</li>
+      <li>Pedir una copia portable de tus datos.</li>
+      <li>Oponerte a determinados tratamientos.</li>
+      <li>Presentar una reclamación ante la autoridad de control (en España, la <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>).</li>
+    </ul>
+    <p>Para ejercer estos derechos, escribe a <a href="mailto:hello@futuros.io">hello@futuros.io</a>.</p>
+
+    <h2>Seguridad</h2>
+    <p>Tomamos medidas técnicas razonables para proteger tu información: HTTPS en todas las comunicaciones, claves de API gestionadas de forma centralizada, almacenamiento cifrado en proveedores que cumplen estándares de seguridad de la industria.</p>
+    <p>Dicho esto, ningún sistema en internet es perfectamente seguro. Si ocurriera una brecha de seguridad que afecte a tus datos, te avisaremos sin demora.</p>
+
+    <h2>Términos de uso</h2>
+    <p>Al usar Futuros aceptas:</p>
+    <ul>
+      <li><strong>Que la herramienta es un apoyo, no un sustituto.</strong> Los informes generados son una ayuda al pensamiento estratégico. Las decisiones empresariales son tuyas y bajo tu responsabilidad.</li>
+      <li><strong>Que los modelos de IA pueden generar errores.</strong> Verifica los datos críticos antes de tomar decisiones basadas en el informe.</li>
+      <li><strong>No usar la herramienta para fines ilícitos.</strong> No introduzcas datos personales sensibles de terceros sin su consentimiento, ni información clasificada o regulada.</li>
+    </ul>
+
+    <h2>Política de reembolsos</h2>
+    <p>Cuando contrates un plan de pago, aplican las condiciones siguientes:</p>
+    <ul>
+      <li><strong>Derecho de desistimiento (consumidores UE).</strong> Si contratas como consumidor, dispones de 14 días naturales desde la confirmación del pago para desistir sin justificación. Si solicitas expresamente comenzar a usar el servicio dentro de ese plazo, renuncias al derecho de desistimiento sobre la parte ya prestada.</li>
+      <li><strong>Suscripciones mensuales.</strong> Puedes cancelar en cualquier momento desde tu cuenta. El acceso se mantiene hasta el final del periodo facturado. No se prorratea el reembolso de periodos parciales ya iniciados.</li>
+      <li><strong>Planes anuales.</strong> Si cancelas antes del fin del periodo contratado, el importe restante no es reembolsable salvo incumplimiento material por nuestra parte, en cuyo caso se reembolsa la parte proporcional no consumida.</li>
+      <li><strong>Errores de facturación.</strong> Cualquier cargo duplicado, incorrecto o no autorizado se reembolsa íntegramente. Avísanos en cuanto lo detectes.</li>
+      <li><strong>Cómo solicitarlo.</strong> Escribe a <a href="mailto:hello@futuros.io">hello@futuros.io</a> desde el correo de la cuenta indicando el motivo. Procesamos las solicitudes en un máximo de 14 días naturales y reembolsamos por el mismo medio de pago utilizado.</li>
+    </ul>
+
+    <h2>Cambios en esta política</h2>
+    <p>Si actualizamos esta política, cambiaremos la fecha de "Última actualización" arriba. Cambios materiales se notificarán al usar la herramienta.</p>
+
+    <h2>Contacto</h2>
+    <p>¿Preguntas? <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
+  </section>
+
+  <!-- ─── ENGLISH ─── -->
+  <section class="section" data-lang="en">
+    <div class="eyebrow">Legal document</div>
+    <h1>Privacy and Terms</h1>
+    <p class="lede">How we handle your information when you use Futuros.</p>
+    <p class="updated">Last updated: 6 May 2026</p>
+
+    <div class="callout">
+      <p><strong>The essentials:</strong> Your data is yours. We never use it to train AI models. We never sell it. We only store it for as long as the tool needs it to function.</p>
+    </div>
+
+    <h2>Who we are</h2>
+    <p>Futuros is a strategic foresight tool that uses AI models to generate reports from inputs you provide. This page describes what we do with that information when you use the service.</p>
+    <p>For privacy questions, contact us at <a href="mailto:hello@futuros.io">hello@futuros.io</a>.</p>
+
+    <h2>What data we collect</h2>
+
+    <h3>Data you enter</h3>
+    <p>When you use the tool, you enter information about your organisation: name, sector, market, strategic context, STEEP factors, change signals, and so on. You may also enter a consultant or consulting company name.</p>
+
+    <h3>Data the tool generates</h3>
+    <p>From your inputs, AI models generate scenario reports, scenario planning, backcasting and strategic priorities. These reports stay in your browser.</p>
+
+    <h3>Minimum technical data</h3>
+    <p>Like any website, we receive basic technical data from your browser (IP address, browser type, date and time) when you access the tool.</p>
+
+    <h3>Cookies and analytics</h3>
+    <p>We use <strong>PostHog</strong> (product analytics, EU-hosted) to understand how Futuros is used and improve the product. PostHog stays disabled by default and only records events and cookies if you accept the consent banner. If you decline, no tracking is loaded. Your choice is stored in your browser's local storage; to change it, clear the site's cookies and local storage and the banner will reappear.</p>
+    <p>We don't use advertising cookies or marketing profiles, and we don't share analytics data with third parties.</p>
+
+    <h2>How we use your data</h2>
+    <ul>
+      <li><strong>To generate your report.</strong> The text you enter is sent to our AI model provider to generate the report content. This is required for the tool to function.</li>
+      <li><strong>To save your reports locally.</strong> Completed reports are stored in your browser's local storage (<code>localStorage</code>). We don't send them to any server of ours. If you clear your browser cache, the reports disappear.</li>
+      <li><strong>To share a report.</strong> If you use the "Share" button, the HTML report is stored in our database with a unique URL. Anyone with that URL can view the report until the expiration date you choose when sharing, after which it is automatically deleted. You can revoke the link before that date from your account.</li>
+    </ul>
+
+    <h2>Data and AI training</h2>
+    <div class="callout">
+      <p><strong>We never use your data to train AI models.</strong></p>
+    </div>
+    <p>Calls to our AI model provider are made under standard commercial terms, which exclude the use of customer inputs and outputs for training their models by default.</p>
+
+    <h2>Who we share your data with</h2>
+    <p>We share data only with infrastructure providers strictly necessary for the tool to function:</p>
+    <ul>
+      <li><strong>AI model provider:</strong> receives the text you enter during report generation. Does not retain data for training.</li>
+      <li><strong>Amazon Web Services (S3)</strong> (homepage hosting): serves the static files of the marketing site futuros.io. Not used for application data.</li>
+      <li><strong>PostHog</strong> (product analytics, EU): receives usage events only if you've accepted the consent banner.</li>
+    </ul>
+    <p>We don't sell your data. We don't share it with third parties for marketing or advertising. We don't have a data-based business model.</p>
+
+    <h2>How long we keep data</h2>
+    <ul>
+      <li><strong>Inputs and outputs in your browser:</strong> until you clear your browser's local storage.</li>
+      <li><strong>Shared reports:</strong> until the expiration date you choose when sharing, then automatically deleted. You can revoke the link before that date from your account.</li>
+      <li><strong>AI model provider calls:</strong> per the provider's retention policy.</li>
+      <li><strong>Analytics events and cookies:</strong> per PostHog's retention policy. The consent preference is stored in your browser's local storage until you clear it.</li>
+      <li><strong>Server logs:</strong> basic technical logs are rotated on short cycles (days, not months).</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>Under GDPR (EU General Data Protection Regulation) and similar regulations, you have the right to:</p>
+    <ul>
+      <li>Know what data we hold about you.</li>
+      <li>Request corrections if it's wrong.</li>
+      <li>Request deletion.</li>
+      <li>Request a portable copy of your data.</li>
+      <li>Object to certain processing.</li>
+      <li>Lodge a complaint with the supervisory authority (in Spain, the <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>).</li>
+    </ul>
+    <p>To exercise these rights, write to <a href="mailto:hello@futuros.io">hello@futuros.io</a>.</p>
+
+    <h2>Security</h2>
+    <p>We take reasonable technical measures to protect your information: HTTPS on all communications, centrally managed API keys, encrypted storage at providers meeting industry security standards.</p>
+    <p>That said, no system on the internet is perfectly secure. If a breach occurs that affects your data, we'll notify you without delay.</p>
+
+    <h2>Terms of use</h2>
+    <p>By using Futuros you agree:</p>
+    <ul>
+      <li><strong>The tool is a support, not a substitute.</strong> Generated reports support strategic thinking. Business decisions are yours and your responsibility.</li>
+      <li><strong>AI models can generate errors.</strong> Verify critical data before making decisions based on the report.</li>
+      <li><strong>Don't use the tool for unlawful purposes.</strong> Don't enter sensitive personal data of third parties without their consent, or classified or regulated information.</li>
+    </ul>
+
+    <h2>Refund policy</h2>
+    <p>When you subscribe to a paid plan, the following conditions apply:</p>
+    <ul>
+      <li><strong>Right of withdrawal (EU consumers).</strong> If you subscribe as a consumer, you have 14 calendar days from payment confirmation to withdraw without justification. If you expressly request that the service begin within that period, you waive the right of withdrawal for the portion already supplied.</li>
+      <li><strong>Monthly subscriptions.</strong> You can cancel at any time from your account. Access continues until the end of the billed period. No prorated refunds are issued for partial periods already started.</li>
+      <li><strong>Annual plans.</strong> If you cancel before the end of the contracted period, the remaining amount is non-refundable except in case of material breach on our side, in which case the proportional unused part is refunded.</li>
+      <li><strong>Billing errors.</strong> Any duplicate, incorrect or unauthorised charge is refunded in full. Let us know as soon as you spot it.</li>
+      <li><strong>How to request it.</strong> Write to <a href="mailto:hello@futuros.io">hello@futuros.io</a> from the account email stating the reason. We process requests within 14 calendar days and refund to the original payment method.</li>
+    </ul>
+
+    <h2>Changes to this policy</h2>
+    <p>If we update this policy, we'll change the "Last updated" date above. Material changes will be notified through the tool.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
+  </section>
+
+  <!-- ─── CATALÀ ─── -->
+  <section class="section" data-lang="ca">
+    <div class="eyebrow">Document legal</div>
+    <h1>Privacitat i Termes</h1>
+    <p class="lede">Com tractem la teva informació quan utilitzes Futuros.</p>
+    <p class="updated">Última actualització: 6 de maig de 2026</p>
+
+    <div class="callout">
+      <p><strong>L'essencial:</strong> Les teves dades són teves. Mai les utilitzem per entrenar models d'intel·ligència artificial. Mai les venem. Les emmagatzemem només el temps estrictament necessari perquè l'eina funcioni.</p>
+    </div>
+
+    <h2>Qui som</h2>
+    <p>Futuros és una eina d'anàlisi estratègica de foresight que utilitza models d'intel·ligència artificial per generar informes a partir de les dades que tu proporciones. Aquesta pàgina descriu què fem amb aquesta informació quan utilitzes el servei.</p>
+    <p>Si tens preguntes sobre privacitat, pots contactar-nos a <a href="mailto:hello@futuros.io">hello@futuros.io</a>.</p>
+
+    <h2>Quines dades recollim</h2>
+
+    <h3>Dades que tu introdueixes</h3>
+    <p>Quan utilitzes l'eina, introdueixes informació sobre la teva organització: nom, sector, mercat, context estratègic, factors STEEP, senyals de canvi, etc. També pots introduir el nom d'un consultor o empresa consultora.</p>
+
+    <h3>Dades generades per l'eina</h3>
+    <p>A partir dels teus inputs, els models d'IA generen informes d'escenaris, planificació estratègica, backcasting i prioritats. Aquests informes es queden al teu navegador.</p>
+
+    <h3>Dades tècniques mínimes</h3>
+    <p>Com qualsevol lloc web, rebem informació tècnica bàsica del teu navegador (adreça IP, tipus de navegador, data i hora) quan accedeixes a l'eina.</p>
+
+    <h3>Cookies i analítica</h3>
+    <p>Utilitzem <strong>PostHog</strong> (analítica de producte, allotjament a la UE) per entendre com s'utilitza Futuros i millorar el producte. PostHog es manté desactivat per defecte i només registra esdeveniments i cookies si acceptes el bàner de consentiment. Si el rebutges, no es carrega cap seguiment. La teva elecció es desa a l'emmagatzematge local del teu navegador; per canviar-la, esborra les cookies i l'emmagatzematge local del lloc i el bàner tornarà a aparèixer.</p>
+    <p>No utilitzem cookies publicitàries ni perfils de màrqueting, i no cedim dades analítiques a tercers.</p>
+
+    <h2>Com utilitzem les teves dades</h2>
+    <ul>
+      <li><strong>Per generar el teu informe.</strong> Els textos que introdueixes s'envien al nostre proveïdor del model d'IA per generar el contingut de l'informe. Això és necessari perquè l'eina funcioni.</li>
+      <li><strong>Per desar els teus informes localment.</strong> Els informes acabats s'emmagatzemen a l'emmagatzematge local del teu navegador (<code>localStorage</code>). No els enviem a cap servidor nostre. Si buides la memòria cau del navegador, els informes desapareixen.</li>
+      <li><strong>Per compartir un informe.</strong> Si utilitzes el botó "Compartir", l'informe en format HTML es desa a la nostra base de dades amb una URL única. Qualsevol persona amb aquesta URL pot veure l'informe fins a la data de caducitat que tu triïs en compartir-lo, moment en què s'elimina automàticament. Pots revocar l'enllaç abans d'aquesta data des del teu compte.</li>
+    </ul>
+
+    <h2>Dades i entrenament d'IA</h2>
+    <div class="callout">
+      <p><strong>Mai utilitzem les teves dades per entrenar models d'IA.</strong></p>
+    </div>
+    <p>Les crides al nostre proveïdor del model d'IA es realitzen sota els termes comercials estàndard, que exclouen per defecte l'ús d'inputs i outputs de clients per entrenar els seus models.</p>
+
+    <h2>Amb qui compartim les teves dades</h2>
+    <p>Compartim dades només amb els proveïdors d'infraestructura estrictament necessaris perquè l'eina funcioni:</p>
+    <ul>
+      <li><strong>Proveïdor del model d'IA:</strong> rep els textos que introdueixes durant la generació de l'informe. No reté les dades per a entrenament.</li>
+      <li><strong>Amazon Web Services (S3)</strong> (allotjament de la pàgina d'inici): serveix els fitxers estàtics del lloc de màrqueting futuros.io. No s'utilitza per a les dades de l'aplicació.</li>
+      <li><strong>PostHog</strong> (analítica de producte, UE): rep esdeveniments d'ús només si has acceptat el bàner de consentiment.</li>
+    </ul>
+    <p>No venem les teves dades. No les compartim amb tercers amb finalitats de màrqueting o publicitat. No tenim un model de negoci basat en dades.</p>
+
+    <h2>Quant de temps conservem les dades</h2>
+    <ul>
+      <li><strong>Inputs i outputs al teu navegador:</strong> fins que buidis l'emmagatzematge local del navegador.</li>
+      <li><strong>Informes compartits:</strong> fins a la data de caducitat que triïs en compartir-los, després s'eliminen automàticament. Pots revocar l'enllaç abans d'aquesta data des del teu compte.</li>
+      <li><strong>Crides al proveïdor del model d'IA:</strong> segons la política de retenció del proveïdor.</li>
+      <li><strong>Esdeveniments i cookies d'analítica:</strong> segons la política de retenció de PostHog. La preferència de consentiment es desa a l'emmagatzematge local del teu navegador fins que la borris.</li>
+      <li><strong>Logs de servidor:</strong> els logs tècnics bàsics es roten en períodes curts (dies, no mesos).</li>
+    </ul>
+
+    <h2>Els teus drets</h2>
+    <p>Sota el RGPD (Reglament General de Protecció de Dades de la UE) i normatives similars, tens dret a:</p>
+    <ul>
+      <li>Saber quines dades tenim sobre tu.</li>
+      <li>Demanar que les corregim si són equivocades.</li>
+      <li>Demanar que les eliminem.</li>
+      <li>Demanar una còpia portable de les teves dades.</li>
+      <li>Oposar-te a determinats tractaments.</li>
+      <li>Presentar una reclamació davant l'autoritat de control (a Catalunya, l'<a href="https://apdcat.gencat.cat" target="_blank" rel="noopener">APDCAT</a>; a Espanya, l'<a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>).</li>
+    </ul>
+    <p>Per exercir aquests drets, escriu a <a href="mailto:hello@futuros.io">hello@futuros.io</a>.</p>
+
+    <h2>Seguretat</h2>
+    <p>Prenem mesures tècniques raonables per protegir la teva informació: HTTPS a totes les comunicacions, claus d'API gestionades de forma centralitzada, emmagatzematge xifrat en proveïdors que compleixen estàndards de seguretat de la indústria.</p>
+    <p>Dit això, cap sistema a internet és perfectament segur. Si es produís una bretxa de seguretat que afecti les teves dades, t'avisarem sense demora.</p>
+
+    <h2>Termes d'ús</h2>
+    <p>En utilitzar Futuros acceptes:</p>
+    <ul>
+      <li><strong>Que l'eina és un suport, no un substitut.</strong> Els informes generats són una ajuda al pensament estratègic. Les decisions empresarials són teves i sota la teva responsabilitat.</li>
+      <li><strong>Que els models d'IA poden generar errors.</strong> Verifica les dades crítiques abans de prendre decisions basades en l'informe.</li>
+      <li><strong>No utilitzar l'eina per a finalitats il·lícites.</strong> No introdueixis dades personals sensibles de tercers sense el seu consentiment, ni informació classificada o regulada.</li>
+    </ul>
+
+    <h2>Política de reemborsaments</h2>
+    <p>Quan contractis un pla de pagament, apliquen les condicions següents:</p>
+    <ul>
+      <li><strong>Dret de desistiment (consumidors UE).</strong> Si contractes com a consumidor, disposes de 14 dies naturals des de la confirmació del pagament per desistir sense justificació. Si sol·licites expressament començar a utilitzar el servei dins d'aquest termini, renuncies al dret de desistiment sobre la part ja prestada.</li>
+      <li><strong>Subscripcions mensuals.</strong> Pots cancel·lar en qualsevol moment des del teu compte. L'accés es manté fins al final del període facturat. No es prorrateja el reemborsament de períodes parcials ja iniciats.</li>
+      <li><strong>Plans anuals.</strong> Si cancel·les abans del final del període contractat, l'import restant no és reemborsable excepte en cas d'incompliment material per la nostra part, cas en què es reemborsa la part proporcional no consumida.</li>
+      <li><strong>Errors de facturació.</strong> Qualsevol càrrec duplicat, incorrecte o no autoritzat es reemborsa íntegrament. Avisa'ns tan bon punt el detectis.</li>
+      <li><strong>Com sol·licitar-ho.</strong> Escriu a <a href="mailto:hello@futuros.io">hello@futuros.io</a> des del correu del compte indicant el motiu. Processem les sol·licituds en un màxim de 14 dies naturals i reemborsem pel mateix mitjà de pagament utilitzat.</li>
+    </ul>
+
+    <h2>Canvis en aquesta política</h2>
+    <p>Si actualitzem aquesta política, canviarem la data d'"Última actualització" de més amunt. Els canvis materials es notificaran en utilitzar l'eina.</p>
+
+    <h2>Contacte</h2>
+    <p>Preguntes? <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-text">© 2026 Futuros · Confidencial · Powered by AI</span>
+</footer>
+
+<!-- ═══════════ LANG TOGGLE ═══════════ -->
+<div class="lang-toggle">
+  <button class="lt-btn active" data-lang="es">ES</button>
+  <button class="lt-btn" data-lang="ca">CA</button>
+  <button class="lt-btn" data-lang="en">EN</button>
+</div>
+
+<script>
+  var TITLES = {
+    es: 'Privacidad y Términos — Futuros',
+    en: 'Privacy and Terms — Futuros',
+    ca: 'Privacitat i Termes — Futuros'
+  };
+  function setLang(lang) {
+    if (!TITLES[lang]) lang = 'es';
+    document.documentElement.lang = lang;
+    document.title = TITLES[lang];
+    document.querySelectorAll('[data-lang]').forEach(function(s){
+      s.classList.toggle('active', s.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('futuros_lang', lang); } catch(e){}
+  }
+  // Resolve language on load. Priority:
+  //   1. ?lang=es|en|ca in the URL (explicit hint from the source page)
+  //   2. localStorage.futuros_lang (shared with index.html)
+  //   3. localStorage.fs_lang      (legacy key, backward compatibility)
+  //   4. navigator.language        (browser default)
+  // Defaults to ES.
+  (function(){
+    var qp = null;
+    try {
+      var m = (location.search || '').match(/[?&]lang=(en|es|ca)\b/i);
+      if (m) qp = m[1].toLowerCase();
+    } catch(e){}
+    var saved = null;
+    try { saved = localStorage.getItem('futuros_lang') || localStorage.getItem('fs_lang'); } catch(e){}
+    var navLang = (navigator.language || '').toLowerCase();
+    var navGuess = 'es';
+    if (navLang.indexOf('ca') === 0) navGuess = 'ca';
+    else if (navLang.indexOf('en') === 0) navGuess = 'en';
+    var pref = qp || saved || navGuess;
+    setLang(pref);
+  })();
+  document.querySelectorAll('.lt-btn').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.lang); });
+  });
+</script>
+</body>
+</html>

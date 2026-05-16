@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fs = require\\('fs'\\); const src = fs.readFileSync\\('C:/Users/ruben/Projects/T3knomanzer/Oliver/Futuros/futuros.io/foresight-home/src/index.html','utf8'\\); const m = src.match\\(/const TRANSLATIONS = \\(\\\\{[\\\\s\\\\S]*?\\\\n\\\\};\\)/\\); if \\(!m\\) { console.log\\('NOT FOUND'\\); process.exit\\(1\\); } try { const T = eval\\('\\(' + m[1].replace\\(/\\\\};$/, '}'\\) + '\\)'\\); console.log\\('OK — langs:', Object.keys\\(T\\).join\\(', '\\), '— ca keys:', Object.keys\\(T.ca\\).length, '— es keys:', Object.keys\\(T.es\\).length, '— en keys:', Object.keys\\(T.en\\).length\\); } catch\\(e\\) { console.log\\('ERROR:', e.message\\); }\")"
+    ]
+  }
+}
