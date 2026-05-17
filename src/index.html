@@ -1021,6 +1021,10 @@ function applyTranslations(lang){
   const modalImg = document.getElementById('modalImg');
   if (modalImg && modalImg.src) modalImg.src = swap(modalImg.src);
   document.querySelectorAll('.lt-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  // Append ?lang= to the terms link so the standalone terms.html page
+  // opens in the same language the user is currently reading the homepage in.
+  // (terms.html no longer has its own in-page switcher; it relies on this hint.)
+  document.querySelectorAll('a[href^="terms.html"]').forEach(a => { a.href = 'terms.html?lang=' + lang; });
 }
 
 document.querySelectorAll('.lt-btn').forEach(b => b.addEventListener('click', () => applyTranslations(b.dataset.lang)));

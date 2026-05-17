@@ -358,14 +358,12 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
   <span class="footer-text">© 2026 Futuros · Confidencial · Powered by AI</span>
 </footer>
 
-<!-- ═══════════ LANG TOGGLE ═══════════ -->
-<div class="lang-toggle">
-  <button class="lt-btn active" data-lang="es">ES</button>
-  <button class="lt-btn" data-lang="ca">CA</button>
-  <button class="lt-btn" data-lang="en">EN</button>
-</div>
-
 <script>
+  // Language resolution. No in-page toggle — the visiting page (homepage
+  // or the Kinde-hosted auth pages) is the authoritative source and
+  // hands the language off via the ?lang= URL parameter. The cookie /
+  // localStorage entries are still read as a fallback for users who
+  // arrive without a query string (e.g. bookmarked / direct link).
   var TITLES = {
     es: 'Privacidad y Términos — Futuros',
     en: 'Privacy and Terms — Futuros',
@@ -401,9 +399,6 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     var pref = qp || saved || navGuess;
     setLang(pref);
   })();
-  document.querySelectorAll('.lt-btn').forEach(function(b){
-    b.addEventListener('click', function(){ setLang(b.dataset.lang); });
-  });
 </script>
 </body>
 </html>
