@@ -2,15 +2,18 @@
 /* Standard: https://humanstxt.org  */
 
 /* TEAM */
-  Founder & Strategy: Oliver Henares
+  Founder · Strategy & Foresight: Oliver Henares
+  Product: Technical Director
+  Engineering: Full-stack
   Contact: hello@futuros.io
   Location: Barcelona, España
 
 /* SITE */
-  Last update: 2025-04-01
-  Language: Spanish
+  Last update: 2026-05-22
+  Languages: Spanish (primary), English, Catalan
   Technology: HTML5, CSS3, Vanilla JS
   Fonts: Playfair Display, DM Sans, DM Mono (Google Fonts)
+  Analytics: PostHog (EU)
   Hosting: futuros.io
 
 /* THANKS */

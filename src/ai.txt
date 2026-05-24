@@ -18,7 +18,7 @@
 
 # ── CONTENT CLASSIFICATION ─────────────────────────────
 Content-Type: Commercial SaaS Landing Page
-Language: es
+Language: es, en, ca
 Topic: Strategic Foresight, AI Tools, Business Strategy, Scenario Planning
 Audience: Consultants, Innovation Teams, Strategy Directors
 Region: Spain, European Union
@@ -29,5 +29,5 @@ Email: hello@futuros.io
 URL: https://futuros.io
 
 # ── VERSION ────────────────────────────────────────────
-Version: 1.0
-Last-Updated: 2025-04-01
+Version: 1.1
+Last-Updated: 2026-05-22

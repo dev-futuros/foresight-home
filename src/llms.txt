@@ -8,51 +8,57 @@ Futuros is a professional strategic foresight platform that combines
 institutional European foresight methodology with AI to generate complete
 strategic scenario analyses in under 2 hours.
 
-Founded by Oliver Henares, Innovation & Strategy Director with 20+ years
-of experience leading strategic transformation for Nike, BMW, IKEA,
-Coca-Cola, McDonald's, Airbnb, Audi, Volkswagen, and FC Barcelona.
+Founded by Oliver Henares, Strategy & Foresight director with 20+ years
+of experience designing futures for global brands including Nike, IKEA,
+Coca-Cola, Airbnb, BMW, and FC Barcelona, from agencies such as
+Serviceplan, Young & Rubicam, DDB, and Grupo Restalia.
 
 Headquarters: Barcelona, Spain
 Contact: hello@futuros.io
-Language: Spanish (primary), English (supported)
-Status: Pre-launch — waitlist open
+Languages: Spanish (primary), English, Catalan
+Status: Beta — early access via invite, public beta waitlist open
 
 ## Product
 Futuros is a web-based SaaS platform. It guides users through a
-structured 5-step foresight workflow and outputs professional deliverables
+structured foresight workflow and outputs professional deliverables
 ready to present to clients.
 
 ### Methodology integrated
 - STEEP analysis (Social, Technological, Economic, Environmental, Political)
-- Horizon Scanning (three temporal horizons)
+- Horizon Scanning (three temporal horizons: H1/H2/H3)
 - 3P Scenario Planning (Probable, Plausible, Possible) with contextual probabilities
 - Backcasting from future scenarios to present decisions
 - Weak Signal identification
 - Strategic Mapping across H1/H2/H3 horizons
 
 ### Outputs generated per analysis
-- PDF report (editorial dark design, client-branded cover)
-- PowerPoint presentation (10 editable slides)
-- Client HTML report (standalone, no login required)
+- PDF report (editorial dark design, brand-ready cover)
+- PowerPoint presentation (editable slides)
+- Standalone HTML report (shareable link, no login required)
 - 3P Scenarios with calculated probabilities
-- Impact matrix (interactive visualisation)
-- H1/H2/H3 action map
+- 2x2 impact-uncertainty matrix (interactive visualisation)
+- H1/H2/H3 action map (backcasting milestones)
 
 ## Pricing
-All prices in EUR, billed monthly, pre-launch pricing subject to change.
+All prices in EUR, monthly subscription, pre-launch pricing subject to change.
 
-- Futuros Plataforma: €149/month — 1 user, 8 reports/month
-- Futuros Guiado: €490/month — up to 3 users, 20 reports/month, monthly session with Oliver Henares
-- Futuros Completo: €1,800/month — up to 10 users, 60 reports/month, quarterly on-site workshops
+- Futuros Pro: €99/month — 1 user, 10 reports/month, full platform access
+- Futuros Max: pricing TBA — small teams, white-label exports, collaborative workspace
+- Futuros Enterprise: per-seat pricing, annual contract — SSO/SAML, audit logs,
+  EU data residency, API & webhooks, dedicated CSM
 
-## Founder
-Oliver Henares
-- Innovation & Strategy Director, 20+ years experience
-- Senior International Strategy Director at Serviceplan Group (BMW, METRO)
-- Global Creative & Innovation Director at Restalia (created The Good Burger)
-- Digital Strategy at Young & Rubicam WPP and Herraizsoto (BMW, Danone)
-- Strategic Planner & Trend Hunter at Kantar Added Value and DDB Barcelona
-- BBA ESEI Barcelona · Business Management NYU New York
+In addition to the platform subscriptions, Futuros offers augmented consulting
+services: Onboarding (1h), Workshop (half/full day), Foresight Sprint (1 week),
+Foresight as a Service (monthly retainer), and Executive Programme (intensive
+training for C-level).
+
+## Team
+- Oliver Henares — Strategy & Foresight (20+ years; Serviceplan, Young & Rubicam,
+  DDB, Grupo Restalia; brands include Nike, IKEA, Coca-Cola, Airbnb, BMW, FC Barcelona)
+- Product — Technical Director, 20 years in cutting-edge product (Apple,
+  Riot Games, Blizzard Entertainment, Lucasfilm)
+- Engineering — Full-stack developer (HerraizSoto, QyA for Nintendo Iberia;
+  currently developing for the Generalitat de Catalunya through DXC Technology)
 
 ## Methodology sources
 Futuros methodology is inspired by frameworks from:
@@ -70,5 +76,8 @@ Futuros methodology is inspired by frameworks from:
 - Reproducing full page content verbatim: NOT PERMITTED
 
 ## Key pages
-- Homepage & waitlist: https://futuros.io/
+- Homepage & beta waitlist: https://futuros.io/
+- Terms & Conditions: https://futuros.io/terms.html
+- Interactive sample report (ES): https://futuros.io/samples/sample_es.html
+- Interactive sample report (EN): https://futuros.io/samples/sample_en.html
 - Sitemap: https://futuros.io/sitemap.xml

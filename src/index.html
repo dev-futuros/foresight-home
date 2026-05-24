@@ -624,7 +624,7 @@ const TRANSLATIONS = {
   es: {
     'meta.title': 'Futuros — Foresight estratégico con IA | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combina metodología de foresight institucional europeo con inteligencia artificial para generar análisis de escenarios estratégicos completos en menos de 2 horas.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.services':'Servicios','nav.plans':'Planes','nav.team':'Equipo','nav.terms':'Términos','nav.cta':'Únete a la beta',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.services':'Servicios','nav.plans':'Planes','nav.team':'Equipo','nav.terms':'Términos y Condiciones','nav.cta':'Únete a la beta',
     'hero.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
     'hero.sub':'Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.',
     'hero.cta1':'Únete a la beta','hero.cta2':'Ver informe interactivo',
@@ -740,7 +740,7 @@ const TRANSLATIONS = {
   en: {
     'meta.title': 'Futuros — AI-powered Strategic Foresight | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combines European institutional foresight methodology with AI to generate complete strategic scenario analyses in under 2 hours.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.services':'Services','nav.plans':'Plans','nav.team':'Team','nav.terms':'Terms','nav.cta':'Join Beta',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.services':'Services','nav.plans':'Plans','nav.team':'Team','nav.terms':'Terms & Conditions','nav.cta':'Join Beta',
     'hero.title':'The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>',
     'hero.sub':'Futuros combines <strong>professional foresight methodology</strong> with advanced artificial intelligence — the same process large corporations use, now within reach of any team.',
     'hero.cta1':'Join Beta','hero.cta2':'See interactive report',
@@ -856,7 +856,7 @@ const TRANSLATIONS = {
   ca: {
     'meta.title': 'Futuros — Foresight estratègic amb IA | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combina metodologia de foresight institucional europeu amb intel·ligència artificial per generar anàlisis d\'escenaris estratègics completes en menys de 2 hores.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Què és','nav.who':'Per a qui','nav.services':'Serveis','nav.plans':'Plans','nav.team':'Equip','nav.terms':'Termes','nav.cta':'Llista d\'espera',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Què és','nav.who':'Per a qui','nav.services':'Serveis','nav.plans':'Plans','nav.team':'Equip','nav.terms':'Termes i Condicions','nav.cta':'Llista d\'espera',
     'hero.title':'El futur no es prediu, <em>es&nbsp;dissenya.</em>',
     'hero.sub':'Futuros combina <strong>metodologia de foresight professional</strong> amb intel·ligència artificial avançada — el mateix procés que utilitzen les grans corporacions, ara a l\'abast de qualsevol equip.',
     'hero.cta1':'Uneix-te a la llista d\'espera','hero.cta2':'Veure informe interactiu',
@@ -985,10 +985,49 @@ let currentLang = 'es';
 
 /* ── i18n ── */
 const SUPPORTED_LANGS = ['es','en','ca'];
+const LANG_COOKIE = 'futuros_lang';
+
+/* Read the futuros_lang cookie. Used as a higher-priority signal than
+   localStorage because the cookie is the only cross-subdomain mechanism
+   — a user who toggled language inside the app (app.futuros.io) sets
+   this cookie on .futuros.io, and we want to honour that choice when
+   they next land on the marketing site. localStorage is per-origin so
+   it can't carry the choice the other way. */
+function readLangCookie(){
+  try {
+    const prefix = LANG_COOKIE + '=';
+    const segment = document.cookie.split('; ').find(c => c.indexOf(prefix) === 0);
+    if (!segment) return null;
+    return decodeURIComponent(segment.slice(prefix.length));
+  } catch(e) { return null; }
+}
+
+/* Write the futuros_lang cookie scoped to the parent domain (.futuros.io)
+   so every subdomain — app, demo, beta, the apex — sees the same value
+   on first load. On localhost / IP-address dev hosts we skip the domain
+   attribute; browsers reject .localhost cookies silently. 1-year max-age
+   matches the implicit lifetime of the localStorage entry. SameSite=Lax
+   is the safe default — the cookie is still readable on top-level
+   navigations between subdomains, which is the only flow that matters. */
+function writeLangCookie(lang){
+  try {
+    const host = window.location.hostname;
+    const isLocal = host === 'localhost' || /^\d{1,3}(\.\d{1,3}){3}$/.test(host);
+    const parts = host.split('.');
+    const domainAttr = !isLocal && parts.length >= 2 ? '; domain=.' + parts.slice(-2).join('.') : '';
+    document.cookie = LANG_COOKIE + '=' + encodeURIComponent(lang) + '; path=/; max-age=31536000; SameSite=Lax' + domainAttr;
+  } catch(e) {}
+}
+
 function detectLang(){
   const param = new URLSearchParams(window.location.search).get('lang');
   if (SUPPORTED_LANGS.includes(param)) return param;
-  const stored = localStorage.getItem('futuros_lang');
+  // Cookie takes precedence over localStorage so a cross-subdomain
+  // toggle (e.g. inside the app) wins over a stale per-origin value
+  // saved on a past marketing-site visit.
+  const cookieLang = readLangCookie();
+  if (SUPPORTED_LANGS.includes(cookieLang)) return cookieLang;
+  const stored = localStorage.getItem(LANG_COOKIE);
   if (SUPPORTED_LANGS.includes(stored)) return stored;
   const checkNav = (l) => {
     if (!l) return null;
@@ -1020,6 +1059,12 @@ function applyTranslations(lang){
   url.searchParams.set('lang', lang);
   window.history.replaceState({}, '', url.toString());
   localStorage.setItem('futuros_lang', lang);
+  // Also write the .futuros.io cookie so the app (app.futuros.io,
+  // demo.futuros.io, beta.futuros.io, the Kinde-hosted /logged-out
+  // page once it boots through the app's i18n init) picks the same
+  // language on its next load. localStorage above is per-origin so
+  // it can't carry the choice off this domain.
+  writeLangCookie(lang);
   // Samples and thumbnails only exist in ES and EN; CA falls back to ES.
   const assetLang = (lang === 'en') ? 'en' : 'es';
   const sampleUrl = 'https://futuros.io/samples/sample_' + assetLang + '.html';
