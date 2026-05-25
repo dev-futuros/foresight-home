@@ -450,6 +450,27 @@ em{font-style:italic;color:var(--gold)}
   background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6"%3E%3Cpath d="M0 0l5 6 5-6z" fill="%238a8680"/%3E%3C/svg%3E');
   background-repeat:no-repeat;background-position:right 16px center;
 }
+.cta-checkbox{
+  display:flex;align-items:flex-start;gap:.7rem;
+  padding:.4rem .2rem;cursor:pointer;user-select:none;
+  font-size:.78rem;color:var(--text2);line-height:1.5;
+}
+.cta-checkbox input{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.cta-checkbox-box{
+  flex-shrink:0;width:18px;height:18px;margin-top:1px;
+  background:var(--bg);border:1px solid var(--border-h);border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  transition:border-color .15s,background .15s;
+}
+.cta-checkbox:hover .cta-checkbox-box{border-color:var(--border-g)}
+.cta-checkbox input:focus-visible + .cta-checkbox-box{outline:2px solid var(--gold);outline-offset:2px}
+.cta-checkbox input:checked + .cta-checkbox-box{background:var(--gold);border-color:var(--gold)}
+.cta-checkbox input:checked + .cta-checkbox-box::after{
+  content:'';width:5px;height:9px;
+  border:solid #0a0a0a;border-width:0 1.5px 1.5px 0;
+  transform:rotate(45deg) translate(-1px,-1px);
+}
+.cta-checkbox-text{flex:1}
 .cta-submit{margin-top:.6rem;width:100%;padding:15px;font-size:.78rem}
 .cta-fine{text-align:center;font-family:'DM Mono',monospace;font-size:.6rem;color:var(--dim);margin-top:1rem;line-height:1.6}
 .cta-fine a{color:var(--gold)}

@@ -550,6 +550,11 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
           <option value="enterprise" data-i18n="form.plan.o3">Futuros Enterprise — Próximamente</option>
           <option value="no-se" data-i18n="form.plan.o4">Todavía no lo sé</option>
         </select>
+        <label class="cta-checkbox">
+          <input type="checkbox" id="wf-marketing">
+          <span class="cta-checkbox-box" aria-hidden="true"></span>
+          <span class="cta-checkbox-text" data-i18n="form.marketing">Acepto recibir comunicaciones de marketing de Futuros.</span>
+        </label>
         <button type="submit" class="btn btn-primary cta-submit" data-i18n="form.btn">Únete a la lista de espera</button>
         <p class="cta-fine" data-i18n-html="form.fine">Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
       </form>
@@ -730,6 +735,7 @@ const TRANSLATIONS = {
     'form.profile.ph':'¿Cuál es tu perfil?','form.profile.o1':'Consultor independiente','form.profile.o2':'Equipo de estrategia / innovación','form.profile.o3':'Consultora o agencia','form.profile.o4':'Empresa — departamento interno','form.profile.o5':'Otro',
     'form.plan.ph':'¿Qué plan te interesa?','form.plan.o1':'Futuros Pro — 99€/mes','form.plan.o2':'Futuros Max — Próximamente','form.plan.o3':'Futuros Enterprise — Próximamente','form.plan.o4':'Todavía no lo sé',
     'form.btn':'Únete a la beta',
+    'form.marketing':'Acepto recibir comunicaciones de marketing de Futuros.',
     'form.fine':'Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
     'form.done.title':'Estás en la lista.','form.done.sub':'Te avisamos en cuanto abramos el acceso.','form.sending':'Enviando...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, España · futuros.io',
@@ -846,6 +852,7 @@ const TRANSLATIONS = {
     'form.profile.ph':"What's your profile?",'form.profile.o1':'Independent consultant','form.profile.o2':'Strategy / innovation team','form.profile.o3':'Consulting firm or agency','form.profile.o4':'Company — internal department','form.profile.o5':'Other',
     'form.plan.ph':'Which plan interests you?','form.plan.o1':'Futuros Pro — €99/month','form.plan.o2':'Futuros Max — Coming soon','form.plan.o3':'Futuros Enterprise — Coming soon','form.plan.o4':'Not sure yet',
     'form.btn':'Join Beta',
+    'form.marketing':'I agree to receive marketing communications from Futuros.',
     'form.fine':'No spam. No data sharing.<br>Direct contact: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
     'form.done.title':"You're on the list.",'form.done.sub':"We'll notify you as soon as we open access.",'form.sending':'Sending...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Spain · futuros.io',
@@ -962,6 +969,7 @@ const TRANSLATIONS = {
     'form.profile.ph':'Quin és el teu perfil?','form.profile.o1':'Consultor independent','form.profile.o2':'Equip d\'estratègia / innovació','form.profile.o3':'Consultora o agència','form.profile.o4':'Empresa — departament intern','form.profile.o5':'Altre',
     'form.plan.ph':'Quin pla t\'interessa?','form.plan.o1':'Futuros Pro — 99€/mes','form.plan.o2':'Futuros Max — Properament','form.plan.o3':'Futuros Enterprise — Properament','form.plan.o4':'Encara no ho sé',
     'form.btn':'Uneix-te a la llista d\'espera',
+    'form.marketing':'Accepto rebre comunicacions de màrqueting de Futuros.',
     'form.fine':'Sense spam. Sense cessió a tercers.<br>Contacte directe: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
     'form.done.title':'Estàs a la llista.','form.done.sub':'T\'avisarem tan bon punt obrim l\'accés.','form.sending':'Enviant...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Catalunya · futuros.io',
@@ -974,11 +982,12 @@ const TRANSLATIONS = {
 const GOOGLE_FORM = {
   url: 'https://docs.google.com/forms/d/e/1FAIpQLScqS4f1PT7z1Xn2jfdczi12M4g2qgfKs0eKoNQpKz4esvGmaA/formResponse',
   fields: {
-    name:    'entry.465702288',
-    email:   'entry.2130579344',
-    lang:    'entry.1628134032',
-    profile: 'entry.1454667331',
-    plan:    'entry.455032590',
+    name:      'entry.465702288',
+    email:     'entry.2130579344',
+    lang:      'entry.1628134032',
+    profile:   'entry.1454667331',
+    plan:      'entry.455032590',
+    marketing: 'entry.123756698',
   }
 };
 let currentLang = 'es';
@@ -1211,6 +1220,7 @@ async function submitWaitlist(e){
   const email = document.getElementById('wf-email').value.trim();
   const profile = document.getElementById('wf-profile').value;
   const plan = document.getElementById('wf-plan').value;
+  const marketing = document.getElementById('wf-marketing').checked ? 'yes' : 'no';
   const btn = e.target.querySelector('button[type="submit"]');
   if (!name || !email) return;
   const orig = btn.textContent;
@@ -1223,6 +1233,7 @@ async function submitWaitlist(e){
     body.append(GOOGLE_FORM.fields.lang, currentLang);
     body.append(GOOGLE_FORM.fields.profile, profile || 'no indicado');
     body.append(GOOGLE_FORM.fields.plan, plan || 'no indicado');
+    if (GOOGLE_FORM.fields.marketing) body.append(GOOGLE_FORM.fields.marketing, marketing);
     await fetch(GOOGLE_FORM.url, {
       method: 'POST',
       mode: 'no-cors',
@@ -1232,7 +1243,7 @@ async function submitWaitlist(e){
   } catch(_) {}
   try {
     const l = JSON.parse(localStorage.getItem('futuros_leads') || '[]');
-    l.push({ name, email, profile, plan, lang: currentLang, ts: new Date().toISOString() });
+    l.push({ name, email, profile, plan, marketing, lang: currentLang, ts: new Date().toISOString() });
     localStorage.setItem('futuros_leads', JSON.stringify(l));
   } catch(_) {}
   document.getElementById('waitlist-form').style.display = 'none';
