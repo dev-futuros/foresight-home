@@ -1,0 +1,69 @@
+# ──────────────────────────────────────────────────────────────
+# Cloudflare Pages headers for futuros.io (the marketing site).
+# Long-cache versioned + image assets; short-cache HTML and meta
+# files so SEO/AI-crawler updates propagate fast. Conservative
+# security headers applied site-wide.
+#
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+# CF Pages reads this file from the build output root.
+# Match-order: ALL matching rules apply; more-specific patterns
+# override less-specific for the same header name.
+# ──────────────────────────────────────────────────────────────
+
+# ── Long-cache: versioned or content-stable assets ──────────
+# styles.css is cache-busted in HTML with ?v=<date>, so the file
+# itself is effectively immutable per version. Bump ?v= in
+# index.html / terms.html (and subscribe.html on the blog) when
+# you change styles.css; visitors with the old version still see
+# the old cached file, new visitors fetch the new one cleanly.
+/styles.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# PWA / favicon set. Paths are stable; if you need to change an
+# icon, give it a new filename or accept the up-to-1-year wait.
+/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Sample-report screenshots (matrix, scenarios, summary, backcasting).
+# These ship once per report version; rare updates accept the
+# year-long cache. The sample_*.html shells stay on the short
+# cache below (they contain inline JS that may change).
+/samples/sample-*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── Short-cache: meta files SEO/AI crawlers re-read ─────────
+# 10-minute revalidate so sitemap edits, robots tweaks, and the
+# llms.txt content surface in search and answer engines quickly.
+/sitemap.xml
+  Cache-Control: public, max-age=600, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=600, must-revalidate
+
+/manifest.json
+  Cache-Control: public, max-age=600, must-revalidate
+
+/llms.txt
+  Cache-Control: public, max-age=600, must-revalidate
+
+/ai.txt
+  Cache-Control: public, max-age=600, must-revalidate
+
+/humans.txt
+  Cache-Control: public, max-age=600, must-revalidate
+
+/security.txt
+  Cache-Control: public, max-age=600, must-revalidate
+
+# ── Default ── HTML pages + anything not matched above ──────
+# Short cache (10 min) so content edits appear fast. Conservative
+# security headers protect against MIME sniffing, clickjacking,
+# and leaking the full referer URL to third parties (we still
+# leak the origin, which is fine for analytics and Mixpanel).
+/*
+  Cache-Control: public, max-age=600, must-revalidate
+  X-Robots-Tag: index, follow
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
