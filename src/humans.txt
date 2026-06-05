@@ -13,7 +13,7 @@
   Languages: Spanish (primary), English, Catalan
   Technology: HTML5, CSS3, Vanilla JS
   Fonts: Playfair Display, DM Sans, DM Mono (Google Fonts)
-  Analytics: PostHog (EU)
+  Analytics: Mixpanel (EU)
   Hosting: futuros.io
 
 /* THANKS */

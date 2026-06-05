@@ -22,9 +22,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Futuros">
-<link rel="icon" type="image/svg+xml" href="https://futuros.io/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="https://futuros.io/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://futuros.io/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="https://futuros.io/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://futuros.io/icons/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://futuros.io/icons/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,19 +33,42 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Futuros","url":"https://futuros.io","description":"Strategic foresight platform combining European institutional methodology with AI.","contactPoint":{"@type":"ContactPoint","email":"hello@futuros.io","contactType":"customer support","availableLanguage":["Spanish","English"]}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Futuros","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://futuros.io","offers":[{"@type":"Offer","name":"Futuros Pro","price":"99","priceCurrency":"EUR"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Futuros","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://futuros.io","offers":[{"@type":"Offer","name":"Futuros Pro","price":"149","priceCurrency":"EUR"},{"@type":"Offer","name":"Futuros Team","price":"390","priceCurrency":"EUR"}]}</script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2026-05-23">
 
-<!-- PostHog analytics -->
+<!-- Mixpanel analytics (EU residency) -->
 <script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
-  api_host:'https://eu.i.posthog.com',
-  person_profiles:'identified_only',
-  defaults:'2025-05-24',
-  opt_out_capturing_by_default:true
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+mixpanel.init('a4b409c01e5f9a3b21db626b1cdefbbb',{
+  api_host:'https://api-eu.mixpanel.com',
+  opt_out_tracking_by_default:true,
+  // Ignore navigator.doNotTrack. DNT was deprecated by the W3C in
+  // 2018 and never reached meaningful adoption — but Chrome still
+  // ships a way to enable it under Settings → Privacy. The Mixpanel
+  // SDK respects DNT by default, which means a user with DNT on who
+  // explicitly clicks Accept on our cookie banner STILL gets dropped:
+  // has_opted_out_tracking() returns true (because of DNT) regardless
+  // of our explicit opt_in_tracking() call, and every track() then
+  // silently no-ops. Our cookie consent banner IS the privacy gate;
+  // a deprecated browser header shouldn't override it.
+  ignore_dnt:true,
+  record_sessions_percent:100,
+  record_mask_text_selector:'input, textarea, [data-mp-mask]',
+  // Scope the distinct_id cookie to the parent so the visitor stays
+  // the same person across futuros.io / blog.futuros.io / beta.futuros.io.
+  // Funnel analyses (marketing → newsletter → subscribe, etc.) rely on
+  // this — without it, the user shows up as 3 separate anonymous IDs.
+  cookie_domain:'futuros.io',
+  cross_subdomain_cookie:true
 });
+// Tag every event with the surface so dashboards can separate
+// marketing-site events from app events in the same project. Without
+// this, only events that explicitly add { surface: 'marketing' } as
+// an event-level property (Page Viewed) get tagged; everything else
+// (CTA Clicked, Nav Link Clicked, Sign In Clicked, Access Requested,
+// Contact Sales Clicked, Sample Report Clicked, $opt_in) lands untagged.
+try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 </script>
 </head>
 <body>
@@ -68,7 +91,8 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
       <a href="#equipo" class="nav-link" data-section="equipo" data-i18n="nav.team">Equipo</a>
     </div>
     <div class="nav-cta">
-      <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Lista de espera</a>
+      <a href="https://beta.futuros.io" class="btn btn-secondary nav-signin" aria-disabled="true" tabindex="-1" data-i18n="nav.signin">Iniciar sesión</a>
+      <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Solicitar acceso</a>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -84,7 +108,8 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
   <a href="#planes" data-i18n="nav.plans">Planes</a>
   <a href="#faq">FAQ</a>
   <a href="#equipo" data-i18n="nav.team">Equipo</a>
-  <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Lista de espera</a>
+  <a href="https://beta.futuros.io" class="btn btn-secondary nav-signin" aria-disabled="true" tabindex="-1" data-i18n="nav.signin">Iniciar sesión</a>
+  <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Solicitar acceso</a>
 </div>
 
 <!-- ═══════════ HERO ═══════════ -->
@@ -93,7 +118,7 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
     <h1 class="hero-title" data-i18n-html="hero.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h1>
     <p class="hero-sub" data-i18n-html="hero.sub">Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.</p>
     <div class="hero-ctas">
-      <a href="#waitlist" class="btn btn-primary btn-arrow" data-i18n="hero.cta1">Únete a la lista de espera</a>
+      <a href="#waitlist" class="btn btn-primary btn-arrow" data-i18n="hero.cta1">Solicitar acceso</a>
       <a id="hero-interactive-report" href="https://futuros.io/samples/sample_es.html" class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="hero.cta2">Ver informe interactivo</a>
     </div>
     <div class="hero-trust">
@@ -295,10 +320,10 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
         <div class="plan reveal">
           <h3 class="plan-name" data-i18n="plan1.name">Futuros Pro</h3>
           <div class="plan-price">
-            <div class="plan-price-num">99€</div>
+            <div class="plan-price-num">149€</div>
             <div class="plan-period" data-i18n="plan.period">/mes</div>
           </div>
-          <div class="plan-limits" data-i18n="plan1.limits">1 usuario · 10 informes/mes</div>
+          <div class="plan-limits" data-i18n="plan1.limits">1 usuario · 15 informes/mes</div>
           <ul class="plan-features">
             <li data-i18n="plan1.f1">Acceso completo a la plataforma</li>
             <li data-i18n="plan1.f2">Flujo guiado STEEP + Horizon Scan</li>
@@ -307,15 +332,16 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
             <li data-i18n="plan1.f5">Export PDF + presentación editable + enlace web</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
+            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Solicitar acceso</a>
           </div>
         </div>
         <div class="plan reveal">
-          <h3 class="plan-name" data-i18n="plan2.name">Futuros Max</h3>
+          <h3 class="plan-name" data-i18n="plan2.name">Futuros Team</h3>
           <div class="plan-price">
-            <div class="plan-price-num coming" data-i18n="plan.coming">Próximamente</div>
+            <div class="plan-price-num">390€</div>
+            <div class="plan-period" data-i18n="plan.period">/mes</div>
           </div>
-          <div class="plan-limits" data-i18n="plan2.limits">Equipos pequeños · pricing TBA</div>
+          <div class="plan-limits" data-i18n="plan2.limits">4 usuarios · 50 informes/mes</div>
           <ul class="plan-features">
             <li data-i18n="plan2.f1">Todo lo del plan Pro</li>
             <li data-i18n="plan2.f2">Workspace colaborativo</li>
@@ -324,13 +350,13 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
             <li data-i18n="plan2.f5">Onboarding + soporte prioritario</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
+            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Solicitar acceso</a>
           </div>
         </div>
         <div class="plan reveal">
           <h3 class="plan-name" data-i18n="plan3.name">Futuros Enterprise</h3>
           <div class="plan-price">
-            <div class="plan-price-num coming" data-i18n="plan.coming">Próximamente</div>
+            <div class="plan-price-num coming" data-i18n="plan.contact">Consultar precio</div>
           </div>
           <div class="plan-limits" data-i18n="plan3.limits">Pricing por seats · contrato anual</div>
           <ul class="plan-features">
@@ -341,7 +367,7 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
             <li data-i18n="plan3.f5">CSM dedicado · SLA · DPA</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
+            <a href="mailto:hello@futuros.io?subject=Futuros%20Enterprise%20inquiry" class="btn btn-secondary" data-i18n="plan.contactCta">Contactar ventas</a>
           </div>
         </div>
       </div>
@@ -431,7 +457,7 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
           <span data-i18n="faq.q2">¿Mis datos están seguros? ¿Dónde se almacenan?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a2">Sí. Los datos se almacenan en infraestructura europea (data residency UE). En el plan Enterprise hay SSO/SAML, logs de auditoría, blacklist de fuentes para compliance, DPA firmado y SLA. Para Pro y Max, los datos del cliente nunca se usan para entrenar modelos.</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a2">Sí. Los datos se almacenan en infraestructura europea (data residency UE). En el plan Enterprise hay SSO/SAML, logs de auditoría, blacklist de fuentes para compliance, DPA firmado y SLA. Para Pro y Team, los datos del cliente nunca se usan para entrenar modelos.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q">
@@ -459,7 +485,7 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
           <span data-i18n="faq.q6">¿Puedo personalizar el branding del informe?</span>
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a6">En el plan Max, puedes aplicar tu logo, paleta y portada al export — perfecto para entregar bajo tu marca a cliente final. En Enterprise, plantillas corporativas completas. En Pro, el export sale con la marca Futuros visible.</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n-html="faq.a6">En el plan Team, puedes aplicar tu logo, paleta y portada al export — perfecto para entregar bajo tu marca a cliente final. En Enterprise, plantillas corporativas completas. En Pro, el export sale con la marca Futuros visible.</div></div>
       </div>
     </div>
   </div>
@@ -528,41 +554,33 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
 <section class="section cta-final" id="waitlist">
   <div class="container">
     <div class="reveal" id="waitlist-form">
-      <div class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">Lista de espera</div>
+      <div class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">Acceso a la beta</div>
       <h2 class="cta-final-title" data-i18n-html="cta.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h2>
       <form class="cta-form" onsubmit="submitWaitlist(event)">
         <div class="cta-form-row">
-          <input class="cta-input" type="text" id="wf-name" required data-i18n-ph="form.name" placeholder="Tu nombre">
-          <input class="cta-input" type="email" id="wf-email" required data-i18n-ph="form.email" placeholder="tu@email.com">
+          <input class="cta-input" type="text" id="wf-name" required data-i18n-ph="form.name" placeholder="Nombre">
+          <input class="cta-input" type="text" id="wf-lastname" required data-i18n-ph="form.lastname" placeholder="Apellido">
         </div>
+        <input class="cta-input" type="email" id="wf-email" required data-i18n-ph="form.email" placeholder="tu@email.com">
         <select class="cta-select" id="wf-profile">
           <option value="" disabled selected data-i18n="form.profile.ph">¿Cuál es tu perfil?</option>
-          <option value="consultor" data-i18n="form.profile.o1">Consultor independiente</option>
-          <option value="equipo" data-i18n="form.profile.o2">Equipo de estrategia / innovación</option>
-          <option value="consultora" data-i18n="form.profile.o3">Consultora o agencia</option>
-          <option value="empresa" data-i18n="form.profile.o4">Empresa — departamento interno</option>
-          <option value="otro" data-i18n="form.profile.o5">Otro</option>
-        </select>
-        <select class="cta-select" id="wf-plan">
-          <option value="" disabled selected data-i18n="form.plan.ph">¿Qué plan te interesa?</option>
-          <option value="pro" data-i18n="form.plan.o1">Futuros Pro — 99€/mes</option>
-          <option value="max" data-i18n="form.plan.o2">Futuros Max — Próximamente</option>
-          <option value="enterprise" data-i18n="form.plan.o3">Futuros Enterprise — Próximamente</option>
-          <option value="no-se" data-i18n="form.plan.o4">Todavía no lo sé</option>
+          <option value="company" data-i18n="form.profile.o1">Empresa</option>
+          <option value="consultant" data-i18n="form.profile.o2">Consultor</option>
+          <option value="other" data-i18n="form.profile.o3">Otro</option>
         </select>
         <label class="cta-checkbox">
           <input type="checkbox" id="wf-marketing">
           <span class="cta-checkbox-box" aria-hidden="true"></span>
           <span class="cta-checkbox-text" data-i18n="form.marketing">Acepto recibir comunicaciones de marketing de Futuros.</span>
         </label>
-        <button type="submit" class="btn btn-primary cta-submit" data-i18n="form.btn">Únete a la lista de espera</button>
+        <button type="submit" class="btn btn-primary cta-submit" data-i18n="form.btn">Solicitar acceso</button>
         <p class="cta-fine" data-i18n-html="form.fine">Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
       </form>
     </div>
     <div class="cta-done" id="waitlist-done">
       <div class="cta-done-icon">◈</div>
-      <div class="cta-done-title" data-i18n="form.done.title">Estás en la lista.</div>
-      <div class="cta-done-sub" data-i18n="form.done.sub">Te avisamos en cuanto abramos el acceso.</div>
+      <div class="cta-done-title" data-i18n="form.done.title">Solicitud recibida.</div>
+      <div class="cta-done-sub" data-i18n="form.done.sub">Te avisaremos en cuanto revisemos tu solicitud.</div>
     </div>
   </div>
 </section>
@@ -585,6 +603,8 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
     </div>
     <div class="footer-bottom" data-i18n="footer.bottom">© 2026 Futuros · Barcelona, España · futuros.io</div>
     <div class="footer-legal">
+      <a href="https://blog.futuros.io/" data-i18n="nav.newsletter">Newsletter</a>
+      <span class="footer-legal-sep">·</span>
       <a href="terms.html" data-i18n="nav.terms">Términos</a>
       <span class="footer-legal-sep">·</span>
       <a href="mailto:hello@futuros.io">hello@futuros.io</a>
@@ -610,13 +630,17 @@ posthog.init('phc_w2W8Zs99Rcv9zAoCyWAEQjKRDDNfxGAZGXmJnJ9UWDw4',{
   </div>
 </div>
 
-<!-- Consent banner -->
-<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Cookie consent">
-  <span class="consent-tag" data-i18n="consent.tag">Privacidad</span>
-  <p class="consent-text" data-i18n-html="consent.text">Usamos cookies para entender cómo se usa Futuros y mejorar el producto. Sin anuncios, sin cesión a terceros.</p>
-  <div class="consent-actions">
-    <button class="btn btn-secondary" id="consentDecline" data-i18n="consent.decline">Rechazar</button>
-    <button class="btn btn-primary" id="consentAccept" data-i18n="consent.accept">Aceptar</button>
+<!-- Cookie consent banner — matches beta.futuros.io's banner for cross-domain UX parity -->
+<div class="fs-cookies" id="fsCookies" role="dialog" aria-live="polite" aria-label="Cookies consent">
+  <div class="fs-cookies-text">
+    <div class="fs-cookies-title" data-i18n="cookies.title">Cookies y analítica</div>
+    <div class="fs-cookies-body">
+      <span data-i18n="cookies.body">Podemos usar herramientas de analítica para entender cómo se usa Futuros y mejorarlo. No compartimos datos con anunciantes ni terceros publicitarios.</span> <a href="terms.html" data-i18n="cookies.learn">Política de Privacidad</a>.
+    </div>
+  </div>
+  <div class="fs-cookies-actions">
+    <button type="button" class="fs-cookies-reject" id="fsCookiesReject" data-i18n="cookies.reject">Rechazar</button>
+    <button type="button" class="fs-cookies-accept" id="fsCookiesAccept" data-i18n="cookies.accept">Aceptar</button>
   </div>
 </div>
 
@@ -629,10 +653,10 @@ const TRANSLATIONS = {
   es: {
     'meta.title': 'Futuros — Foresight estratégico con IA | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combina metodología de foresight institucional europeo con inteligencia artificial para generar análisis de escenarios estratégicos completos en menos de 2 horas.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.services':'Servicios','nav.plans':'Planes','nav.team':'Equipo','nav.terms':'Términos y Condiciones','nav.cta':'Únete a la beta',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.services':'Servicios','nav.plans':'Planes','nav.team':'Equipo','nav.terms':'Términos y Condiciones','nav.newsletter':'Newsletter','nav.signin':'Iniciar sesión','nav.cta':'Solicitar acceso',
     'hero.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
     'hero.sub':'Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.',
-    'hero.cta1':'Únete a la beta','hero.cta2':'Ver informe interactivo',
+    'hero.cta1':'Solicitar acceso','hero.cta2':'Ver informe interactivo',
     'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Metodología de instituciones europeas líderes','hero.trust3':'Informe completo en menos de 2 horas',
     'prob.eyebrow':'El reto',
     'prob.title':'Tu cliente quiere un análisis estratégico para el próximo comité. <em>Tienes cinco días.</em>',
@@ -696,10 +720,10 @@ const TRANSLATIONS = {
     'plans.eyebrow':'Planes',
     'plans.title':'Tres niveles de <em>relación con el futuro.</em>',
     'plans.lede':'Desde el profesional en solitario hasta la organización con governance completa.',
-    'plan.period':'/mes','plan.coming':'Próximamente','plan.cta':'Únete a la beta',
-    'plan1.name':'Futuros Pro','plan1.limits':'1 usuario · 10 informes/mes',
+    'plan.period':'/mes','plan.coming':'Próximamente','plan.contact':'Consultar precio','plan.contactCta':'Contactar ventas','plan.cta':'Solicitar acceso',
+    'plan1.name':'Futuros Pro','plan1.limits':'1 usuario · 15 informes/mes',
     'plan1.f1':'Acceso completo a la plataforma','plan1.f2':'Flujo guiado STEEP + Horizon Scan','plan1.f3':'Escenarios 3P contextuales','plan1.f4':'Backcasting + mapa H1/H2/H3','plan1.f5':'Export PDF + presentación editable + enlace web',
-    'plan2.name':'Futuros Max','plan2.limits':'Equipos pequeños · pricing TBA',
+    'plan2.name':'Futuros Team','plan2.limits':'4 usuarios · 50 informes/mes',
     'plan2.f1':'Todo lo del plan Pro','plan2.f2':'Workspace colaborativo','plan2.f3':'White-label en exports','plan2.f4':'Integraciones con tus herramientas','plan2.f5':'Onboarding + soporte prioritario',
     'plan3.name':'Futuros Enterprise','plan3.limits':'Pricing por seats · contrato anual',
     'plan3.f1':'Cuenta admin · roles · workspaces','plan3.f2':'Blacklist de fuentes (compliance)','plan3.f3':'SSO/SAML · audit logs · EU residency','plan3.f4':'API + webhooks · plantillas corp.','plan3.f5':'CSM dedicado · SLA · DPA',
@@ -707,7 +731,7 @@ const TRANSLATIONS = {
     'faq.q1':'¿En qué se diferencia de pedirle un análisis a una IA general?',
     'faq.a1':'Tres cosas. <strong>Una:</strong> Futuros integra metodología real (STEEP, Tres Horizontes, scenario planning) en un workflow guiado, con lógica encadenada entre pasos. <strong>Dos:</strong> hace búsqueda web en vivo durante la generación, así los datos macro están actualizados al día. <strong>Tres:</strong> el output es un entregable brand-ready listo para cliente, no un texto plano que tienes que reformatear.',
     'faq.q2':'¿Mis datos están seguros? ¿Dónde se almacenan?',
-    'faq.a2':'Sí. Los datos se almacenan en infraestructura europea (data residency UE). En el plan Enterprise hay SSO/SAML, logs de auditoría, blacklist de fuentes para compliance, DPA firmado y SLA. Para Pro y Max, los datos del cliente nunca se usan para entrenar modelos.',
+    'faq.a2':'Sí. Los datos se almacenan en infraestructura europea (data residency UE). En el plan Enterprise hay SSO/SAML, logs de auditoría, blacklist de fuentes para compliance, DPA firmado y SLA. Para Pro y Team, los datos del cliente nunca se usan para entrenar modelos.',
     'faq.q3':'¿Necesito formación para usarlo?',
     'faq.a3':'No. El flujo está diseñado para ser intuitivo desde el primer informe. Si prefieres ir guiado, el asistente conversacional te lleva paso a paso. Si quieres control total, puedes introducir tus propios datos y matices manualmente. Para sacar el máximo partido ofrecemos un onboarding 1:1 de 1 hora con nuestro equipo — opcional, pero recomendable para los primeros entregables a cliente.',
     'faq.q4':'¿Puedo cancelar cuando quiera?',
@@ -715,7 +739,7 @@ const TRANSLATIONS = {
     'faq.q5':'¿Funciona en inglés y español?',
     'faq.a5':'Sí, completamente bilingüe — interfaz, prompts y output. Configurable por informe: puedes hacer el análisis en español pero entregar el PDF en inglés para tu cliente internacional. Más idiomas en el roadmap (FR, IT, DE) para 2027.',
     'faq.q6':'¿Puedo personalizar el branding del informe?',
-    'faq.a6':'En el plan Max, puedes aplicar tu logo, paleta y portada al export — perfecto para entregar bajo tu marca a cliente final. En Enterprise, plantillas corporativas completas. En Pro, el export sale con la marca Futuros visible.',
+    'faq.a6':'En el plan Team, puedes aplicar tu logo, paleta y portada al export — perfecto para entregar bajo tu marca a cliente final. En Enterprise, plantillas corporativas completas. En Pro, el export sale con la marca Futuros visible.',
     'team.eyebrow':'El equipo',
     'team.title':'El foresight estratégico ha sido siempre un privilegio. <em>Lo estamos cambiando.</em>',
     'team.lede':'Durante décadas, sólo las grandes corporaciones con presupuestos para consultoras de primer nivel han tenido acceso real al diseño de futuros. Sabemos cómo funciona ese mundo desde dentro — y sabemos cómo construir herramientas que lo democraticen.',
@@ -729,27 +753,27 @@ const TRANSLATIONS = {
     'team.s2':'marcas globales transformadas',
     'team.s3':'disciplinas en un equipo core: estrategia, producto e ingeniería',
     'team.s4':'misión: democratizar el diseño de futuros',
-    'cta.eyebrow':'Lista de espera',
+    'cta.eyebrow':'Acceso a la beta',
     'cta.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
-    'form.name':'Tu nombre','form.email':'tu@email.com',
-    'form.profile.ph':'¿Cuál es tu perfil?','form.profile.o1':'Consultor independiente','form.profile.o2':'Equipo de estrategia / innovación','form.profile.o3':'Consultora o agencia','form.profile.o4':'Empresa — departamento interno','form.profile.o5':'Otro',
-    'form.plan.ph':'¿Qué plan te interesa?','form.plan.o1':'Futuros Pro — 99€/mes','form.plan.o2':'Futuros Max — Próximamente','form.plan.o3':'Futuros Enterprise — Próximamente','form.plan.o4':'Todavía no lo sé',
-    'form.btn':'Únete a la beta',
+    'form.name':'Nombre','form.lastname':'Apellido','form.email':'tu@email.com',
+    'form.profile.ph':'¿Cuál es tu perfil?','form.profile.o1':'Empresa','form.profile.o2':'Consultor','form.profile.o3':'Otro',
+    'form.btn':'Solicitar acceso',
     'form.marketing':'Acepto recibir comunicaciones de marketing de Futuros.',
     'form.fine':'Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
-    'form.done.title':'Estás en la lista.','form.done.sub':'Te avisamos en cuanto abramos el acceso.','form.sending':'Enviando...',
+    'form.done.title':'Solicitud recibida.','form.done.sub':'Te avisaremos en cuanto revisemos tu solicitud.','form.sending':'Enviando...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, España · futuros.io',
-    'consent.tag':'Privacidad',
-    'consent.text':'Usamos cookies para entender cómo se usa Futuros y mejorar el producto. Sin anuncios, sin cesión a terceros. Más en <a href="mailto:hello@futuros.io">hello@futuros.io</a>.',
-    'consent.accept':'Aceptar','consent.decline':'Rechazar',
+    'cookies.title':'Cookies y analítica',
+    'cookies.body':'Podemos usar herramientas de analítica para entender cómo se usa Futuros y mejorarlo. No compartimos datos con anunciantes ni terceros publicitarios.',
+    'cookies.learn':'Política de Privacidad',
+    'cookies.accept':'Aceptar','cookies.reject':'Rechazar',
   },
   en: {
     'meta.title': 'Futuros — AI-powered Strategic Foresight | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combines European institutional foresight methodology with AI to generate complete strategic scenario analyses in under 2 hours.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.services':'Services','nav.plans':'Plans','nav.team':'Team','nav.terms':'Terms & Conditions','nav.cta':'Join Beta',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.services':'Services','nav.plans':'Plans','nav.team':'Team','nav.terms':'Terms & Conditions','nav.newsletter':'Newsletter','nav.signin':'Sign in','nav.cta':'Request access',
     'hero.title':'The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>',
     'hero.sub':'Futuros combines <strong>professional foresight methodology</strong> with advanced artificial intelligence — the same process large corporations use, now within reach of any team.',
-    'hero.cta1':'Join Beta','hero.cta2':'See interactive report',
+    'hero.cta1':'Request access','hero.cta2':'See interactive report',
     'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Methodology from leading European institutions','hero.trust3':'Complete report in under 2 hours',
     'prob.eyebrow':'The challenge',
     'prob.title':'Your client wants a strategic analysis for the next board meeting. <em>You have five days.</em>',
@@ -813,10 +837,10 @@ const TRANSLATIONS = {
     'plans.eyebrow':'Plans',
     'plans.title':'Three levels of <em>relationship with the future.</em>',
     'plans.lede':'From the solo professional to the organization with full governance.',
-    'plan.period':'/mo','plan.coming':'Coming soon','plan.cta':'Join Beta',
-    'plan1.name':'Futuros Pro','plan1.limits':'1 user · 10 reports/month',
+    'plan.period':'/mo','plan.coming':'Coming soon','plan.contact':'Contact sales','plan.contactCta':'Talk to sales','plan.cta':'Request access',
+    'plan1.name':'Futuros Pro','plan1.limits':'1 user · 15 reports/month',
     'plan1.f1':'Full platform access','plan1.f2':'Guided STEEP + Horizon Scan','plan1.f3':'Contextual 3P scenarios','plan1.f4':'Backcasting + H1/H2/H3 map','plan1.f5':'PDF + editable presentation + web link export',
-    'plan2.name':'Futuros Max','plan2.limits':'Small teams · pricing TBA',
+    'plan2.name':'Futuros Team','plan2.limits':'4 users · 50 reports/month',
     'plan2.f1':'Everything in Pro','plan2.f2':'Collaborative workspace','plan2.f3':'White-label exports','plan2.f4':'Integrations with your tools','plan2.f5':'Onboarding + priority support',
     'plan3.name':'Futuros Enterprise','plan3.limits':'Per-seat pricing · annual contract',
     'plan3.f1':'Admin · roles · workspaces','plan3.f2':'Source blacklist (compliance)','plan3.f3':'SSO/SAML · audit logs · EU residency','plan3.f4':'API + webhooks · corp templates','plan3.f5':'Dedicated CSM · SLA · DPA',
@@ -824,7 +848,7 @@ const TRANSLATIONS = {
     'faq.q1':"How is it different from asking a general AI for an analysis?",
     'faq.a1':'Three things. <strong>One:</strong> Futuros integrates real methodology (STEEP, Three Horizons, scenario planning) in a guided workflow with chained logic between steps. <strong>Two:</strong> live web search at generation time, so macro data is current to today. <strong>Three:</strong> the output is a brand-ready, client-ready deliverable, not raw text you have to reformat.',
     'faq.q2':'Is my data secure? Where is it stored?',
-    'faq.a2':'Yes. Data is stored on European infrastructure (EU data residency). Enterprise plan includes SSO/SAML, audit logs, source blacklist for compliance, signed DPA and SLA. For Pro and Max, customer data is never used to train models.',
+    'faq.a2':'Yes. Data is stored on European infrastructure (EU data residency). Enterprise plan includes SSO/SAML, audit logs, source blacklist for compliance, signed DPA and SLA. For Pro and Team, customer data is never used to train models.',
     'faq.q3':'Do I need training to use it?',
     'faq.a3':"No. The flow is designed to be intuitive from the first report. If you prefer to be guided, the conversational assistant walks you through step by step. If you want full control, you can input your own data and nuances manually. To get the most out of it, we offer a 1:1 onboarding hour with our team — optional, but recommended for the first client deliverables.",
     'faq.q4':'Can I cancel anytime?',
@@ -832,7 +856,7 @@ const TRANSLATIONS = {
     'faq.q5':'Does it work in English and Spanish?',
     'faq.a5':"Yes, fully bilingual — interface, prompts and output. Configurable per report: you can do the analysis in Spanish but deliver the PDF in English for your international client. More languages on the roadmap (FR, IT, DE) for 2027.",
     'faq.q6':'Can I customize the report branding?',
-    'faq.a6':'In the Max plan, you can apply your logo, palette and cover to the export — perfect for delivering under your brand to the end client. Enterprise has full corporate templates. In Pro, exports include the visible Futuros brand.',
+    'faq.a6':'In the Team plan, you can apply your logo, palette and cover to the export — perfect for delivering under your brand to the end client. Enterprise has full corporate templates. In Pro, exports include the visible Futuros brand.',
     'team.eyebrow':'The team',
     'team.title':'Strategic foresight has always been a privilege. <em>We are changing that.</em>',
     'team.lede':'For decades, only large corporations with budgets for top-tier consultancies have had real access to futures design. We know how that world works from the inside — and we know how to build tools that democratize it.',
@@ -846,27 +870,27 @@ const TRANSLATIONS = {
     'team.s2':'global brands transformed',
     'team.s3':'disciplines in one core team: strategy, product, engineering',
     'team.s4':'mission: democratize futures design',
-    'cta.eyebrow':'Waitlist',
+    'cta.eyebrow':'Beta access',
     'cta.title':"The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>",
-    'form.name':'Your name','form.email':'your@email.com',
-    'form.profile.ph':"What's your profile?",'form.profile.o1':'Independent consultant','form.profile.o2':'Strategy / innovation team','form.profile.o3':'Consulting firm or agency','form.profile.o4':'Company — internal department','form.profile.o5':'Other',
-    'form.plan.ph':'Which plan interests you?','form.plan.o1':'Futuros Pro — €99/month','form.plan.o2':'Futuros Max — Coming soon','form.plan.o3':'Futuros Enterprise — Coming soon','form.plan.o4':'Not sure yet',
-    'form.btn':'Join Beta',
+    'form.name':'First name','form.lastname':'Last name','form.email':'your@email.com',
+    'form.profile.ph':"What's your profile?",'form.profile.o1':'Company','form.profile.o2':'Consultant','form.profile.o3':'Other',
+    'form.btn':'Request access',
     'form.marketing':'I agree to receive marketing communications from Futuros.',
     'form.fine':'No spam. No data sharing.<br>Direct contact: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
-    'form.done.title':"You're on the list.",'form.done.sub':"We'll notify you as soon as we open access.",'form.sending':'Sending...',
+    'form.done.title':"Request received.",'form.done.sub':"We'll be in touch once we've reviewed your request.",'form.sending':'Sending...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Spain · futuros.io',
-    'consent.tag':'Privacy',
-    'consent.text':'We use cookies to understand how Futuros is used and improve the product. No ads, no third-party sharing. More at <a href="mailto:hello@futuros.io">hello@futuros.io</a>.',
-    'consent.accept':'Accept','consent.decline':'Decline',
+    'cookies.title':'Cookies & analytics',
+    'cookies.body':"We may use analytics tools to understand how Futuros is used and improve it. We don't share data with advertisers or ad-tech third parties.",
+    'cookies.learn':'Privacy Policy',
+    'cookies.accept':'Accept','cookies.reject':'Decline',
   },
   ca: {
     'meta.title': 'Futuros — Foresight estratègic amb IA | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combina metodologia de foresight institucional europeu amb intel·ligència artificial per generar anàlisis d\'escenaris estratègics completes en menys de 2 hores.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Què és','nav.who':'Per a qui','nav.services':'Serveis','nav.plans':'Plans','nav.team':'Equip','nav.terms':'Termes i Condicions','nav.cta':'Llista d\'espera',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Què és','nav.who':'Per a qui','nav.services':'Serveis','nav.plans':'Plans','nav.team':'Equip','nav.terms':'Termes i Condicions','nav.newsletter':'Newsletter','nav.signin':'Iniciar sessió','nav.cta':'Sol·licitar accés',
     'hero.title':'El futur no es prediu, <em>es&nbsp;dissenya.</em>',
     'hero.sub':'Futuros combina <strong>metodologia de foresight professional</strong> amb intel·ligència artificial avançada — el mateix procés que utilitzen les grans corporacions, ara a l\'abast de qualsevol equip.',
-    'hero.cta1':'Uneix-te a la llista d\'espera','hero.cta2':'Veure informe interactiu',
+    'hero.cta1':'Sol·licitar accés','hero.cta2':'Veure informe interactiu',
     'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Metodologia d\'institucions europees líders','hero.trust3':'Informe complet en menys de 2 hores',
     'prob.eyebrow':'El repte',
     'prob.title':'El teu client vol una anàlisi estratègica per al pròxim comitè. <em>Tens cinc dies.</em>',
@@ -930,10 +954,10 @@ const TRANSLATIONS = {
     'plans.eyebrow':'Plans',
     'plans.title':'Tres nivells de <em>relació amb el futur.</em>',
     'plans.lede':'Des del professional en solitari fins a l\'organització amb governance completa.',
-    'plan.period':'/mes','plan.coming':'Properament','plan.cta':'Uneix-te a la llista d\'espera',
-    'plan1.name':'Futuros Pro','plan1.limits':'1 usuari · 10 informes/mes',
+    'plan.period':'/mes','plan.coming':'Properament','plan.contact':'Consultar preu','plan.contactCta':'Contactar vendes','plan.cta':'Sol·licitar accés',
+    'plan1.name':'Futuros Pro','plan1.limits':'1 usuari · 15 informes/mes',
     'plan1.f1':'Accés complet a la plataforma','plan1.f2':'Flux guiat STEEP + Horizon Scan','plan1.f3':'Escenaris 3P contextuals','plan1.f4':'Backcasting + mapa H1/H2/H3','plan1.f5':'Export PDF + presentació editable + enllaç web',
-    'plan2.name':'Futuros Max','plan2.limits':'Equips petits · pricing TBA',
+    'plan2.name':'Futuros Team','plan2.limits':'4 usuaris · 50 informes/mes',
     'plan2.f1':'Tot el del pla Pro','plan2.f2':'Workspace col·laboratiu','plan2.f3':'White-label en exports','plan2.f4':'Integracions amb les teves eines','plan2.f5':'Onboarding + suport prioritari',
     'plan3.name':'Futuros Enterprise','plan3.limits':'Pricing per seats · contracte anual',
     'plan3.f1':'Compte admin · rols · workspaces','plan3.f2':'Blacklist de fonts (compliance)','plan3.f3':'SSO/SAML · audit logs · EU residency','plan3.f4':'API + webhooks · plantilles corp.','plan3.f5':'CSM dedicat · SLA · DPA',
@@ -941,7 +965,7 @@ const TRANSLATIONS = {
     'faq.q1':'En què es diferencia de demanar una anàlisi a una IA general?',
     'faq.a1':'Tres coses. <strong>Una:</strong> Futuros integra metodologia real (STEEP, Tres Horitzons, scenario planning) en un workflow guiat, amb lògica encadenada entre passos. <strong>Dues:</strong> fa cerca web en directe durant la generació, així les dades macro estan actualitzades al dia. <strong>Tres:</strong> l\'output és un entregable brand-ready llest per a client, no un text pla que has de reformatar.',
     'faq.q2':'Les meves dades són segures? On s\'emmagatzemen?',
-    'faq.a2':'Sí. Les dades s\'emmagatzemen en infraestructura europea (data residency UE). Al pla Enterprise hi ha SSO/SAML, logs d\'auditoria, blacklist de fonts per a compliance, DPA signat i SLA. Per a Pro i Max, les dades del client mai s\'utilitzen per entrenar models.',
+    'faq.a2':'Sí. Les dades s\'emmagatzemen en infraestructura europea (data residency UE). Al pla Enterprise hi ha SSO/SAML, logs d\'auditoria, blacklist de fonts per a compliance, DPA signat i SLA. Per a Pro i Team, les dades del client mai s\'utilitzen per entrenar models.',
     'faq.q3':'Necessito formació per utilitzar-lo?',
     'faq.a3':'No. El flux està dissenyat per ser intuïtiu des del primer informe. Si prefereixes anar guiat, l\'assistent conversacional et porta pas a pas. Si vols control total, pots introduir les teves pròpies dades i matisos manualment. Per treure\'n el màxim partit oferim un onboarding 1:1 d\'1 hora amb el nostre equip — opcional, però recomanable per als primers entregables a client.',
     'faq.q4':'Puc cancel·lar quan vulgui?',
@@ -949,7 +973,7 @@ const TRANSLATIONS = {
     'faq.q5':'Funciona en anglès i espanyol?',
     'faq.a5':'Sí, completament trilingüe — interfície, prompts i output en català, espanyol i anglès. Configurable per informe: pots fer l\'anàlisi en català però entregar el PDF en anglès per al teu client internacional. Més idiomes al roadmap (FR, IT, DE) per al 2027.',
     'faq.q6':'Puc personalitzar el branding de l\'informe?',
-    'faq.a6':'Al pla Max, pots aplicar el teu logo, paleta i portada a l\'export — perfecte per entregar sota la teva marca a client final. A Enterprise, plantilles corporatives completes. A Pro, l\'export surt amb la marca Futuros visible.',
+    'faq.a6':'Al pla Team, pots aplicar el teu logo, paleta i portada a l\'export — perfecte per entregar sota la teva marca a client final. A Enterprise, plantilles corporatives completes. A Pro, l\'export surt amb la marca Futuros visible.',
     'team.eyebrow':'L\'equip',
     'team.title':'El foresight estratègic ha estat sempre un privilegi. <em>L\'estem canviant.</em>',
     'team.lede':'Durant dècades, només les grans corporacions amb pressupostos per a consultores de primer nivell han tingut accés real al disseny de futurs. Sabem com funciona aquell món des de dins — i sabem com construir eines que el democratitzin.',
@@ -963,33 +987,23 @@ const TRANSLATIONS = {
     'team.s2':'marques globals transformades',
     'team.s3':'disciplines en un equip core: estratègia, producte i enginyeria',
     'team.s4':'missió: democratitzar el disseny de futurs',
-    'cta.eyebrow':'Llista d\'espera',
+    'cta.eyebrow':'Accés a la beta',
     'cta.title':'El futur no es prediu, <em>es&nbsp;dissenya.</em>',
-    'form.name':'El teu nom','form.email':'tu@email.com',
-    'form.profile.ph':'Quin és el teu perfil?','form.profile.o1':'Consultor independent','form.profile.o2':'Equip d\'estratègia / innovació','form.profile.o3':'Consultora o agència','form.profile.o4':'Empresa — departament intern','form.profile.o5':'Altre',
-    'form.plan.ph':'Quin pla t\'interessa?','form.plan.o1':'Futuros Pro — 99€/mes','form.plan.o2':'Futuros Max — Properament','form.plan.o3':'Futuros Enterprise — Properament','form.plan.o4':'Encara no ho sé',
-    'form.btn':'Uneix-te a la llista d\'espera',
+    'form.name':'Nom','form.lastname':'Cognom','form.email':'tu@email.com',
+    'form.profile.ph':'Quin és el teu perfil?','form.profile.o1':'Empresa','form.profile.o2':'Consultor','form.profile.o3':'Altre',
+    'form.btn':'Sol·licitar accés',
     'form.marketing':'Accepto rebre comunicacions de màrqueting de Futuros.',
     'form.fine':'Sense spam. Sense cessió a tercers.<br>Contacte directe: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
-    'form.done.title':'Estàs a la llista.','form.done.sub':'T\'avisarem tan bon punt obrim l\'accés.','form.sending':'Enviant...',
+    'form.done.title':'Sol·licitud rebuda.','form.done.sub':'T\'avisarem tan bon punt revisem la teva sol·licitud.','form.sending':'Enviant...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Catalunya · futuros.io',
-    'consent.tag':'Privacitat',
-    'consent.text':'Utilitzem cookies per entendre com s\'utilitza Futuros i millorar el producte. Sense anuncis, sense cessió a tercers. Més a <a href="mailto:hello@futuros.io">hello@futuros.io</a>.',
-    'consent.accept':'Acceptar','consent.decline':'Rebutjar',
+    'cookies.title':'Cookies i analítica',
+    'cookies.body':'Podem fer servir eines d\'analítica per entendre com s\'utilitza Futuros i millorar-lo. No compartim dades amb anunciants ni tercers publicitaris.',
+    'cookies.learn':'Política de Privacitat',
+    'cookies.accept':'Acceptar','cookies.reject':'Rebutjar',
   }
 };
 
-const GOOGLE_FORM = {
-  url: 'https://docs.google.com/forms/d/e/1FAIpQLScqS4f1PT7z1Xn2jfdczi12M4g2qgfKs0eKoNQpKz4esvGmaA/formResponse',
-  fields: {
-    name:      'entry.465702288',
-    email:     'entry.2130579344',
-    lang:      'entry.1628134032',
-    profile:   'entry.1454667331',
-    plan:      'entry.455032590',
-    marketing: 'entry.123756698',
-  }
-};
+const N8N_WEBHOOK = 'https://futuros.app.n8n.cloud/webhook/api/user/subscribe';
 let currentLang = 'es';
 
 /* ── i18n ── */
@@ -1115,7 +1129,7 @@ mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => 
 /* ── Nav scrollspy + scrolled state ── */
 const nav = document.getElementById('mainNav');
 const navLinks = document.querySelectorAll('.nav-link[data-section]');
-const sections = ['producto','como','para-quien','servicios','planes','faq'].map(id => ({ id, el: document.getElementById(id) })).filter(s => s.el);
+const sections = ['producto','como','para-quien','servicios','planes','faq','equipo'].map(id => ({ id, el: document.getElementById(id) })).filter(s => s.el);
 
 function updateNav(){
   const scrolled = window.scrollY > 20;
@@ -1217,33 +1231,67 @@ reveals.forEach(r => io.observe(r));
 async function submitWaitlist(e){
   e.preventDefault();
   const name = document.getElementById('wf-name').value.trim();
+  const lastName = document.getElementById('wf-lastname').value.trim();
   const email = document.getElementById('wf-email').value.trim();
   const profile = document.getElementById('wf-profile').value;
-  const plan = document.getElementById('wf-plan').value;
-  const marketing = document.getElementById('wf-marketing').checked ? 'yes' : 'no';
+  const marketing = document.getElementById('wf-marketing').checked;
   const btn = e.target.querySelector('button[type="submit"]');
-  if (!name || !email) return;
+  if (!name || !lastName || !email) return;
+  // Promote the anonymous Mixpanel visitor into a named profile, then
+  // fire the conversion event. All calls are no-ops if the user hasn't
+  // opted in — Mixpanel drops them silently while opted out.
+  if (window.mixpanel) {
+    try {
+      // identify() aliases the current anonymous distinct_id to the
+      // user's email, so prior pageviews / clicks in this session get
+      // attributed to the same person record once they convert.
+      if (typeof mixpanel.identify === 'function') mixpanel.identify(email);
+      // people.set fills the user profile fields. $email / $name / $first_name
+      // / $last_name are Mixpanel reserved props that power the People
+      // view and search; profile / marketing / lang are custom.
+      if (mixpanel.people && typeof mixpanel.people.set === 'function') {
+        mixpanel.people.set({
+          $email: email,
+          $first_name: name,
+          $last_name: lastName,
+          $name: name + ' ' + lastName,
+          profile: profile || 'no indicado',
+          marketing: marketing,
+          lang: currentLang
+        });
+      }
+      if (typeof mixpanel.track === 'function') {
+        mixpanel.track('Access Requested', {
+          lang: currentLang,
+          profile: profile || 'no indicado',
+          marketing: marketing
+        });
+      }
+    } catch(_) {}
+  }
   const orig = btn.textContent;
   btn.disabled = true;
   btn.textContent = t('form.sending');
   try {
-    const body = new URLSearchParams();
-    body.append(GOOGLE_FORM.fields.name, name);
-    body.append(GOOGLE_FORM.fields.email, email);
-    body.append(GOOGLE_FORM.fields.lang, currentLang);
-    body.append(GOOGLE_FORM.fields.profile, profile || 'no indicado');
-    body.append(GOOGLE_FORM.fields.plan, plan || 'no indicado');
-    if (GOOGLE_FORM.fields.marketing) body.append(GOOGLE_FORM.fields.marketing, marketing);
-    await fetch(GOOGLE_FORM.url, {
+    await fetch(N8N_WEBHOOK, {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        lastName,
+        email,
+        lang: currentLang,
+        profile: profile || 'no indicado',
+        marketing,
+        ts: new Date().toISOString(),
+        source: 'futuros.io/',
+        campaign: 'beta'
+      })
     });
-  } catch(_) {}
+  } catch(err) { console.warn('Waitlist submission failed:', err); }
   try {
     const l = JSON.parse(localStorage.getItem('futuros_leads') || '[]');
-    l.push({ name, email, profile, plan, marketing, lang: currentLang, ts: new Date().toISOString() });
+    l.push({ name, lastName, email, profile, marketing, lang: currentLang, ts: new Date().toISOString(), campaign: 'beta' });
     localStorage.setItem('futuros_leads', JSON.stringify(l));
   } catch(_) {}
   document.getElementById('waitlist-form').style.display = 'none';
@@ -1252,42 +1300,191 @@ async function submitWaitlist(e){
   btn.textContent = orig;
 }
 
-/* ── Consent banner ── */
+/* ── Consent banner ──────────────────────────────────────────────
+   Cross-domain cookie {@code futuros_consent} on {@code .futuros.io}.
+   A user who accepts here is never asked again on app.futuros.io /
+   beta.futuros.io / demo.futuros.io (and vice versa).
+
+   Lifetime:
+     - accept  → 1-year persistent cookie. Banner stays hidden across
+                 sessions until the user clears cookies.
+     - decline → session cookie (no max-age). Banner reappears the
+                 next browser launch so users who declined out of
+                 caution can revisit the decision.
+
+   Legacy migration: if no cookie is found but the previous
+   per-origin localStorage key {@code futuros_consent_v1} holds
+   'granted', honour it and write the cookie so this user isn't
+   re-prompted. Declines ({@code 'denied'}) are NOT migrated —
+   under the new policy, declines shouldn't persist across sessions. */
 (function(){
-  const CONSENT_KEY = 'futuros_consent_v1';
-  const banner = document.getElementById('consent');
-  const stored = localStorage.getItem(CONSENT_KEY);
+  const COOKIE_NAME = 'futuros_consent';
+  const LEGACY_KEY  = 'futuros_consent_v1';
+  const banner = document.getElementById('fsCookies');
+
+  function readCookie(name){
+    try {
+      const prefix = name + '=';
+      const segment = (document.cookie || '').split('; ').find(c => c.indexOf(prefix) === 0);
+      if (!segment) return null;
+      return decodeURIComponent(segment.slice(prefix.length));
+    } catch(e){ return null; }
+  }
+  function cookieDomainAttr(){
+    var host = window.location.hostname;
+    var isLocal = host === 'localhost' || /^\d{1,3}(\.\d{1,3}){3}$/.test(host);
+    var parts = host.split('.');
+    if (isLocal || parts.length < 2) return '';
+    return '; domain=.' + parts.slice(-2).join('.');
+  }
+  function writeCookie(v){
+    var base = 'path=/; SameSite=Lax';
+    var domainAttr = cookieDomainAttr();
+    // accepted = 1y persistent; rejected = session cookie (no max-age).
+    var maxAge = v === 'accepted' ? '; max-age=31536000' : '';
+    document.cookie = COOKIE_NAME + '=' + encodeURIComponent(v) + '; ' + base + maxAge + domainAttr;
+    // Drop the legacy localStorage key once we've upgraded to the cookie.
+    try { localStorage.removeItem(LEGACY_KEY); } catch(_) {}
+  }
+  function readConsent(){
+    var v = readCookie(COOKIE_NAME);
+    if (v === 'accepted' || v === 'rejected') return v;
+    // Legacy fallback — only the affirmative value migrates.
+    try { if (localStorage.getItem(LEGACY_KEY) === 'granted') return 'accepted'; } catch(_) {}
+    return null;
+  }
 
   function apply(decision){
-    if (!window.posthog) return;
-    if (decision === 'granted' && typeof posthog.opt_in_capturing === 'function') posthog.opt_in_capturing();
-    else if (decision === 'denied' && typeof posthog.opt_out_capturing === 'function') posthog.opt_out_capturing();
+    if (!window.mixpanel) return;
+    if (decision === 'accepted' && typeof mixpanel.opt_in_tracking === 'function') {
+      mixpanel.opt_in_tracking();
+      // Force the recorder to start. With opt_out_tracking_by_default the SDK
+      // doesn't always auto-start recording when we opt-in late.
+      if (typeof mixpanel.start_session_recording === 'function') {
+        try { mixpanel.start_session_recording(); } catch(_) {}
+      }
+    } else if (decision === 'rejected' && typeof mixpanel.opt_out_tracking === 'function') {
+      mixpanel.opt_out_tracking();
+    }
   }
 
-  function hide(){
-    banner.classList.remove('visible');
-    setTimeout(() => banner.classList.remove('show'), 350);
-  }
+  function hide(){ banner.classList.remove('fs-cookies-show'); }
 
-  if (stored === 'granted' || stored === 'denied'){
+  // Debug shim matching the app's API.
+  // window.fsCookies.reset() clears the stored decision and re-opens
+  // the banner — handy when QAing the flow.
+  window.fsCookies = {
+    open: () => banner.classList.add('fs-cookies-show'),
+    reset: () => {
+      var domainAttr = cookieDomainAttr();
+      document.cookie = COOKIE_NAME + '=; path=/; max-age=0' + domainAttr;
+      try { localStorage.removeItem(LEGACY_KEY); } catch(_) {}
+      banner.classList.add('fs-cookies-show');
+    }
+  };
+
+  var stored = readConsent();
+  if (stored){
     apply(stored);
+    // If we just migrated a legacy localStorage accept, persist the
+    // cookie so subsequent reads are direct.
+    if (stored === 'accepted' && !readCookie(COOKIE_NAME)) writeCookie('accepted');
     return;
   }
 
-  setTimeout(() => {
-    banner.classList.add('show');
-    requestAnimationFrame(() => banner.classList.add('visible'));
-  }, 600);
+  setTimeout(() => banner.classList.add('fs-cookies-show'), 600);
 
-  document.getElementById('consentAccept').addEventListener('click', () => {
-    localStorage.setItem(CONSENT_KEY, 'granted');
-    apply('granted');
+  document.getElementById('fsCookiesAccept').addEventListener('click', () => {
+    writeCookie('accepted');
+    apply('accepted');
+    // The load-time Page Viewed queued below was dropped (user was opted out).
+    // Fire it now that we've just opted in.
+    try { mixpanel.track('Page Viewed', { surface: 'marketing', path: window.location.pathname }); } catch(_) {}
     hide();
   });
-  document.getElementById('consentDecline').addEventListener('click', () => {
-    localStorage.setItem(CONSENT_KEY, 'denied');
-    apply('denied');
+  document.getElementById('fsCookiesReject').addEventListener('click', () => {
+    writeCookie('rejected');
+    apply('rejected');
     hide();
+  });
+})();
+
+/* ── Mixpanel: fire Page Viewed on load ─────────────────────────
+   Queued after the consent IIFE so any opt_in_tracking() call it
+   may have made is processed first by the SDK. No-op when opted
+   out, so first-time visitors get nothing here (the Accept handler
+   handles them); returning opted-in visitors get exactly one event. */
+try { mixpanel.track('Page Viewed', { surface: 'marketing', path: window.location.pathname }); } catch(_) {}
+
+/* ── Mixpanel event tracking ── */
+(function(){
+  function track(event, props){
+    if (!window.mixpanel || typeof mixpanel.track !== 'function') return;
+    try { mixpanel.track(event, props); } catch(_) {}
+  }
+
+  document.addEventListener('click', function(e){
+    const link = e.target.closest('a');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+
+    // Sign In — any anchor that points at beta.futuros.io (root or /login).
+    // Captured separately from the Request Access funnel since these
+    // visitors are already invited users, not new leads.
+    if (link.classList.contains('nav-signin') || /^https?:\/\/beta\.futuros\.io/.test(href)) {
+      track('Sign In Clicked', {
+        location: link.closest('.mobile-nav') ? 'mobile-nav' : 'top-nav',
+        lang: currentLang
+      });
+      return;
+    }
+
+    // Request Access CTA — any anchor pointing at #waitlist
+    if (href === '#waitlist') {
+      let location = 'unknown';
+      if (link.closest('.nav-cta')) location = 'top-nav';
+      else if (link.closest('.mobile-nav')) location = 'mobile-nav';
+      else if (link.closest('.hero-ctas')) location = 'hero';
+      else if (link.closest('.plan')) {
+        const planName = (link.closest('.plan').querySelector('.plan-name')?.textContent || '').toLowerCase();
+        if (planName.includes('pro')) location = 'plan-pro';
+        else if (planName.includes('team')) location = 'plan-team';
+        else if (planName.includes('enterprise')) location = 'plan-enterprise';
+        else location = 'plan-card';
+      }
+      track('CTA Clicked', { cta: 'request-access', location: location, lang: currentLang });
+      return;
+    }
+
+    // Interactive sample report — by element ID
+    if (link.id === 'hero-interactive-report' || link.id === 'cta-interactive-report') {
+      track('Sample Report Clicked', {
+        location: link.id === 'hero-interactive-report' ? 'hero' : 'output',
+        lang: currentLang,
+        destination: link.getAttribute('href') || ''
+      });
+      return;
+    }
+
+    // Enterprise "Contact sales" mailto — track separately from beta signups
+    // so we can measure enterprise interest as its own funnel.
+    if (href.indexOf('mailto:hello@futuros.io') === 0 && link.closest('.plan')) {
+      track('Contact Sales Clicked', {
+        location: 'plan-enterprise',
+        lang: currentLang
+      });
+      return;
+    }
+
+    // Section nav link — any other in-page anchor
+    if (href.startsWith('#') && href.length > 1) {
+      const section = href.slice(1);
+      let location = 'unknown';
+      if (link.closest('.nav-links')) location = 'top-nav';
+      else if (link.closest('.mobile-nav')) location = 'mobile-nav';
+      else if (link.closest('.footer')) location = 'footer';
+      track('Nav Link Clicked', { section: section, location: location, lang: currentLang });
+    }
   });
 })();
 

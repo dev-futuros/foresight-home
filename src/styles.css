@@ -108,8 +108,16 @@ em{font-style:italic;color:var(--gold)}
 .nav-link:hover{color:var(--text2)}
 .nav-link.active{color:var(--gold)}
 .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold)}
-.nav-cta{margin-left:.5rem}
+.nav-cta{display:flex;align-items:center;gap:.5rem;margin-left:.5rem}
 .nav-cta .btn{padding:9px 16px;min-height:36px;font-size:.65rem}
+/* Disabled-button look (used for "Sign in" while the beta hasn't opened yet).
+   pointer-events:none means clicks don't fire — link won't navigate or trigger
+   tracking. Drop aria-disabled and these styles when the beta goes live. */
+.btn[aria-disabled="true"]{
+  opacity:.45;
+  cursor:not-allowed;
+  pointer-events:none;
+}
 .nav-burger{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:5px}
 .nav-burger span{display:block;width:22px;height:1.5px;background:var(--text2);transition:transform .3s,opacity .3s}
 .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
@@ -569,33 +577,63 @@ em{font-style:italic;color:var(--gold)}
   .reveal.visible{opacity:1;transform:translateY(0)}
 }
 
-/* ─── CONSENT BANNER ─── */
-.consent{
-  position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:200;
-  max-width:560px;margin:0 auto;
-  background:rgba(15,15,17,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border:1px solid var(--border);border-radius:var(--r-md);
-  padding:1.1rem 1.2rem;
-  display:none;flex-direction:column;gap:.85rem;
-  box-shadow:0 20px 50px rgba(0,0,0,.5);
-  opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease;
+/* ─── COOKIE CONSENT BANNER ───
+   Mirrors beta.futuros.io's banner so the experience is consistent
+   across the .futuros.io family. Decision persists via the .futuros.io-
+   scoped `futuros_consent` cookie (see consent IIFE in index.html).
+   Accept = 1-year cookie; reject = session cookie (reappears next
+   browser session). */
+.fs-cookies{
+  position:fixed;left:24px;right:24px;bottom:24px;z-index:9998;
+  max-width:760px;margin:0 auto;
+  background:linear-gradient(180deg,#0e0e12,#14141a);
+  border:1px solid hsla(0,0%,100%,.11);
+  border-radius:14px;
+  padding:18px 22px;
+  color:#f0ece4;
+  font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  font-size:13px;line-height:1.55;
+  box-shadow:0 24px 48px -16px rgba(0,0,0,.55),0 0 60px hsla(40,60%,56%,.05);
+  display:none;align-items:center;gap:20px;
+  transform:translateY(12px);opacity:0;
+  transition:transform 280ms cubic-bezier(.2,.7,.2,1),opacity 280ms cubic-bezier(.2,.7,.2,1);
 }
-.consent.show{display:flex}
-.consent.visible{opacity:1;transform:translateY(0)}
-.consent-tag{
-  font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gold);
-  letter-spacing:.16em;text-transform:uppercase;
-  display:inline-flex;align-items:center;gap:.6rem;
+.fs-cookies.fs-cookies-show{display:flex;transform:translateY(0);opacity:1}
+.fs-cookies-text{flex:1;min-width:0}
+.fs-cookies-title{
+  font-family:'Playfair Display','Times New Roman',serif;
+  font-size:15px;color:#d4a853;margin-bottom:4px;
+  font-weight:400;letter-spacing:-.005em;
 }
-.consent-tag::before{content:'';width:20px;height:1px;background:var(--gold)}
-.consent-text{font-size:.85rem;color:var(--text2);line-height:1.55}
-.consent-text a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
-.consent-text a:hover{color:var(--gold2)}
-.consent-actions{display:flex;gap:.6rem;flex-wrap:wrap}
-.consent-actions .btn{padding:10px 18px;min-height:36px;font-size:.62rem;flex:1;min-width:120px}
-@media(max-width:480px){
-  .consent{left:.75rem;right:.75rem;bottom:.75rem;padding:1rem}
-  .consent-actions .btn{width:100%;flex:none}
+.fs-cookies-body{color:#b8b3aa;font-size:12.5px}
+.fs-cookies-body a{
+  color:#d4a853;text-decoration:none;
+  border-bottom:1px solid rgba(212,168,83,.3);
+  transition:border-color 200ms;
+}
+.fs-cookies-body a:hover{border-bottom-color:#d4a853}
+.fs-cookies-actions{display:flex;gap:8px;flex-shrink:0}
+.fs-cookies button{
+  font-family:'DM Sans',sans-serif;font-size:12.5px;
+  padding:9px 18px;border-radius:8px;cursor:pointer;
+  letter-spacing:.005em;
+  transition:opacity 180ms,background 180ms,border-color 180ms,color 180ms;
+}
+.fs-cookies-reject{
+  background:transparent;border:1px solid hsla(0,0%,100%,.11);color:#b8b3aa;
+}
+.fs-cookies-reject:hover{border-color:hsla(0,0%,100%,.22);color:#f0ece4}
+.fs-cookies-accept{
+  background:#d4a853;border:1px solid #c69839;color:#0a0a0a;
+  font-weight:600;box-shadow:0 1px 0 hsla(0,0%,100%,.2) inset;
+}
+.fs-cookies-accept:hover{
+  opacity:.92;
+  box-shadow:0 1px 0 hsla(0,0%,100%,.2) inset,0 0 24px hsla(40,60%,56%,.18);
+}
+@media(max-width:600px){
+  .fs-cookies{flex-direction:column;align-items:stretch;gap:12px;left:12px;right:12px;bottom:12px;padding:16px}
+  .fs-cookies-actions{justify-content:flex-end}
 }
 </content>
 </invoke>

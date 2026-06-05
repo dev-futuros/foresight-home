@@ -7,24 +7,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
-<!-- PostHog analytics (EU cloud) — current snippet from posthog.com/docs, 2026-01-30 defaults -->
+<!-- Mixpanel analytics (EU residency) -->
 <script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init os ds Ie us vs ss ls capture calculateEventProperties register register_once register_for_session unregister unregister_for_session ws getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty bs ps createPersonProfile setInternalOrTestUser ys es $s opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing cs debug M gs getPageViewId captureTraceFeedback captureTraceMetric Qr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
-  api_host: 'https://eu.i.posthog.com',
-  defaults: '2026-01-30',
-  person_profiles: 'identified_only',
-  opt_out_capturing_by_default: true,
-  loaded: function (ph) {
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+mixpanel.init('a4b409c01e5f9a3b21db626b1cdefbbb', {
+  api_host: 'https://api-eu.mixpanel.com',
+  opt_out_tracking_by_default: true,
+  // Ignore navigator.doNotTrack. DNT was deprecated in 2018 but
+  // Chrome still ships an enable toggle, and the Mixpanel SDK
+  // respects DNT by default — so a user with DNT on who explicitly
+  // clicks Accept on our cookie banner STILL gets dropped:
+  // has_opted_out_tracking() returns true (DNT) regardless of our
+  // explicit opt_in_tracking() call, and every track() silently
+  // no-ops. Our cookie banner IS the privacy gate; a deprecated
+  // browser header shouldn't override it.
+  ignore_dnt: true,
+  record_sessions_percent: 100,
+  record_mask_text_selector: 'input, textarea, [data-mp-mask]',
+  // Persist distinct_id across .futuros.io subdomains so funnels
+  // marketing → blog → app stitch as one visitor.
+  cookie_domain: 'futuros.io',
+  cross_subdomain_cookie: true,
+  loaded: function (mp) {
     try {
-      console.log('[posthog] loaded', {
-        distinct_id: ph.get_distinct_id(),
-        opted_in:    ph.has_opted_in_capturing(),
-        opted_out:   ph.has_opted_out_capturing()
+      console.log('[mixpanel] loaded', {
+        distinct_id: mp.get_distinct_id(),
+        opted_in:    mp.has_opted_in_tracking(),
+        opted_out:   mp.has_opted_out_tracking()
       });
     } catch (e) {}
   }
 });
+// Tag every event with the surface so dashboards can separate
+// marketing-site events from app events in the same project.
+try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
+try {
+  // Read the cross-domain `futuros_consent` cookie; fall back to the
+  // legacy per-origin localStorage flag (granted-only) for users who
+  // accepted before the migration.
+  var _seg = (document.cookie || '').split('; ').find(function (c) { return c.indexOf('futuros_consent=') === 0; });
+  var _v = _seg ? decodeURIComponent(_seg.slice(16)) : null;
+  if (_v !== 'accepted' && localStorage.getItem('futuros_consent_v1') === 'granted') _v = 'accepted';
+  if (_v === 'accepted') {
+    mixpanel.opt_in_tracking();
+    if (typeof mixpanel.start_session_recording === 'function') mixpanel.start_session_recording();
+  }
+} catch(_) {}
+try { mixpanel.track('Page Viewed', { surface: 'marketing', path: window.location.pathname }); } catch(_) {}
 </script>
 <script defer src="cookies.js?v=1"></script>
 </head>
@@ -51,7 +80,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <div class="eyebrow">Documento legal</div>
     <h1>Privacidad y Términos</h1>
     <p class="lede">Cómo tratamos tu información cuando usas Futuros.</p>
-    <p class="updated">Última actualización: 6 de mayo de 2026</p>
+    <p class="updated">Última actualización: 22 de mayo de 2026</p>
 
     <div class="callout">
       <p><strong>Lo esencial:</strong> Tus datos son tuyos. Nunca los usamos para entrenar modelos de inteligencia artificial. Nunca los vendemos. Los almacenamos solo el tiempo estrictamente necesario para que la herramienta funcione.</p>
@@ -73,7 +102,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <p>Como cualquier sitio web, recibimos información técnica básica de tu navegador (dirección IP, tipo de navegador, fecha y hora) cuando accedes a la herramienta.</p>
 
     <h3>Cookies y analítica</h3>
-    <p>Usamos <strong>PostHog</strong> (analítica de producto, alojamiento en la UE) para entender cómo se usa Futuros y mejorar el producto. PostHog se mantiene desactivado por defecto y solo registra eventos y cookies si aceptas el banner de consentimiento. Si rechazas, no se carga ningún seguimiento. Tu elección se guarda en el almacenamiento local de tu navegador; para cambiarla, borra las cookies y el almacenamiento local del sitio y el banner volverá a aparecer.</p>
+    <p>Usamos <strong>Mixpanel</strong> (analítica de producto y grabación de sesiones, alojamiento en la UE) para entender cómo se usa Futuros y mejorar el producto. Mixpanel se mantiene desactivado por defecto y solo registra eventos, grabaciones de sesión (con campos de formulario y contenido sensible enmascarado) y cookies si aceptas el banner de consentimiento. Si rechazas, no se carga ningún seguimiento. Tu elección se guarda en el almacenamiento local de tu navegador; para cambiarla, borra las cookies y el almacenamiento local del sitio y el banner volverá a aparecer.</p>
     <p>No usamos cookies publicitarias ni perfiles de marketing, y no cedemos datos analíticos a terceros.</p>
 
     <h2>Cómo usamos tus datos</h2>
@@ -94,7 +123,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <ul>
       <li><strong>Proveedor del modelo de IA:</strong> recibe los textos que introduces durante la generación del informe. No retiene los datos para entrenamiento.</li>
       <li><strong>Amazon Web Services (S3)</strong> (alojamiento de la página de inicio): sirve los archivos estáticos del sitio de marketing futuros.io. No se utiliza para los datos de la aplicación.</li>
-      <li><strong>PostHog</strong> (analítica de producto, UE): recibe eventos de uso solo si has aceptado el banner de consentimiento.</li>
+      <li><strong>Mixpanel</strong> (analítica de producto y grabación de sesiones, UE): recibe eventos de uso y grabaciones de sesión enmascaradas solo si has aceptado el banner de consentimiento.</li>
     </ul>
     <p>No vendemos tus datos. No los compartimos con terceros con fines de marketing o publicidad. No tenemos un modelo de negocio basado en datos.</p>
 
@@ -103,7 +132,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
       <li><strong>Inputs y outputs en tu navegador:</strong> hasta que vacíes el almacenamiento local del navegador.</li>
       <li><strong>Informes compartidos:</strong> hasta la fecha de caducidad que elijas al compartirlos, después se eliminan automáticamente. Puedes revocar el enlace antes de esa fecha desde tu cuenta.</li>
       <li><strong>Llamadas al proveedor del modelo de IA:</strong> según la política de retención del proveedor.</li>
-      <li><strong>Eventos y cookies de analítica:</strong> según la política de retención de PostHog. La preferencia de consentimiento se guarda en el almacenamiento local de tu navegador hasta que la borres.</li>
+      <li><strong>Eventos, grabaciones de sesión y cookies de analítica:</strong> según la política de retención de Mixpanel. La preferencia de consentimiento se guarda en el almacenamiento local de tu navegador hasta que la borres.</li>
       <li><strong>Logs de servidor:</strong> los logs técnicos básicos se rotan en periodos cortos (días, no meses).</li>
     </ul>
 
@@ -153,7 +182,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <div class="eyebrow">Legal document</div>
     <h1>Privacy and Terms</h1>
     <p class="lede">How we handle your information when you use Futuros.</p>
-    <p class="updated">Last updated: 6 May 2026</p>
+    <p class="updated">Last updated: 22 May 2026</p>
 
     <div class="callout">
       <p><strong>The essentials:</strong> Your data is yours. We never use it to train AI models. We never sell it. We only store it for as long as the tool needs it to function.</p>
@@ -175,7 +204,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <p>Like any website, we receive basic technical data from your browser (IP address, browser type, date and time) when you access the tool.</p>
 
     <h3>Cookies and analytics</h3>
-    <p>We use <strong>PostHog</strong> (product analytics, EU-hosted) to understand how Futuros is used and improve the product. PostHog stays disabled by default and only records events and cookies if you accept the consent banner. If you decline, no tracking is loaded. Your choice is stored in your browser's local storage; to change it, clear the site's cookies and local storage and the banner will reappear.</p>
+    <p>We use <strong>Mixpanel</strong> (product analytics and session replay, EU-hosted) to understand how Futuros is used and improve the product. Mixpanel stays disabled by default and only records events, session replays (with form fields and sensitive content masked), and cookies if you accept the consent banner. If you decline, no tracking is loaded. Your choice is stored in your browser's local storage; to change it, clear the site's cookies and local storage and the banner will reappear.</p>
     <p>We don't use advertising cookies or marketing profiles, and we don't share analytics data with third parties.</p>
 
     <h2>How we use your data</h2>
@@ -196,7 +225,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <ul>
       <li><strong>AI model provider:</strong> receives the text you enter during report generation. Does not retain data for training.</li>
       <li><strong>Amazon Web Services (S3)</strong> (homepage hosting): serves the static files of the marketing site futuros.io. Not used for application data.</li>
-      <li><strong>PostHog</strong> (product analytics, EU): receives usage events only if you've accepted the consent banner.</li>
+      <li><strong>Mixpanel</strong> (product analytics and session replay, EU): receives usage events and masked session replays only if you've accepted the consent banner.</li>
     </ul>
     <p>We don't sell your data. We don't share it with third parties for marketing or advertising. We don't have a data-based business model.</p>
 
@@ -205,7 +234,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
       <li><strong>Inputs and outputs in your browser:</strong> until you clear your browser's local storage.</li>
       <li><strong>Shared reports:</strong> until the expiration date you choose when sharing, then automatically deleted. You can revoke the link before that date from your account.</li>
       <li><strong>AI model provider calls:</strong> per the provider's retention policy.</li>
-      <li><strong>Analytics events and cookies:</strong> per PostHog's retention policy. The consent preference is stored in your browser's local storage until you clear it.</li>
+      <li><strong>Analytics events, session replays, and cookies:</strong> per Mixpanel's retention policy. The consent preference is stored in your browser's local storage until you clear it.</li>
       <li><strong>Server logs:</strong> basic technical logs are rotated on short cycles (days, not months).</li>
     </ul>
 
@@ -255,7 +284,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <div class="eyebrow">Document legal</div>
     <h1>Privacitat i Termes</h1>
     <p class="lede">Com tractem la teva informació quan utilitzes Futuros.</p>
-    <p class="updated">Última actualització: 6 de maig de 2026</p>
+    <p class="updated">Última actualització: 22 de maig de 2026</p>
 
     <div class="callout">
       <p><strong>L'essencial:</strong> Les teves dades són teves. Mai les utilitzem per entrenar models d'intel·ligència artificial. Mai les venem. Les emmagatzemem només el temps estrictament necessari perquè l'eina funcioni.</p>
@@ -277,7 +306,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <p>Com qualsevol lloc web, rebem informació tècnica bàsica del teu navegador (adreça IP, tipus de navegador, data i hora) quan accedeixes a l'eina.</p>
 
     <h3>Cookies i analítica</h3>
-    <p>Utilitzem <strong>PostHog</strong> (analítica de producte, allotjament a la UE) per entendre com s'utilitza Futuros i millorar el producte. PostHog es manté desactivat per defecte i només registra esdeveniments i cookies si acceptes el bàner de consentiment. Si el rebutges, no es carrega cap seguiment. La teva elecció es desa a l'emmagatzematge local del teu navegador; per canviar-la, esborra les cookies i l'emmagatzematge local del lloc i el bàner tornarà a aparèixer.</p>
+    <p>Utilitzem <strong>Mixpanel</strong> (analítica de producte i enregistrament de sessions, allotjament a la UE) per entendre com s'utilitza Futuros i millorar el producte. Mixpanel es manté desactivat per defecte i només registra esdeveniments, enregistraments de sessió (amb camps de formulari i contingut sensible emmascarats) i cookies si acceptes el bàner de consentiment. Si el rebutges, no es carrega cap seguiment. La teva elecció es desa a l'emmagatzematge local del teu navegador; per canviar-la, esborra les cookies i l'emmagatzematge local del lloc i el bàner tornarà a aparèixer.</p>
     <p>No utilitzem cookies publicitàries ni perfils de màrqueting, i no cedim dades analítiques a tercers.</p>
 
     <h2>Com utilitzem les teves dades</h2>
@@ -298,7 +327,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
     <ul>
       <li><strong>Proveïdor del model d'IA:</strong> rep els textos que introdueixes durant la generació de l'informe. No reté les dades per a entrenament.</li>
       <li><strong>Amazon Web Services (S3)</strong> (allotjament de la pàgina d'inici): serveix els fitxers estàtics del lloc de màrqueting futuros.io. No s'utilitza per a les dades de l'aplicació.</li>
-      <li><strong>PostHog</strong> (analítica de producte, UE): rep esdeveniments d'ús només si has acceptat el bàner de consentiment.</li>
+      <li><strong>Mixpanel</strong> (analítica de producte i enregistrament de sessions, UE): rep esdeveniments d'ús i enregistraments de sessió emmascarats només si has acceptat el bàner de consentiment.</li>
     </ul>
     <p>No venem les teves dades. No les compartim amb tercers amb finalitats de màrqueting o publicitat. No tenim un model de negoci basat en dades.</p>
 
@@ -307,7 +336,7 @@ posthog.init('phc_zKZcNZNQnKVhUA5eQJK8RMKhficXggp2VQ8KKADYTN5M', {
       <li><strong>Inputs i outputs al teu navegador:</strong> fins que buidis l'emmagatzematge local del navegador.</li>
       <li><strong>Informes compartits:</strong> fins a la data de caducitat que triïs en compartir-los, després s'eliminen automàticament. Pots revocar l'enllaç abans d'aquesta data des del teu compte.</li>
       <li><strong>Crides al proveïdor del model d'IA:</strong> segons la política de retenció del proveïdor.</li>
-      <li><strong>Esdeveniments i cookies d'analítica:</strong> segons la política de retenció de PostHog. La preferència de consentiment es desa a l'emmagatzematge local del teu navegador fins que la borris.</li>
+      <li><strong>Esdeveniments, enregistraments de sessió i cookies d'analítica:</strong> segons la política de retenció de Mixpanel. La preferència de consentiment es desa a l'emmagatzematge local del teu navegador fins que la borris.</li>
       <li><strong>Logs de servidor:</strong> els logs tècnics bàsics es roten en períodes curts (dies, no mesos).</li>
     </ul>
 

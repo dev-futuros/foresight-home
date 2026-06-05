@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Futuros">
+  <rect width="64" height="64" rx="12" fill="#09090b"/>
+  <!--
+    Path-traced serif "F" in the Playfair/Didone tradition:
+    high stroke contrast (thick stem, thin arms) and a foot serif.
+    Drawn as a single closed path so rendering is byte-for-byte
+    identical across browsers and OSes — no font fallback drift.
+
+    Anatomy in 64-unit grid:
+      stem        x 17–27 (width 10, thick)
+      top arm     y 14–19 (thickness 5, thin)        width 30
+      middle arm  y 27–31 (thickness 4, thinner)     width 13
+      foot serif  y 47–50 (thickness 3, extends 7px each side)
+  -->
+  <path fill="#d4a853" d="M17 14 L47 14 L47 19 L27 19 L27 27 L40 27 L40 31 L27 31 L27 47 L34 47 L34 50 L10 50 L10 47 L17 47 Z"/>
+</svg>

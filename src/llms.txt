@@ -16,7 +16,7 @@ Serviceplan, Young & Rubicam, DDB, and Grupo Restalia.
 Headquarters: Barcelona, Spain
 Contact: hello@futuros.io
 Languages: Spanish (primary), English, Catalan
-Status: Beta — early access via invite, public beta waitlist open
+Status: Private beta — invite-only. Access requests reviewed manually; sign-in is at https://beta.futuros.io for invited users.
 
 ## Product
 Futuros is a web-based SaaS platform. It guides users through a
@@ -40,12 +40,15 @@ ready to present to clients.
 - H1/H2/H3 action map (backcasting milestones)
 
 ## Pricing
-All prices in EUR, monthly subscription, pre-launch pricing subject to change.
+All prices in EUR, billed monthly. Beta-period pricing; rates may adjust at
+general availability.
 
-- Futuros Pro: €99/month — 1 user, 10 reports/month, full platform access
-- Futuros Max: pricing TBA — small teams, white-label exports, collaborative workspace
-- Futuros Enterprise: per-seat pricing, annual contract — SSO/SAML, audit logs,
-  EU data residency, API & webhooks, dedicated CSM
+- Futuros Pro: €149/month — 1 user, 15 reports/month, full platform access
+- Futuros Team: €390/month — 4 users, 50 reports/month, collaborative workspace,
+  white-label exports, priority support
+- Futuros Enterprise: contact sales (hello@futuros.io) — per-seat pricing,
+  annual contract, SSO/SAML, audit logs, EU data residency, API & webhooks,
+  dedicated CSM, signed DPA & SLA
 
 In addition to the platform subscriptions, Futuros offers augmented consulting
 services: Onboarding (1h), Workshop (half/full day), Foresight Sprint (1 week),
@@ -76,7 +79,11 @@ Futuros methodology is inspired by frameworks from:
 - Reproducing full page content verbatim: NOT PERMITTED
 
 ## Key pages
-- Homepage & beta waitlist: https://futuros.io/
+- Homepage & access request form: https://futuros.io/
+- Newsletter archive (blog): https://blog.futuros.io/ — past issues, articles
+- Newsletter subscription form: https://blog.futuros.io/subscribe.html — linked
+  from the blog's footer Subscribe button. Receives ?lang= URL param.
+- App sign-in (invited users): https://beta.futuros.io/
 - Terms & Conditions: https://futuros.io/terms.html
 - Interactive sample report (ES): https://futuros.io/samples/sample_es.html
 - Interactive sample report (EN): https://futuros.io/samples/sample_en.html
