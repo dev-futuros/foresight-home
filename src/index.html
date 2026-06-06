@@ -66,7 +66,7 @@ mixpanel.init('a4b409c01e5f9a3b21db626b1cdefbbb',{
 // marketing-site events from app events in the same project. Without
 // this, only events that explicitly add { surface: 'marketing' } as
 // an event-level property (Page Viewed) get tagged; everything else
-// (CTA Clicked, Nav Link Clicked, Sign In Clicked, Access Requested,
+// (CTA Clicked, Nav Link Clicked, Sign In Clicked, Waitlist Joined,
 // Contact Sales Clicked, Sample Report Clicked, $opt_in) lands untagged.
 try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 </script>
@@ -89,8 +89,8 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
       <a href="#equipo" class="nav-link" data-section="equipo" data-i18n="nav.team">Equipo</a>
     </div>
     <div class="nav-cta">
-      <a href="https://beta.futuros.io" class="btn btn-primary nav-signin" data-i18n="nav.signin">Iniciar sesión</a>
-      <a href="#waitlist" class="btn btn-primary is-beta-hidden" data-i18n="nav.cta">Solicitar acceso</a>
+      <a href="https://beta.futuros.io" class="btn btn-secondary nav-signin" data-i18n="nav.signin">Iniciar sesión</a>
+      <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Únete a la lista de espera</a>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -106,8 +106,8 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
   <a href="#planes" data-i18n="nav.plans">Planes</a>
   <a href="#faq">FAQ</a>
   <a href="#equipo" data-i18n="nav.team">Equipo</a>
-  <a href="https://beta.futuros.io" class="btn btn-primary nav-signin" data-i18n="nav.signin">Iniciar sesión</a>
-  <a href="#waitlist" class="btn btn-primary is-beta-hidden" data-i18n="nav.cta">Solicitar acceso</a>
+  <a href="https://beta.futuros.io" class="btn btn-secondary nav-signin" data-i18n="nav.signin">Iniciar sesión</a>
+  <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Únete a la lista de espera</a>
 </div>
 
 <!-- ═══════════ HERO ═══════════ -->
@@ -116,7 +116,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
     <h1 class="hero-title" data-i18n-html="hero.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h1>
     <p class="hero-sub" data-i18n-html="hero.sub">Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.</p>
     <div class="hero-ctas">
-      <a href="#waitlist" class="btn btn-primary btn-arrow is-beta-hidden" data-i18n="hero.cta1">Solicitar acceso</a>
+      <a href="#waitlist" class="btn btn-primary btn-arrow" data-i18n="hero.cta1">Únete a la lista de espera</a>
       <a id="hero-interactive-report" href="https://futuros.io/samples/sample_es.html" class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="hero.cta2">Ver informe interactivo</a>
     </div>
     <div class="hero-trust">
@@ -330,7 +330,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
             <li data-i18n="plan1.f5">Export PDF + presentación editable + enlace web</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary is-beta-hidden" data-i18n="plan.cta">Solicitar acceso</a>
+            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
           </div>
         </div>
         <div class="plan reveal">
@@ -348,7 +348,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
             <li data-i18n="plan2.f5">Onboarding + soporte prioritario</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary is-beta-hidden" data-i18n="plan.cta">Solicitar acceso</a>
+            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Únete a la lista de espera</a>
           </div>
         </div>
         <div class="plan reveal">
@@ -549,10 +549,10 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 </section>
 
 <!-- ═══════════ FINAL CTA ═══════════ -->
-<section class="section cta-final is-beta-hidden" id="waitlist">
+<section class="section cta-final" id="waitlist">
   <div class="container">
     <div class="reveal" id="waitlist-form">
-      <div class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">Acceso a la beta</div>
+      <div class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">Lista de espera</div>
       <h2 class="cta-final-title" data-i18n-html="cta.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h2>
       <form class="cta-form" onsubmit="submitWaitlist(event)">
         <div class="cta-form-row">
@@ -571,14 +571,14 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
           <span class="cta-checkbox-box" aria-hidden="true"></span>
           <span class="cta-checkbox-text" data-i18n="form.marketing">Acepto recibir comunicaciones de marketing de Futuros.</span>
         </label>
-        <button type="submit" class="btn btn-primary cta-submit" data-i18n="form.btn">Solicitar acceso</button>
+        <button type="submit" class="btn btn-primary cta-submit" data-i18n="form.btn">Únete a la lista de espera</button>
         <p class="cta-fine" data-i18n-html="form.fine">Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a></p>
       </form>
     </div>
     <div class="cta-done" id="waitlist-done">
       <div class="cta-done-icon">◈</div>
-      <div class="cta-done-title" data-i18n="form.done.title">Solicitud recibida.</div>
-      <div class="cta-done-sub" data-i18n="form.done.sub">Te avisaremos en cuanto revisemos tu solicitud.</div>
+      <div class="cta-done-title" data-i18n="form.done.title">Estás en la lista.</div>
+      <div class="cta-done-sub" data-i18n="form.done.sub">Te avisaremos cuando abramos el acceso al lanzamiento en septiembre.</div>
     </div>
   </div>
 </section>
@@ -651,10 +651,10 @@ const TRANSLATIONS = {
   es: {
     'meta.title': 'Futuros — Foresight estratégico con IA | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combina metodología de foresight institucional europeo con inteligencia artificial para generar análisis de escenarios estratégicos completos en menos de 2 horas.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.services':'Servicios','nav.plans':'Planes','nav.team':'Equipo','nav.terms':'Términos y Condiciones','nav.newsletter':'Newsletter','nav.signin':'Iniciar sesión','nav.cta':'Solicitar acceso',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Qué es','nav.who':'Para quién','nav.services':'Servicios','nav.plans':'Planes','nav.team':'Equipo','nav.terms':'Términos y Condiciones','nav.newsletter':'Newsletter','nav.signin':'Iniciar sesión','nav.cta':'Únete a la lista de espera',
     'hero.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
     'hero.sub':'Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.',
-    'hero.cta1':'Solicitar acceso','hero.cta2':'Ver informe interactivo',
+    'hero.cta1':'Únete a la lista de espera','hero.cta2':'Ver informe interactivo',
     'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Metodología de instituciones europeas líderes','hero.trust3':'Informe completo en menos de 2 horas',
     'prob.eyebrow':'El reto',
     'prob.title':'Tu cliente quiere un análisis estratégico para el próximo comité. <em>Tienes cinco días.</em>',
@@ -718,7 +718,7 @@ const TRANSLATIONS = {
     'plans.eyebrow':'Planes',
     'plans.title':'Tres niveles de <em>relación con el futuro.</em>',
     'plans.lede':'Desde el profesional en solitario hasta la organización con governance completa.',
-    'plan.period':'/mes','plan.coming':'Próximamente','plan.contact':'Consultar precio','plan.contactCta':'Contactar ventas','plan.cta':'Solicitar acceso',
+    'plan.period':'/mes','plan.coming':'Próximamente','plan.contact':'Consultar precio','plan.contactCta':'Contactar ventas','plan.cta':'Únete a la lista de espera',
     'plan1.name':'Futuros Pro','plan1.limits':'1 usuario · 15 informes/mes',
     'plan1.f1':'Acceso completo a la plataforma','plan1.f2':'Flujo guiado STEEP + Horizon Scan','plan1.f3':'Escenarios 3P contextuales','plan1.f4':'Backcasting + mapa H1/H2/H3','plan1.f5':'Export PDF + presentación editable + enlace web',
     'plan2.name':'Futuros Team','plan2.limits':'4 usuarios · 50 informes/mes',
@@ -751,14 +751,14 @@ const TRANSLATIONS = {
     'team.s2':'marcas globales transformadas',
     'team.s3':'disciplinas en un equipo core: estrategia, producto e ingeniería',
     'team.s4':'misión: democratizar el diseño de futuros',
-    'cta.eyebrow':'Acceso a la beta',
+    'cta.eyebrow':'Lista de espera',
     'cta.title':'El futuro no se predice, <em>se&nbsp;diseña.</em>',
     'form.name':'Nombre','form.lastname':'Apellido','form.email':'tu@email.com',
     'form.profile.ph':'¿Cuál es tu perfil?','form.profile.o1':'Empresa','form.profile.o2':'Consultor','form.profile.o3':'Otro',
-    'form.btn':'Solicitar acceso',
+    'form.btn':'Únete a la lista de espera',
     'form.marketing':'Acepto recibir comunicaciones de marketing de Futuros.',
     'form.fine':'Sin spam. Sin cesión a terceros.<br>Contacto directo: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
-    'form.done.title':'Solicitud recibida.','form.done.sub':'Te avisaremos en cuanto revisemos tu solicitud.','form.sending':'Enviando...',
+    'form.done.title':'Estás en la lista.','form.done.sub':'Te avisaremos cuando abramos el acceso al lanzamiento en septiembre.','form.sending':'Enviando...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, España · futuros.io',
     'cookies.title':'Cookies y analítica',
     'cookies.body':'Podemos usar herramientas de analítica para entender cómo se usa Futuros y mejorarlo. No compartimos datos con anunciantes ni terceros publicitarios.',
@@ -768,10 +768,10 @@ const TRANSLATIONS = {
   en: {
     'meta.title': 'Futuros — AI-powered Strategic Foresight | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combines European institutional foresight methodology with AI to generate complete strategic scenario analyses in under 2 hours.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.services':'Services','nav.plans':'Plans','nav.team':'Team','nav.terms':'Terms & Conditions','nav.newsletter':'Newsletter','nav.signin':'Sign in','nav.cta':'Request access',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'What it is','nav.who':'For whom','nav.services':'Services','nav.plans':'Plans','nav.team':'Team','nav.terms':'Terms & Conditions','nav.newsletter':'Newsletter','nav.signin':'Sign in','nav.cta':'Join the waitlist',
     'hero.title':'The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>',
     'hero.sub':'Futuros combines <strong>professional foresight methodology</strong> with advanced artificial intelligence — the same process large corporations use, now within reach of any team.',
-    'hero.cta1':'Request access','hero.cta2':'See interactive report',
+    'hero.cta1':'Join the waitlist','hero.cta2':'See interactive report',
     'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Methodology from leading European institutions','hero.trust3':'Complete report in under 2 hours',
     'prob.eyebrow':'The challenge',
     'prob.title':'Your client wants a strategic analysis for the next board meeting. <em>You have five days.</em>',
@@ -835,7 +835,7 @@ const TRANSLATIONS = {
     'plans.eyebrow':'Plans',
     'plans.title':'Three levels of <em>relationship with the future.</em>',
     'plans.lede':'From the solo professional to the organization with full governance.',
-    'plan.period':'/mo','plan.coming':'Coming soon','plan.contact':'Contact sales','plan.contactCta':'Talk to sales','plan.cta':'Request access',
+    'plan.period':'/mo','plan.coming':'Coming soon','plan.contact':'Contact sales','plan.contactCta':'Talk to sales','plan.cta':'Join the waitlist',
     'plan1.name':'Futuros Pro','plan1.limits':'1 user · 15 reports/month',
     'plan1.f1':'Full platform access','plan1.f2':'Guided STEEP + Horizon Scan','plan1.f3':'Contextual 3P scenarios','plan1.f4':'Backcasting + H1/H2/H3 map','plan1.f5':'PDF + editable presentation + web link export',
     'plan2.name':'Futuros Team','plan2.limits':'4 users · 50 reports/month',
@@ -868,14 +868,14 @@ const TRANSLATIONS = {
     'team.s2':'global brands transformed',
     'team.s3':'disciplines in one core team: strategy, product, engineering',
     'team.s4':'mission: democratize futures design',
-    'cta.eyebrow':'Beta access',
+    'cta.eyebrow':'Waitlist',
     'cta.title':"The future is not predicted, <em>it&nbsp;is&nbsp;designed.</em>",
     'form.name':'First name','form.lastname':'Last name','form.email':'your@email.com',
     'form.profile.ph':"What's your profile?",'form.profile.o1':'Company','form.profile.o2':'Consultant','form.profile.o3':'Other',
-    'form.btn':'Request access',
+    'form.btn':'Join the waitlist',
     'form.marketing':'I agree to receive marketing communications from Futuros.',
     'form.fine':'No spam. No data sharing.<br>Direct contact: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
-    'form.done.title':"Request received.",'form.done.sub':"We'll be in touch once we've reviewed your request.",'form.sending':'Sending...',
+    'form.done.title':"You're on the list.",'form.done.sub':"We'll notify you when we open access to the launch in September.",'form.sending':'Sending...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Spain · futuros.io',
     'cookies.title':'Cookies & analytics',
     'cookies.body':"We may use analytics tools to understand how Futuros is used and improve it. We don't share data with advertisers or ad-tech third parties.",
@@ -885,10 +885,10 @@ const TRANSLATIONS = {
   ca: {
     'meta.title': 'Futuros — Foresight estratègic amb IA | Advanced AI Strategic Tools',
     'meta.desc':  'Futuros combina metodologia de foresight institucional europeu amb intel·ligència artificial per generar anàlisis d\'escenaris estratègics completes en menys de 2 hores.',
-    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Què és','nav.who':'Per a qui','nav.services':'Serveis','nav.plans':'Plans','nav.team':'Equip','nav.terms':'Termes i Condicions','nav.newsletter':'Newsletter','nav.signin':'Iniciar sessió','nav.cta':'Sol·licitar accés',
+    'nav.tag':'Advanced AI Strategic Tools','nav.product':'Què és','nav.who':'Per a qui','nav.services':'Serveis','nav.plans':'Plans','nav.team':'Equip','nav.terms':'Termes i Condicions','nav.newsletter':'Newsletter','nav.signin':'Iniciar sessió','nav.cta':'Uneix-te a la llista d\'espera',
     'hero.title':'El futur no es prediu, <em>es&nbsp;dissenya.</em>',
     'hero.sub':'Futuros combina <strong>metodologia de foresight professional</strong> amb intel·ligència artificial avançada — el mateix procés que utilitzen les grans corporacions, ara a l\'abast de qualsevol equip.',
-    'hero.cta1':'Sol·licitar accés','hero.cta2':'Veure informe interactiu',
+    'hero.cta1':'Uneix-te a la llista d\'espera','hero.cta2':'Veure informe interactiu',
     'hero.trust1':'Advanced AI Strategic Tools','hero.trust2':'Metodologia d\'institucions europees líders','hero.trust3':'Informe complet en menys de 2 hores',
     'prob.eyebrow':'El repte',
     'prob.title':'El teu client vol una anàlisi estratègica per al pròxim comitè. <em>Tens cinc dies.</em>',
@@ -952,7 +952,7 @@ const TRANSLATIONS = {
     'plans.eyebrow':'Plans',
     'plans.title':'Tres nivells de <em>relació amb el futur.</em>',
     'plans.lede':'Des del professional en solitari fins a l\'organització amb governance completa.',
-    'plan.period':'/mes','plan.coming':'Properament','plan.contact':'Consultar preu','plan.contactCta':'Contactar vendes','plan.cta':'Sol·licitar accés',
+    'plan.period':'/mes','plan.coming':'Properament','plan.contact':'Consultar preu','plan.contactCta':'Contactar vendes','plan.cta':'Uneix-te a la llista d\'espera',
     'plan1.name':'Futuros Pro','plan1.limits':'1 usuari · 15 informes/mes',
     'plan1.f1':'Accés complet a la plataforma','plan1.f2':'Flux guiat STEEP + Horizon Scan','plan1.f3':'Escenaris 3P contextuals','plan1.f4':'Backcasting + mapa H1/H2/H3','plan1.f5':'Export PDF + presentació editable + enllaç web',
     'plan2.name':'Futuros Team','plan2.limits':'4 usuaris · 50 informes/mes',
@@ -985,14 +985,14 @@ const TRANSLATIONS = {
     'team.s2':'marques globals transformades',
     'team.s3':'disciplines en un equip core: estratègia, producte i enginyeria',
     'team.s4':'missió: democratitzar el disseny de futurs',
-    'cta.eyebrow':'Accés a la beta',
+    'cta.eyebrow':'Llista d\'espera',
     'cta.title':'El futur no es prediu, <em>es&nbsp;dissenya.</em>',
     'form.name':'Nom','form.lastname':'Cognom','form.email':'tu@email.com',
     'form.profile.ph':'Quin és el teu perfil?','form.profile.o1':'Empresa','form.profile.o2':'Consultor','form.profile.o3':'Altre',
-    'form.btn':'Sol·licitar accés',
+    'form.btn':'Uneix-te a la llista d\'espera',
     'form.marketing':'Accepto rebre comunicacions de màrqueting de Futuros.',
     'form.fine':'Sense spam. Sense cessió a tercers.<br>Contacte directe: <a href="mailto:hello@futuros.io">hello@futuros.io</a>',
-    'form.done.title':'Sol·licitud rebuda.','form.done.sub':'T\'avisarem tan bon punt revisem la teva sol·licitud.','form.sending':'Enviant...',
+    'form.done.title':'Estàs a la llista.','form.done.sub':'T\'avisarem quan obrim l\'accés al llançament al setembre.','form.sending':'Enviant...',
     'footer.tag':'Advanced AI Strategic Tools','footer.bottom':'© 2026 Futuros · Barcelona, Catalunya · futuros.io',
     'cookies.title':'Cookies i analítica',
     'cookies.body':'Podem fer servir eines d\'analítica per entendre com s\'utilitza Futuros i millorar-lo. No compartim dades amb anunciants ni tercers publicitaris.',
@@ -1258,7 +1258,7 @@ async function submitWaitlist(e){
         });
       }
       if (typeof mixpanel.track === 'function') {
-        mixpanel.track('Access Requested', {
+        mixpanel.track('Waitlist Joined', {
           lang: currentLang,
           profile: profile || 'no indicado',
           marketing: marketing
@@ -1282,13 +1282,13 @@ async function submitWaitlist(e){
         marketing,
         ts: new Date().toISOString(),
         source: 'futuros.io/',
-        campaign: 'beta'
+        campaign: 'waitlist-release'
       })
     });
   } catch(err) { console.warn('Waitlist submission failed:', err); }
   try {
     const l = JSON.parse(localStorage.getItem('futuros_leads') || '[]');
-    l.push({ name, lastName, email, profile, marketing, lang: currentLang, ts: new Date().toISOString(), campaign: 'beta' });
+    l.push({ name, lastName, email, profile, marketing, lang: currentLang, ts: new Date().toISOString(), campaign: 'waitlist-release' });
     localStorage.setItem('futuros_leads', JSON.stringify(l));
   } catch(_) {}
   document.getElementById('waitlist-form').style.display = 'none';
@@ -1436,7 +1436,7 @@ try { mixpanel.track('Page Viewed', { surface: 'marketing', path: window.locatio
       return;
     }
 
-    // Request Access CTA — any anchor pointing at #waitlist
+    // Join the waitlist CTA — any anchor pointing at #waitlist
     if (href === '#waitlist') {
       let location = 'unknown';
       if (link.closest('.nav-cta')) location = 'top-nav';
@@ -1449,7 +1449,7 @@ try { mixpanel.track('Page Viewed', { surface: 'marketing', path: window.locatio
         else if (planName.includes('enterprise')) location = 'plan-enterprise';
         else location = 'plan-card';
       }
-      track('CTA Clicked', { cta: 'request-access', location: location, lang: currentLang });
+      track('CTA Clicked', { cta: 'join-waitlist', location: location, lang: currentLang });
       return;
     }
 
