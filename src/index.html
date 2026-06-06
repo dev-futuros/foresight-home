@@ -35,7 +35,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Futuros","url":"https://futuros.io","description":"Strategic foresight platform combining European institutional methodology with AI.","contactPoint":{"@type":"ContactPoint","email":"hello@futuros.io","contactType":"customer support","availableLanguage":["Spanish","English"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Futuros","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://futuros.io","offers":[{"@type":"Offer","name":"Futuros Pro","price":"149","priceCurrency":"EUR"},{"@type":"Offer","name":"Futuros Team","price":"390","priceCurrency":"EUR"}]}</script>
 
-<link rel="stylesheet" href="styles.css?v=2026-05-23">
+<link rel="stylesheet" href="styles.css?v=2026-05-24">
 
 <!-- Mixpanel analytics (EU residency) -->
 <script>
@@ -73,8 +73,6 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 </head>
 <body>
 
-<!-- Secret beta access -->
-<a id="beta-secret" href="https://beta.futuros.io" aria-hidden="true" tabindex="-1" style="position:fixed;top:0;right:0;width:16px;height:16px;background:rgba(9,9,11,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:200;display:block"></a>
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav class="nav" id="mainNav">
@@ -91,8 +89,8 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
       <a href="#equipo" class="nav-link" data-section="equipo" data-i18n="nav.team">Equipo</a>
     </div>
     <div class="nav-cta">
-      <a href="https://beta.futuros.io" class="btn btn-secondary nav-signin" aria-disabled="true" tabindex="-1" data-i18n="nav.signin">Iniciar sesión</a>
-      <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Solicitar acceso</a>
+      <a href="https://beta.futuros.io" class="btn btn-primary nav-signin" data-i18n="nav.signin">Iniciar sesión</a>
+      <a href="#waitlist" class="btn btn-primary is-beta-hidden" data-i18n="nav.cta">Solicitar acceso</a>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -108,8 +106,8 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
   <a href="#planes" data-i18n="nav.plans">Planes</a>
   <a href="#faq">FAQ</a>
   <a href="#equipo" data-i18n="nav.team">Equipo</a>
-  <a href="https://beta.futuros.io" class="btn btn-secondary nav-signin" aria-disabled="true" tabindex="-1" data-i18n="nav.signin">Iniciar sesión</a>
-  <a href="#waitlist" class="btn btn-primary" data-i18n="nav.cta">Solicitar acceso</a>
+  <a href="https://beta.futuros.io" class="btn btn-primary nav-signin" data-i18n="nav.signin">Iniciar sesión</a>
+  <a href="#waitlist" class="btn btn-primary is-beta-hidden" data-i18n="nav.cta">Solicitar acceso</a>
 </div>
 
 <!-- ═══════════ HERO ═══════════ -->
@@ -118,7 +116,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
     <h1 class="hero-title" data-i18n-html="hero.title">El futuro no se predice, <em>se&nbsp;diseña.</em></h1>
     <p class="hero-sub" data-i18n-html="hero.sub">Futuros combina <strong>metodología de foresight profesional</strong> con inteligencia artificial avanzada — el mismo proceso que usan grandes corporaciones, ahora al alcance de cualquier equipo.</p>
     <div class="hero-ctas">
-      <a href="#waitlist" class="btn btn-primary btn-arrow" data-i18n="hero.cta1">Solicitar acceso</a>
+      <a href="#waitlist" class="btn btn-primary btn-arrow is-beta-hidden" data-i18n="hero.cta1">Solicitar acceso</a>
       <a id="hero-interactive-report" href="https://futuros.io/samples/sample_es.html" class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="hero.cta2">Ver informe interactivo</a>
     </div>
     <div class="hero-trust">
@@ -332,7 +330,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
             <li data-i18n="plan1.f5">Export PDF + presentación editable + enlace web</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Solicitar acceso</a>
+            <a href="#waitlist" class="btn btn-secondary is-beta-hidden" data-i18n="plan.cta">Solicitar acceso</a>
           </div>
         </div>
         <div class="plan reveal">
@@ -350,7 +348,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
             <li data-i18n="plan2.f5">Onboarding + soporte prioritario</li>
           </ul>
           <div class="plan-cta">
-            <a href="#waitlist" class="btn btn-secondary" data-i18n="plan.cta">Solicitar acceso</a>
+            <a href="#waitlist" class="btn btn-secondary is-beta-hidden" data-i18n="plan.cta">Solicitar acceso</a>
           </div>
         </div>
         <div class="plan reveal">
@@ -551,7 +549,7 @@ try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 </section>
 
 <!-- ═══════════ FINAL CTA ═══════════ -->
-<section class="section cta-final" id="waitlist">
+<section class="section cta-final is-beta-hidden" id="waitlist">
   <div class="container">
     <div class="reveal" id="waitlist-form">
       <div class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">Acceso a la beta</div>
@@ -1105,9 +1103,8 @@ function applyTranslations(lang){
   // opens in the same language the user is currently reading the homepage in.
   // (terms.html no longer has its own in-page switcher; it relies on this hint.)
   document.querySelectorAll('a[href^="terms.html"]').forEach(a => { a.href = 'terms.html?lang=' + lang; });
-  // Carry current language into the secret beta link.
-  const betaLink = document.getElementById('beta-secret');
-  if (betaLink) betaLink.href = 'https://beta.futuros.io/?lang=' + lang;
+  // Carry current language into the Sign In link → beta.futuros.io.
+  document.querySelectorAll('a.nav-signin').forEach(a => { a.href = 'https://beta.futuros.io/?lang=' + lang; });
 }
 
 document.querySelectorAll('.lt-btn').forEach(b => b.addEventListener('click', () => applyTranslations(b.dataset.lang)));
