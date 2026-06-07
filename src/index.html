@@ -60,14 +60,18 @@ mixpanel.init('a4b409c01e5f9a3b21db626b1cdefbbb',{
   // Funnel analyses (marketing → newsletter → subscribe, etc.) rely on
   // this — without it, the user shows up as 3 separate anonymous IDs.
   cookie_domain:'futuros.io',
-  cross_subdomain_cookie:true
+  cross_subdomain_cookie:true,
+  // Register surface from the loaded callback so the tag is in place
+  // BEFORE the SDK finishes reading persisted state. Registering after
+  // a synchronous init() returns is racy — the persistence-load step
+  // can run later and silently overwrite freshly-registered super
+  // properties, which is why Page Viewed / session_start were
+  // sometimes landing in Mixpanel untagged.
+  loaded: function(mp) { try { mp.register({ surface: 'marketing' }); } catch(_) {} }
 });
-// Tag every event with the surface so dashboards can separate
-// marketing-site events from app events in the same project. Without
-// this, only events that explicitly add { surface: 'marketing' } as
-// an event-level property (Page Viewed) get tagged; everything else
-// (CTA Clicked, Nav Link Clicked, Sign In Clicked, Waitlist Joined,
-// Contact Sales Clicked, Sample Report Clicked, $opt_in) lands untagged.
+// Belt-and-suspenders sync register — covers the case where the
+// loaded callback never fires (unlikely, but the snippet stub queues
+// register calls before the real SDK arrives, so this is free).
 try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 </script>
 </head>

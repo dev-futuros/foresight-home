@@ -29,6 +29,12 @@ mixpanel.init('a4b409c01e5f9a3b21db626b1cdefbbb', {
   cookie_domain: 'futuros.io',
   cross_subdomain_cookie: true,
   loaded: function (mp) {
+    // Register the surface tag from inside `loaded` so it lands AFTER
+    // the SDK has read its persisted state — registering synchronously
+    // post-init is racy because persistence-load can overwrite freshly-
+    // written super props, which is why Page Viewed / session_start
+    // were sometimes landing in Mixpanel untagged.
+    try { mp.register({ surface: 'marketing' }); } catch (e) {}
     try {
       console.log('[mixpanel] loaded', {
         distinct_id: mp.get_distinct_id(),
@@ -38,8 +44,8 @@ mixpanel.init('a4b409c01e5f9a3b21db626b1cdefbbb', {
     } catch (e) {}
   }
 });
-// Tag every event with the surface so dashboards can separate
-// marketing-site events from app events in the same project.
+// Belt-and-suspenders sync register — harmless duplicate when the
+// loaded callback runs, fallback if it ever doesn't.
 try { mixpanel.register({ surface: 'marketing' }); } catch(_) {}
 try {
   // Read the cross-domain `futuros_consent` cookie; fall back to the
